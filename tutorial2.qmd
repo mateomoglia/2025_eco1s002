@@ -1,0 +1,51 @@
+---
+title: "Tutorial 2"
+format: html
+editor: visual
+toc: true
+toc-title: ""
+toc-location: right
+---
+
+```{r, echo=F,eval=T,message=F,warning=F}
+packages <- c("ggplot2", "readxl", "dplyr", "tidyr","xtable")
+# Install packages not yet installed
+installed_packages <- packages %in% rownames(installed.packages())
+if (any(installed_packages == FALSE)) {
+  install.packages(packages[!installed_packages])
+}
+# Packages loading
+invisible(lapply(packages, library, character.only = TRUE))
+```
+
+Last week, we learnt how to manage simple datasets using R. We are going replicate our very first paper!
+
+## Mankiw, Romer, Weil (1994)
+
+This paper is ...
+
+### Main objectives
+
+1.  Open the dataset
+2.  Inspect and clean
+3.  Run the main regression
+4.  Make a graph
+
+### Data source
+
+Download the data from Moodle.
+
+### Folder organization
+
+We are going to work in `tutorial2`. You may want to create additional subfolders like `raw_data`, `code`, `output` to store the raw data, the code, and the output we create.
+
+``` plaintext
+/Users/mmoglia/Dropbox/
+└── courses/
+    └── 2025_eco1s002
+      └── tutorial2
+```
+
+```{r}
+path <- "/Users/mmoglia/Dropbox/courses/polytechnique/2025_eco1s002/tutorial2"
+```

@@ -12,6 +12,8 @@ website:
         href: home.qmd
       - text: "Tutorial 1"
         href: tutorial1.qmd
+      - text: "Tutorial 2"
+        href: tutorial2.qmd
   page-footer:
     right: "Built with [Quarto](https://quarto.org/)"
     left: "&copy; Copyright 2025, Mateo Moglia"

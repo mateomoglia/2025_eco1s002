@@ -6,21 +6,21 @@ editor: visual
 
 ## Welcome to the class!
 
-This website will walk you through the tutorials for the *Topics in Economics* (1S002) of Ecole Polytechnique.
+This website will walk you through the tutorials for the *Topics in Economics* (1S002) of Ecole Polytechnique Bachelor program.
 
 > **Practical information**
 >
-> TA: [Mateo Moglia](https://www.mateomoglia.github.io)
+> TA: [Mateo Moglia](https://mateomoglia.github.io)
 >
-> Schedule: Wednesday morning
+> Schedule: Wednesday morning (check Synapses regularly for any changes in room)
 >
-> Required software: R and its IDE, RStudio. You may download it [here](https://posit.co/download/rstudio-desktop/)
+> Required software: R and its IDE, RStudio. You may download it [here](https://posit.co/download/rstudio-desktop/).
 >
-> Create a free account to use [Overleaf](https://www.overleaf.com)
+> Create a free account to use [Overleaf](https://www.overleaf.com).
 
 ## Class outline
 
--   Tutorial 1 (February 12)
+-   [Tutorial 1](tutorial1.hmtl) (February 12)
     -   First hand on R
     -   First hand on LaTeX
     -   Presentation of the group projects

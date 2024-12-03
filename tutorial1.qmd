@@ -7,6 +7,18 @@ toc-title: ""
 toc-location: right
 ---
 
+```{r, echo=F,eval=T,message=F,warning=F}
+packages <- c("ggplot2", "readxl", "dplyr", "tidyr","xtable")
+# Install packages not yet installed
+installed_packages <- packages %in% rownames(installed.packages())
+if (any(installed_packages == FALSE)) {
+  install.packages(packages[!installed_packages])
+}
+# Packages loading
+invisible(lapply(packages, library, character.only = TRUE))
+```
+
+
 For this first tutorial, we are going to download R and Rstudio, discover the software and make our first data visualisation. We are also going to see how to export them and input them in a `.tex` file.
 
 ## Download R and RStudio
@@ -83,9 +95,8 @@ First, open RStudio and opens a new script. You should have an empty page. You m
 # Date: 12/02/2025
 #_______________________________________
 
-setwd("/Users/mmoglia/Dropbox/courses/polytechnique/2025_eco1s002/forStudents")
-path <- "/Users/mmoglia/Dropbox/courses/polytechnique/2025_eco1s002/forStudents"
-
+setwd("/Users/mmoglia/Dropbox/courses/polytechnique/2025_eco1s002/site/2025_eco1s002")
+path <- "/Users/mmoglia/Dropbox/courses/polytechnique/2025_eco1s002/site/2025_eco1s002"
 ```
 
 Here, I set the working directory and create an object called `path` using the `<-` operator. I will be able to call my path thanks to this object instead of typing the path everytime I need it.
@@ -121,11 +132,10 @@ plot(iris$Sepal.Length,iris$Sepal.Width)
 
 We can also use a very popular library for dataviz, `ggplot2`. First, we install it, then we load it, and we are going to be able to use it.
 
-```{r}
+```{r,echo=T,eval=F}
 install.packages("ggplot2",repos = "http://cran.us.r-project.org")
 library(ggplot2)
 ```
-
 
 ::: callout-note
 All packages have to be downloaded and loaded this way. Note that once you've downloaded a package on your computer, you do not need to install it *but* you still need to load it through the `library` function.
@@ -161,11 +171,10 @@ The function `paste0` is useful to concatenate text. Here, instead of writing th
 
 To finish this -short- introduction to R, I introduce a new package, probably the most popular one in R: `dplyr`. As before, we install then load the library.
 
-```{r}
-install.packages("dplyr",repos = "http://cran.us.r-project.org")
-library(dplyr)
+```{r,echo=T,eval=F}
+install.packages("tidyverse")
+library(tidyverse)
 ```
-
 
 Let's imagine we want to filter the dataset to keep only the `setosa`. In base R, we need to extract the lines of `iris` for which `Species=="setosa"`. Because R is object based, we can multiple objects, here: `base_setosa`.
 
@@ -234,11 +243,10 @@ ggplot(dplyr_grouped, aes(x = Species, y = count_sepal_large, fill = Species)) +
 
 But we can also export it to `LaTeX`:
 
-```{r}
-install.packages("xtable",repos = "http://cran.us.r-project.org")
+```{r,echo=T,eval=F}
+install.packages("xtable")
 library(xtable)
 ```
-
 
 ```{r}
 colnames(dplyr_grouped) <- c("Species", "Mean_Sepal_Length", "Count_Sepal_Large")
