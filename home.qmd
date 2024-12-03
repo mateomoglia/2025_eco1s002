@@ -1,0 +1,55 @@
+---
+title: "Home"
+format: html
+editor: visual
+---
+
+## Welcome to the class!
+
+This website will walk you through the tutorials for the *Topics in Economics* (1S002) of Ecole Polytechnique.
+
+> **Practical information**
+>
+> TA: [Mateo Moglia](https://www.mateomoglia.github.io)
+>
+> Schedule: Wednesday morning
+>
+> Required software: R and its IDE, RStudio. You may download it [here](https://posit.co/download/rstudio-desktop/)
+>
+> Create a free account to use [Overleaf](https://www.overleaf.com)
+
+## Class outline
+
+-   Tutorial 1 (February 12)
+    -   First hand on R
+    -   First hand on LaTeX
+    -   Presentation of the group projects
+-   Tutorial 2 (February 19)
+    -   Replication of Mankiw et al. (1997)
+    -   OLS estimator
+-   Tutorial 3 (March 5)
+    -   The Solow model and its extension
+-   Tutorial 4 (March 12)
+    -   Replication of Acemoglu et al. (2010)
+    -   Export the results
+-   Tutorial 5 (March 19)
+    -   Correction of the mock exam
+-   Tutorial 6 (March 26)
+    -   Autonomous replication of an IV paper
+-   Tutorial 7 (April 2)
+    -   Difference-in-differences estimator
+-   Tutorial 8 (April 9)
+    -   The social multiplier
+-   Tutorial 9 (April 9)
+    -   Labor force participation
+-   Tutorial 10 (April 16)
+    -   Spatial segregration
+    -   Regression in discontinuity
+-   Tutorial 11 (April 30)
+    -   Mock exam
+-   Tutorial 12 (May 14)
+    -   The marriage market
+-   Tutorial 13 (May 21)
+    -   Final Q&A before the exam
+-   Tutorial 14 (May 28)
+    -   Restitution of the group project

@@ -1,0 +1,313 @@
+---
+title: "Tutorial 1"
+format: html
+editor: visual
+toc: true
+toc-title: ""
+toc-location: right
+---
+
+For this first tutorial, we are going to download R and Rstudio, discover the software and make our first data visualisation. We are also going to see how to export them and input them in a `.tex` file.
+
+## Download R and RStudio
+
+R is a free software used in many contexts: data cleaning, data visualisation, econometrics, machine and deep learning, among others. It is an **object-based** format, meaning that we are going to manipulate objects through a series of command.
+
+R can be used directely from a command terminal, but we prefer to use RStudio, an IDE, to make our lifes easier.
+
+1.  Download R
+2.  Download RStudio
+
+> You can download both from here <https://posit.co/download/rstudio-desktop/>.
+
+3.  Open RStudio
+
+## Folder organization
+
+Computers are organized around folder. We are going to work in a working directory (`wd`), but we need to identify it.
+
+``` plaintext
+/Users/mmoglia/
+├── Documents/
+│   ├── Personal/
+│   │   ├── Finances/
+│   │   ├── Health/
+│   │   └── Education/
+│   └── Miscellaneous/
+├── Downloads/
+├── Music/
+│   ├── Artists/
+│   │   ├── Artist_Name/
+│   │   │   ├── Albums/
+│   │   │   └── Singles/
+│   └── Playlists/
+├── Pictures/
+│   ├── Vacations/
+│   ├── Events/
+│   ├── Family/
+│   └── Miscellaneous/
+├── Videos/
+│   ├── Movies/
+│   ├── Tutorials/
+│   └── Personal/
+└── courses/
+    ├── 2024_ECO102/
+    ├── 2025_eco1s002/
+    └── Research/
+```
+
+Here we are going to work in `~/courses/2025_eco1s002/`. This folder may (and should!) contains subfolders, for instance: `/code`, `/output`, `/raw_data`, etc.
+
+### Naming convention
+
+A typical tip is to choose simple and short titles for the files and the scripts. For instance, this file is named `tutorial1.qmd`. Your code can be named `code_tutorial1`. It should be self-explanatory.
+
+::: callout-tip
+Avoid at all cost to use spaces or special characters in your file names. Prefer instead an underscore or a score.
+:::
+
+## First step in R
+
+### Open a script
+
+R has built-in functions but most useful functions should be called using `libraries`. These libraries should be first downloaded then loaded into your project.
+
+First, open RStudio and opens a new script. You should have an empty page. You may want to write some words at the top of it to have an idea of what this code does. You can use `#` to comment code.
+
+```{r}
+#_______________________________________
+# This script opens a dataset and proceeds
+# to data visualization.
+#
+# Author: Matéo Moglia
+# Date: 12/02/2025
+#_______________________________________
+
+setwd("/Users/mmoglia/Dropbox/courses/polytechnique/2025_eco1s002/forStudents")
+path <- "/Users/mmoglia/Dropbox/courses/polytechnique/2025_eco1s002/forStudents"
+
+```
+
+Here, I set the working directory and create an object called `path` using the `<-` operator. I will be able to call my path thanks to this object instead of typing the path everytime I need it.
+
+### Our first data
+
+We can load a built-in dataframe, the `iris` dataset, into an object called `data`.
+
+```{r}
+data <- iris
+class(data)
+head(data)
+```
+
+### Data description
+
+By clicking on the object in the `Environement` panel, I can visualize it. I can also write some code to describe it:
+
+```{r}
+table(data$Species)
+summary(data$Sepal.Length)
+```
+
+Here, I use the `table` function to have a frequency table of the variable `Species` and the function `summary` to compute summary statistics of the variable `Sepal.Length`.
+
+Now, I want to visualize the data. To do so, we can use base R function `plot`:
+
+```{r}
+plot(iris$Sepal.Length,iris$Sepal.Width)
+```
+
+### Our first graph!
+
+We can also use a very popular library for dataviz, `ggplot2`. First, we install it, then we load it, and we are going to be able to use it.
+
+```{r}
+install.packages("ggplot2",repos = "http://cran.us.r-project.org")
+library(ggplot2)
+```
+
+
+::: callout-note
+All packages have to be downloaded and loaded this way. Note that once you've downloaded a package on your computer, you do not need to install it *but* you still need to load it through the `library` function.
+:::
+
+```{r}
+g1 <- ggplot(data = data, mapping = aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+  geom_point() +
+  theme_minimal()
+g1
+```
+
+This looks better! To produce this graph we used different information:
+
+-   The `ggplot` command takes `data` and `mapping` as input.
+    -   `data` should be the dataset you want to visualize, here we named it `data`
+    -   `mapping` takes `aes` (for aesthetics)
+        -   Here, the aesthetics are the `x` and `y` axis, and the `color` one, to distinguish between the species.
+    -   `geom_point` allows to plot... points
+    -   `theme_minimal` makes the graph tidy, with a white background, etc.
+
+Now, we can save it:
+
+```{r}
+ggsave(filename = paste0(path,"/output/graph_iris.png"),plot = g1)
+```
+
+::: callout-tip
+The function `paste0` is useful to concatenate text. Here, instead of writing the full path, we concatenate the object `path` (which happens to be our path) and the end of the path, including the name of the output.
+:::
+
+### Data manipulation
+
+To finish this -short- introduction to R, I introduce a new package, probably the most popular one in R: `dplyr`. As before, we install then load the library.
+
+```{r}
+install.packages("dplyr",repos = "http://cran.us.r-project.org")
+library(dplyr)
+```
+
+
+Let's imagine we want to filter the dataset to keep only the `setosa`. In base R, we need to extract the lines of `iris` for which `Species=="setosa"`. Because R is object based, we can multiple objects, here: `base_setosa`.
+
+> The data frame `iris` is close to a matrix, hence, we can extract using notations close to the matrix ones. Hence `data[1,1]` would give us the first line of the first column (in this order) of `data`. Here, we filt the lines using a condition: `data$Species=="setosa"`. Do not forget the `,`.
+
+```{r}
+# Base R: Filter rows where Species is "setosa"
+base_setosa <- data[data$Species == "setosa", ]
+head(base_setosa)
+```
+
+Using `dplyr` and the `pipe` operator `%>%`, we apply the function `filter` on `Species`.
+
+```{r}
+# dplyr: Filter rows where Species is "setosa"
+dplyr_setosa <- iris %>% 
+  filter(Species == "setosa")
+head(dplyr_setosa)
+```
+
+Next, we can select specific columns.
+
+```{r}
+# Base R: Select only Sepal.Length and Sepal.Width columns
+base_columns <- iris[, c("Sepal.Length", "Sepal.Width")]
+head(base_columns)
+
+# dplyr: Select only Sepal.Length and Sepal.Width columns
+dplyr_columns <- iris %>% 
+  select(Sepal.Length, Sepal.Width)
+head(dplyr_columns)
+```
+
+```{r}
+# Base R: Create a new column with Sepal.Area (Sepal.Length * Sepal.Width)
+iris$Sepal.Area <- iris$Sepal.Length * iris$Sepal.Width
+head(iris)
+
+# dplyr: Create a new column with Sepal.Area (Sepal.Length * Sepal.Width)
+dplyr_iris <- iris %>% 
+  mutate(Sepal.Area = Sepal.Length * Sepal.Width)
+head(dplyr_iris)
+```
+
+The advantage of `dplyr` is to allow for many computations:
+
+```{r}
+dplyr_grouped <- iris %>%
+  mutate(Sepal.Area = Sepal.Length * Sepal.Width) %>%
+  mutate(is.Sepal.Large = ifelse(Sepal.Area > median(Sepal.Area),1,0)) %>% 
+  group_by(Species) %>%
+  summarize(mean_sepal_length = mean(Sepal.Length),
+            count_sepal_large = sum(is.Sepal.Large))
+print(dplyr_grouped)
+```
+
+This dataset can be, of course represented visually:
+
+```{r}
+ggplot(dplyr_grouped, aes(x = Species, y = count_sepal_large, fill = Species)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Histogram of Sepal Count by Species",
+       x = "Species", y = "Count of large sepals") +
+  theme_minimal()
+```
+
+But we can also export it to `LaTeX`:
+
+```{r}
+install.packages("xtable",repos = "http://cran.us.r-project.org")
+library(xtable)
+```
+
+
+```{r}
+colnames(dplyr_grouped) <- c("Species", "Mean_Sepal_Length", "Count_Sepal_Large")
+print(xtable(dplyr_grouped), type = "latex", file = paste0(path,"/output/sepal_large.tex"))
+```
+
+## First step in LaTeX
+
+LaTeX is very popular software to produce scientic writings. It is extremely easy to use. From now on, it is mandatory to produce output you would hand using LaTeX. You have three options to use LaTeX:
+
+1.  Use any text editor and compile the file using the console
+2.  Use an IDE, like TexStudio or TexLive
+3.  Use an online IDE like Overleaf
+
+> There are plenty of tutorials over the web (or ChatGPT) to know how to use LaTeX, so I am going to be quick.
+
+Open a blank project in Overleaf. It should look like that:
+
+```         
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Tutorial one}
+\author{Matéo Moglia}
+\date{February 2024}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+\end{document}
+```
+
+You can directly write any text you like.
+
+### Math mode
+
+Most interesting is the math mode. You can write in line using `$ x = y$` or in an equation environment:
+
+```         
+\begin{equation}
+  \mu_k = \int_0^{+\infty} x^k f(x) dx = \int_0^{+\infty} t^{-\frac{k}{\alpha}} \exp ^{-t} dt
+\end{equation}
+```
+
+> An environment starts with `\begin{name}` and ends with `\end{name}`. The environment can be an equation, to center a large chunk of text, a figure, a table, etc.
+
+### Include our results
+
+```         
+\begin{figure}
+  \centering # To center the graph
+  \includegraphics[width=8,height=10]{graph/graph_iris.png}
+  \caption{Iris Sepals Length and Width}
+\end{figure}
+```
+
+We work within the `figure` environment, center the graphic, include it with some options and add a caption. The graph should be uploaded in the project first! Here, I stored it in the folder `graph`.
+
+To input the table, we can use `\input{}`:
+
+```         
+\input{table/sepal_large.tex}
+```
+
+No need to specify the environment as it was directly created by the `xtable` function earlier on!
+
+### Compile the file
+
+LaTeX is not a "What You See Is What You Get" software, like Word or Canvas. You need to compile the code to obtain the results (usually a `.pdf`), that you can further download.
