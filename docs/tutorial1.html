@@ -157,15 +157,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <nav id="TOC" role="doc-toc" class="toc-active">
    
   <ul>
-  <li><a href="#download-r-and-rstudio" id="toc-download-r-and-rstudio" class="nav-link active" data-scroll-target="#download-r-and-rstudio">Download R and RStudio</a></li>
-  <li><a href="#folder-organization" id="toc-folder-organization" class="nav-link" data-scroll-target="#folder-organization">Folder organization</a>
+  <li><a href="#what-is-r-set-up-and-launch" id="toc-what-is-r-set-up-and-launch" class="nav-link active" data-scroll-target="#what-is-r-set-up-and-launch">What is R? Set-up and launch</a></li>
+  <li><a href="#general-best-practices" id="toc-general-best-practices" class="nav-link" data-scroll-target="#general-best-practices">General best practices</a>
   <ul class="collapse">
+  <li><a href="#folder-organization" id="toc-folder-organization" class="nav-link" data-scroll-target="#folder-organization">Folder organization</a></li>
   <li><a href="#naming-convention" id="toc-naming-convention" class="nav-link" data-scroll-target="#naming-convention">Naming convention</a></li>
+  <li><a href="#when-writing-code" id="toc-when-writing-code" class="nav-link" data-scroll-target="#when-writing-code">When writing code</a></li>
   </ul></li>
-  <li><a href="#first-step-in-r" id="toc-first-step-in-r" class="nav-link" data-scroll-target="#first-step-in-r">First step in R</a>
+  <li><a href="#first-step-in-rrstudio" id="toc-first-step-in-rrstudio" class="nav-link" data-scroll-target="#first-step-in-rrstudio">First step in R/Rstudio</a>
   <ul class="collapse">
+  <li><a href="#some-useful-terms" id="toc-some-useful-terms" class="nav-link" data-scroll-target="#some-useful-terms">Some useful terms</a></li>
   <li><a href="#open-a-script" id="toc-open-a-script" class="nav-link" data-scroll-target="#open-a-script">Open a script</a></li>
-  <li><a href="#our-first-data" id="toc-our-first-data" class="nav-link" data-scroll-target="#our-first-data">Our first data</a></li>
+  <li><a href="#our-first-data-manipulation" id="toc-our-first-data-manipulation" class="nav-link" data-scroll-target="#our-first-data-manipulation">Our first data manipulation</a></li>
   <li><a href="#data-description" id="toc-data-description" class="nav-link" data-scroll-target="#data-description">Data description</a></li>
   <li><a href="#our-first-graph" id="toc-our-first-graph" class="nav-link" data-scroll-target="#our-first-graph">Our first graph!</a></li>
   <li><a href="#data-manipulation" id="toc-data-manipulation" class="nav-link" data-scroll-target="#data-manipulation">Data manipulation</a></li>
@@ -201,56 +204,46 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>For this first tutorial, we are going to download R and Rstudio, discover the software and make our first data visualisation. We are also going to see how to export them and input them in a <code>.tex</code> file.</p>
-<section id="download-r-and-rstudio" class="level2">
-<h2 class="anchored" data-anchor-id="download-r-and-rstudio">Download R and RStudio</h2>
-<p>R is a free software used in many contexts: data cleaning, data visualisation, econometrics, machine and deep learning, among others. It is an <strong>object-based</strong> format, meaning that we are going to manipulate objects through a series of command.</p>
-<p>R can be used directely from a command terminal, but we prefer to use RStudio, an IDE, to make our lifes easier.</p>
+<p>For this first tutorial, we are going to (i) download R and Rstudio, (ii) discover the software and (iii) make our first data visualisation. We are also going to see how to export them and input them in a <code>.tex</code> file.</p>
+<section id="what-is-r-set-up-and-launch" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-r-set-up-and-launch">What is R? Set-up and launch</h2>
+<p>R is a free and open-source software used in many contexts: data cleaning, data visualisation, econometrics, machine and deep learning, among others. It is supported by a lively and active user community. R is an <strong>object-based</strong> language, meaning that we are going to manipulate objects through a series of commands.</p>
+<p>R can be used directely from a command terminal, but we prefer to use RStudio, an IDE, to make our lifes easier. An IDE is an interface that eases the use of a software. The most popular one is <code>RStudio</code>. To use it, we need to:</p>
 <ol type="1">
 <li>Download R</li>
-<li>Download RStudio</li>
+<li>Then, download RStudio</li>
 </ol>
 <blockquote class="blockquote">
 <p>You can download both from here <a href="https://posit.co/download/rstudio-desktop/" class="uri">https://posit.co/download/rstudio-desktop/</a>.</p>
 </blockquote>
-<ol start="3" type="1">
-<li>Open RStudio</li>
-</ol>
 </section>
-<section id="folder-organization" class="level2">
-<h2 class="anchored" data-anchor-id="folder-organization">Folder organization</h2>
-<p>Computers are organized around folder. We are going to work in a working directory (<code>wd</code>), but we need to identify it.</p>
-<pre class="plaintext"><code>/Users/mmoglia/
+<section id="general-best-practices" class="level2">
+<h2 class="anchored" data-anchor-id="general-best-practices">General best practices</h2>
+<p>Before jumping to coding <em>per se</em>, let me recall you some best practices when performing computer-based tasks.</p>
+<section id="folder-organization" class="level3">
+<h3 class="anchored" data-anchor-id="folder-organization">Folder organization</h3>
+<p>Computers are organized around folder. We are going to work in a working directory (<code>wd</code>), but we need to identify it. My folder tree looks like it:</p>
+<pre class="plaintext"><code>/Users/mmoglia/Dropbox/
 ├── Documents/
-│   ├── Personal/
-│   │   ├── Finances/
-│   │   ├── Health/
-│   │   └── Education/
-│   └── Miscellaneous/
+│   ├── perso/
+│   │   ├── banque/
+│   │   ├── admin/
+│   │   └── festival/
 ├── Downloads/
 ├── Music/
-│   ├── Artists/
-│   │   ├── Artist_Name/
-│   │   │   ├── Albums/
-│   │   │   └── Singles/
-│   └── Playlists/
 ├── Pictures/
-│   ├── Vacations/
-│   ├── Events/
-│   ├── Family/
-│   └── Miscellaneous/
-├── Videos/
-│   ├── Movies/
-│   ├── Tutorials/
-│   └── Personal/
+│   ├── famille/
+│   ├── vacances/
 └── courses/
-    ├── 2024_ECO102/
-    ├── 2025_eco1s002/
-    └── Research/</code></pre>
+│   ├── polytechnique/
+|   |   ├── 2024_eco102/
+|   |   ├── 2025_eco1s002/
+├── research/</code></pre>
 <p>Here we are going to work in <code>~/courses/2025_eco1s002/</code>. This folder may (and should!) contains subfolders, for instance: <code>/code</code>, <code>/output</code>, <code>/raw_data</code>, etc.</p>
+</section>
 <section id="naming-convention" class="level3">
 <h3 class="anchored" data-anchor-id="naming-convention">Naming convention</h3>
-<p>A typical tip is to choose simple and short titles for the files and the scripts. For instance, this file is named <code>tutorial1.qmd</code>. Your code can be named <code>code_tutorial1</code>. It should be self-explanatory.</p>
+<p>A typical tip is to choose simple and short titles for the files and the scripts. For instance, this file is named <code>tutorial1.qmd</code>. Your code can be named <code>code_tutorial1.R</code>. It should be self-explanatory.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -265,37 +258,60 @@ Tip
 </div>
 </div>
 </section>
+<section id="when-writing-code" class="level3">
+<h3 class="anchored" data-anchor-id="when-writing-code">When writing code</h3>
+<p><strong>Always</strong> comment your code, make it readable for your future self but also for others. You may use your code in a week, a month, a year, and should be able to directly understands it! When creating objects, functions, or whatever, give it simple but understandable names. For instance, if you create a data frame containing wages for individuals aged between 25 and 30, you way call it <code>wage_25_30</code> and not <code>w2530</code> (too short) or <code>wage_individuals_aged_25_30</code> (too long).</p>
+<p>Moreover, especially for large project, you want to have different scripts. Always keep scripts short and with clear names. For instance <code>1_clean_data.R</code>, <code>2_import_wages.R</code>, <code>3_merge_datasets.R</code>, and <code>4_data_analysis.R</code>.</p>
 </section>
-<section id="first-step-in-r" class="level2">
-<h2 class="anchored" data-anchor-id="first-step-in-r">First step in R</h2>
+</section>
+<section id="first-step-in-rrstudio" class="level2">
+<h2 class="anchored" data-anchor-id="first-step-in-rrstudio">First step in R/Rstudio</h2>
+<section id="some-useful-terms" class="level3">
+<h3 class="anchored" data-anchor-id="some-useful-terms">Some useful terms</h3>
+<p>So far, we talked about <code>script</code>. We are going to manipulate <code>object</code> using <code>functions</code>. Objects can be of different <code>classes</code>: matrix, vector, character, numeric, data.frame, etc. Some functions are already in <code>R</code> but some are not. Hence, we need to load them thanks to <code>packages</code>.</p>
+</section>
 <section id="open-a-script" class="level3">
 <h3 class="anchored" data-anchor-id="open-a-script">Open a script</h3>
-<p>R has built-in functions but most useful functions should be called using <code>libraries</code>. These libraries should be first downloaded then loaded into your project.</p>
+<p>We are going to create our first script (the extension is <code>.R</code>). This script contains all commands you want to run. R has built-in functions but most useful functions should be called using <code>library()</code>. These libraries should be first downloaded then loaded into your project.</p>
 <p>First, open RStudio and opens a new script. You should have an empty page. You may want to write some words at the top of it to have an idea of what this code does. You can use <code>#</code> to comment code.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#_______________________________________</span></span>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#-------------------------------------------------------------------------------</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># This script opens a dataset and proceeds</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># to data visualization.</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Author: Matéo Moglia</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Date: 12/02/2025</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">#_______________________________________</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">#-------------------------------------------------------------------------------</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"/Users/mmoglia/Dropbox/courses/polytechnique/2025_eco1s002/site/2025_eco1s002"</span>)</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>path <span class="ot">&lt;-</span> <span class="st">"/Users/mmoglia/Dropbox/courses/polytechnique/2025_eco1s002/site/2025_eco1s002"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Set your working directory</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"/Users/mmoglia/Dropbox/courses/polytechnique/2025_eco1s002/site"</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>path <span class="ot">&lt;-</span> <span class="st">"/Users/mmoglia/Dropbox/courses/polytechnique/2025_eco1s002/site"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Here, I set the working directory and create an object called <code>path</code> using the <code>&lt;-</code> operator. I will be able to call my path thanks to this object instead of typing the path everytime I need it.</p>
+<p>Here, I set the working directory using <code>setwd()</code>. Notice that we created our first object, named <code>path</code> using the assignment operator <code>&lt;-</code> (I personally prefer to use <code>=</code> which works exactly the same).</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>What is the class of <code>path</code>? <strong>Hint: use the function <code>class()</code></strong></p>
+</div>
+</div>
 </section>
-<section id="our-first-data" class="level3">
-<h3 class="anchored" data-anchor-id="our-first-data">Our first data</h3>
-<p>We can load a built-in dataframe, the <code>iris</code> dataset, into an object called <code>data</code>.</p>
+<section id="our-first-data-manipulation" class="level3">
+<h3 class="anchored" data-anchor-id="our-first-data-manipulation">Our first data manipulation</h3>
+<p>We can load a very famous built-in data set, the <code>iris</code> dataset, into an object called <code>data</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> iris</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">=</span> iris <span class="co"># Attribute to data the data set iris</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(data) <span class="co"># Check its class</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "data.frame"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data) <span class="co"># Preview the first lines of data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
 1          5.1         3.5          1.4         0.2  setosa
@@ -306,24 +322,38 @@ Tip
 6          5.4         3.9          1.7         0.4  setosa</code></pre>
 </div>
 </div>
+<p>Notice that the two objects we created so far can be seen in the Environment pane.</p>
 </section>
 <section id="data-description" class="level3">
 <h3 class="anchored" data-anchor-id="data-description">Data description</h3>
-<p>By clicking on the object in the <code>Environement</code> panel, I can visualize it. I can also write some code to describe it:</p>
+<p>By clicking on the object in the <code>Environement</code> panel, you can visualize it, but you can also write some code to describe it. As we just check, <code>data</code> is a <code>data.frame</code> object. It is made of several columns and rows. To call a specific column in a dataframe, we use the <code>$</code> operator. To know all the column names in <code>data</code>, we can use the function <code>names()</code>. To know the “size” of the dataframe, the right function is <code>dim()</code>: the first element is the number of rows and the second the number of columns.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can also call a column by its position in the dataframe. For instance, to call the second column you can type <code>data[,2]</code>. For the second row: <code>data[,2]</code>. What should you write to print the 10th element of the 3rd column?</p>
+</div>
+</div>
+<p>We know how to call specific part of the dataframe. To describe the data, we can use several built-in functions.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(data<span class="sc">$</span>Species)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(data<span class="sc">$</span>Species) <span class="co"># To make a frequency table</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     setosa versicolor  virginica 
         50         50         50 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(data<span class="sc">$</span>Sepal.Length)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(data<span class="sc">$</span>Sepal.Length) <span class="co"># To provide summary statistics</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
   4.300   5.100   5.800   5.843   6.400   7.900 </code></pre>
 </div>
 </div>
-<p>Here, I use the <code>table</code> function to have a frequency table of the variable <code>Species</code> and the function <code>summary</code> to compute summary statistics of the variable <code>Sepal.Length</code>.</p>
 <p>Now, I want to visualize the data. To do so, we can use base R function <code>plot</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(iris<span class="sc">$</span>Sepal.Length,iris<span class="sc">$</span>Sepal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -545,7 +575,7 @@ Tip
 </section>
 <section id="first-step-in-latex" class="level2">
 <h2 class="anchored" data-anchor-id="first-step-in-latex">First step in LaTeX</h2>
-<p>LaTeX is very popular software to produce scientic writings. It is extremely easy to use. From now on, it is mandatory to produce output you would hand using LaTeX. You have three options to use LaTeX:</p>
+<p>LaTeX is very popular software to produce scientic writings. It is relatively easy to use. From now on, it is mandatory to produce output you would hand using LaTeX. You have three options to use LaTeX:</p>
 <ol type="1">
 <li>Use any text editor and compile the file using the console</li>
 <li>Use an IDE, like TexStudio or TexLive</li>
@@ -556,11 +586,18 @@ Tip
 </blockquote>
 <p>Open a blank project in Overleaf. It should look like that:</p>
 <pre><code>\documentclass{article}
+
+%% PREAMBULE ------------------
+
 \usepackage{graphicx} % Required for inserting images
+
+%% METADATA -------------------
 
 \title{Tutorial one}
 \author{Matéo Moglia}
 \date{February 2024}
+
+%% DOCUMENT START ------------
 
 \begin{document}
 
@@ -569,16 +606,33 @@ Tip
 \section{Introduction}
 
 \end{document}</code></pre>
-<p>You can directly write any text you like.</p>
+<p>Three elements are mandatory here: the <code>\documentclass{}</code> call, the <code>\begin{document}</code> and the <code>\end{docoment}</code> parts. All texts should be these last two commands. The preambule is of high importance: it allows you to load packages to perform specific tasks. Here, <code>graphicx</code> is useful to input images. Other popular packages include:</p>
+<ul>
+<li><code>geometry</code> allows you to change the margins of the pages,</li>
+<li><code>booktab</code> to build nice-looking tables</li>
+<li><code>tikz</code> to draw graphs directly in LaTeX</li>
+<li><code>xcolor</code> to create and choose your favorite colors</li>
+</ul>
+<p>You can then directly write any text you like after <code>\begin{document}</code>.</p>
 <section id="math-mode" class="level3">
 <h3 class="anchored" data-anchor-id="math-mode">Math mode</h3>
 <p>Most interesting is the math mode. You can write in line using <code>$ x = y$</code> or in an equation environment:</p>
 <pre><code>\begin{equation}
   \mu_k = \int_0^{+\infty} x^k f(x) dx = \int_0^{+\infty} t^{-\frac{k}{\alpha}} \exp ^{-t} dt
 \end{equation}</code></pre>
-<blockquote class="blockquote">
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>An environment starts with <code>\begin{name}</code> and ends with <code>\end{name}</code>. The environment can be an equation, to center a large chunk of text, a figure, a table, etc.</p>
-</blockquote>
+</div>
+</div>
 </section>
 <section id="include-our-results" class="level3">
 <h3 class="anchored" data-anchor-id="include-our-results">Include our results</h3>

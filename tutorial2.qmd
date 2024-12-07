@@ -1,5 +1,5 @@
 ---
-title: "Tutorial 2"
+title: "Tutorial 2: OLS and first repliction"
 format: html
 editor: visual
 toc: true

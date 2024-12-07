@@ -18,109 +18,121 @@ if (any(installed_packages == FALSE)) {
 invisible(lapply(packages, library, character.only = TRUE))
 ```
 
+For this first tutorial, we are going to (i) download R and Rstudio, (ii) discover the software and (iii) make our first data visualisation. We are also going to see how to export them and input them in a `.tex` file.
 
-For this first tutorial, we are going to download R and Rstudio, discover the software and make our first data visualisation. We are also going to see how to export them and input them in a `.tex` file.
+## What is R? Set-up and launch
 
-## Download R and RStudio
+R is a free and open-source software used in many contexts: data cleaning, data visualisation, econometrics, machine and deep learning, among others. It is supported by a lively and active user community. R is an **object-based** language, meaning that we are going to manipulate objects through a series of commands. 
 
-R is a free software used in many contexts: data cleaning, data visualisation, econometrics, machine and deep learning, among others. It is an **object-based** format, meaning that we are going to manipulate objects through a series of command.
-
-R can be used directely from a command terminal, but we prefer to use RStudio, an IDE, to make our lifes easier.
+R can be used directely from a command terminal, but we prefer to use RStudio, an IDE, to make our lifes easier. An IDE is an interface that eases the use of a software. The most popular one is `RStudio`. To use it, we need to:
 
 1.  Download R
-2.  Download RStudio
+2.  Then, download RStudio
 
 > You can download both from here <https://posit.co/download/rstudio-desktop/>.
 
-3.  Open RStudio
+## General best practices
 
-## Folder organization
+Before jumping to coding *per se*, let me recall you some best practices when performing computer-based tasks.
 
-Computers are organized around folder. We are going to work in a working directory (`wd`), but we need to identify it.
+### Folder organization
+
+Computers are organized around folder. We are going to work in a working directory (`wd`), but we need to identify it. My folder tree looks like it:
 
 ``` plaintext
-/Users/mmoglia/
+/Users/mmoglia/Dropbox/
 ├── Documents/
-│   ├── Personal/
-│   │   ├── Finances/
-│   │   ├── Health/
-│   │   └── Education/
-│   └── Miscellaneous/
+│   ├── perso/
+│   │   ├── banque/
+│   │   ├── admin/
+│   │   └── festival/
 ├── Downloads/
 ├── Music/
-│   ├── Artists/
-│   │   ├── Artist_Name/
-│   │   │   ├── Albums/
-│   │   │   └── Singles/
-│   └── Playlists/
 ├── Pictures/
-│   ├── Vacations/
-│   ├── Events/
-│   ├── Family/
-│   └── Miscellaneous/
-├── Videos/
-│   ├── Movies/
-│   ├── Tutorials/
-│   └── Personal/
+│   ├── famille/
+│   ├── vacances/
 └── courses/
-    ├── 2024_ECO102/
-    ├── 2025_eco1s002/
-    └── Research/
+│   ├── polytechnique/
+|   |   ├── 2024_eco102/
+|   |   ├── 2025_eco1s002/
+├── research/
 ```
 
 Here we are going to work in `~/courses/2025_eco1s002/`. This folder may (and should!) contains subfolders, for instance: `/code`, `/output`, `/raw_data`, etc.
 
 ### Naming convention
 
-A typical tip is to choose simple and short titles for the files and the scripts. For instance, this file is named `tutorial1.qmd`. Your code can be named `code_tutorial1`. It should be self-explanatory.
+A typical tip is to choose simple and short titles for the files and the scripts. For instance, this file is named `tutorial1.qmd`. Your code can be named `code_tutorial1.R`. It should be self-explanatory.
 
 ::: callout-tip
 Avoid at all cost to use spaces or special characters in your file names. Prefer instead an underscore or a score.
 :::
 
-## First step in R
+### When writing code
+
+**Always** comment your code, make it readable for your future self but also for others. You may use your code in a week, a month, a year, and should be able to directly understands it! When creating objects, functions, or whatever, give it simple but understandable names. For instance, if you create a data frame containing wages for individuals aged between 25 and 30, you way call it `wage_25_30` and not `w2530` (too short) or `wage_individuals_aged_25_30` (too long). 
+
+Moreover, especially for large project, you want to have different scripts. Always keep scripts short and with clear names. For instance `1_clean_data.R`, `2_import_wages.R`, `3_merge_datasets.R`, and `4_data_analysis.R`.
+
+## First step in R/Rstudio
+
+### Some useful terms
+
+So far, we talked about `script`. We are going to manipulate `object` using `functions`. Objects can be of different `classes`: matrix, vector, character, numeric, data.frame, etc. Some functions are already in `R` but some are not. Hence, we need to load them thanks to `packages`. 
 
 ### Open a script
 
-R has built-in functions but most useful functions should be called using `libraries`. These libraries should be first downloaded then loaded into your project.
+We are going to create our first script (the extension is `.R`). This script contains all commands you want to run. R has built-in functions but most useful functions should be called using `library()`. These libraries should be first downloaded then loaded into your project. 
 
 First, open RStudio and opens a new script. You should have an empty page. You may want to write some words at the top of it to have an idea of what this code does. You can use `#` to comment code.
 
 ```{r}
-#_______________________________________
+#-------------------------------------------------------------------------------
 # This script opens a dataset and proceeds
 # to data visualization.
 #
 # Author: Matéo Moglia
 # Date: 12/02/2025
-#_______________________________________
+#-------------------------------------------------------------------------------
 
-setwd("/Users/mmoglia/Dropbox/courses/polytechnique/2025_eco1s002/site/2025_eco1s002")
-path <- "/Users/mmoglia/Dropbox/courses/polytechnique/2025_eco1s002/site/2025_eco1s002"
+# Set your working directory
+setwd("/Users/mmoglia/Dropbox/courses/polytechnique/2025_eco1s002/site")
+path <- "/Users/mmoglia/Dropbox/courses/polytechnique/2025_eco1s002/site"
 ```
 
-Here, I set the working directory and create an object called `path` using the `<-` operator. I will be able to call my path thanks to this object instead of typing the path everytime I need it.
+Here, I set the working directory using `setwd()`. Notice that we created our first object, named `path` using the assignment operator `<-` (I personally prefer to use `=` which works exactly the same). 
 
-### Our first data
+::: callout-tip
+What is the class of `path`? **Hint: use the function `class()`**
+:::
 
-We can load a built-in dataframe, the `iris` dataset, into an object called `data`.
+### Our first data manipulation
+
+We can load a very famous built-in data set, the `iris` dataset, into an object called `data`.
 
 ```{r}
-data <- iris
-class(data)
-head(data)
+data = iris # Attribute to data the data set iris
+class(data) # Check its class
+head(data) # Preview the first lines of data
 ```
+
+Notice that the two objects we created so far can be seen in the Environment pane. 
 
 ### Data description
 
-By clicking on the object in the `Environement` panel, I can visualize it. I can also write some code to describe it:
+By clicking on the object in the `Environement` panel, you can visualize it, but you can also write some code to describe it. As we just check, `data` is a `data.frame` object. It is made of several columns and rows. To call a specific column in a dataframe, we use the `$` operator.
+To know all the column names in `data`, we can use the function `names()`. To know the "size" of the dataframe, the right function is `dim()`: the first element is the number of rows and the second the number of columns. 
+
+::: callout-tip
+You can also call a column by its position in the dataframe. For instance, to call the second column you can type `data[,2]`. For the second row: `data[,2]`. What should you write to print the 10th element of the 3rd column? 
+:::
+
+We know how to call specific part of the dataframe. To describe the data, we can use several built-in functions.
 
 ```{r}
-table(data$Species)
-summary(data$Sepal.Length)
+table(data$Species) # To make a frequency table
+summary(data$Sepal.Length) # To provide summary statistics
 ```
-
-Here, I use the `table` function to have a frequency table of the variable `Species` and the function `summary` to compute summary statistics of the variable `Sepal.Length`.
 
 Now, I want to visualize the data. To do so, we can use base R function `plot`:
 
@@ -255,7 +267,7 @@ print(xtable(dplyr_grouped), type = "latex", file = paste0(path,"/output/sepal_l
 
 ## First step in LaTeX
 
-LaTeX is very popular software to produce scientic writings. It is extremely easy to use. From now on, it is mandatory to produce output you would hand using LaTeX. You have three options to use LaTeX:
+LaTeX is very popular software to produce scientic writings. It is relatively easy to use. From now on, it is mandatory to produce output you would hand using LaTeX. You have three options to use LaTeX:
 
 1.  Use any text editor and compile the file using the console
 2.  Use an IDE, like TexStudio or TexLive
@@ -265,13 +277,20 @@ LaTeX is very popular software to produce scientic writings. It is extremely eas
 
 Open a blank project in Overleaf. It should look like that:
 
-```         
+```
 \documentclass{article}
+
+%% PREAMBULE ------------------
+
 \usepackage{graphicx} % Required for inserting images
+
+%% METADATA -------------------
 
 \title{Tutorial one}
 \author{Matéo Moglia}
 \date{February 2024}
+
+%% DOCUMENT START ------------
 
 \begin{document}
 
@@ -282,23 +301,32 @@ Open a blank project in Overleaf. It should look like that:
 \end{document}
 ```
 
-You can directly write any text you like.
+Three elements are mandatory here: the `\documentclass{}` call, the `\begin{document}` and the `\end{docoment}` parts. All texts should be these last two commands. The preambule is of high importance: it allows you to load packages to perform specific tasks. Here, `graphicx` is useful to input images. Other popular packages include:
+
+-   `geometry` allows you to change the margins of the pages, 
+-   `booktab` to build nice-looking tables
+-   `tikz` to draw graphs directly in LaTeX
+-   `xcolor` to create and choose your favorite colors
+
+You can then directly write any text you like after `\begin{document}`. 
 
 ### Math mode
 
 Most interesting is the math mode. You can write in line using `$ x = y$` or in an equation environment:
 
-```         
+```
 \begin{equation}
   \mu_k = \int_0^{+\infty} x^k f(x) dx = \int_0^{+\infty} t^{-\frac{k}{\alpha}} \exp ^{-t} dt
 \end{equation}
 ```
 
-> An environment starts with `\begin{name}` and ends with `\end{name}`. The environment can be an equation, to center a large chunk of text, a figure, a table, etc.
+::: callout-tip
+An environment starts with `\begin{name}` and ends with `\end{name}`. The environment can be an equation, to center a large chunk of text, a figure, a table, etc.
+:::
 
 ### Include our results
 
-```         
+``` 
 \begin{figure}
   \centering # To center the graph
   \includegraphics[width=8,height=10]{graph/graph_iris.png}
@@ -310,7 +338,7 @@ We work within the `figure` environment, center the graphic, include it with som
 
 To input the table, we can use `\input{}`:
 
-```         
+```    
 \input{table/sepal_large.tex}
 ```
 

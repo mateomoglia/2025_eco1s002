@@ -1,30 +1,35 @@
 ---
-title: "Home"
+title: "Welcome to this class!"
 format: html
 editor: visual
 ---
 
-## Welcome to the class!
-
-This website will walk you through the tutorials for the *Topics in Economics* (1S002) of Ecole Polytechnique Bachelor program.
+This website will walk you through the tutorials for the *Topics in Economics* (1S002) course of Ecole Polytechnique's Bachelor program. The course has 3 main objectives: (i) know the basics of R (ii) manipulate the standard statistical and empirical tools (iii) write an original research output.
 
 > **Practical information**
 >
-> TA: [Mateo Moglia](https://mateomoglia.github.io)
+> **TA**: [Mateo Moglia](https://mateomoglia.github.io)
 >
-> Schedule: Wednesday morning (check Synapses regularly for any changes in room)
+> **Schedule**: Wednesday morning (check Synapses regularly for any changes in room).
 >
-> Required software: R and its IDE, RStudio. You may download it [here](https://posit.co/download/rstudio-desktop/).
->
-> Create a free account to use [Overleaf](https://www.overleaf.com).
+> **Required software**: R and its IDE, RStudio (all free). You may download it [here](https://posit.co/download/rstudio-desktop/). Create a free account to use [Overleaf](https://www.overleaf.com). Bring you own laptop or use the lab's computer. The data are made available on Synapses. 
+> 
+> **Rules**: Send me an email if you miss the class. You are grown-up adults, I trust you to follow thoroughly the class. Do not hesitate to work in small groups. 
+
+::: {.callout-caution collapse="true"}
+## Log
+
+-   v0.1 - 7/12/24 - Tutorial 1
+-   v0.0 - 5/12/24 - Creation
+:::
 
 ## Class outline
 
--   [Tutorial 1](tutorial1.hmtl) (February 12)
-    -   First hand on R
-    -   First hand on LaTeX
-    -   Presentation of the group projects
--   Tutorial 2 (February 19)
+-   [Tutorial 1](tutorial1.hmtl) *(February 12, computer lab)*
+    -   Presentation of the class objectives
+    -   First hands on R
+    -   First hands on LaTeX
+-   [Tutorial 2](tutorial2.hmtl) *(February 19, computer lab)*
     -   Replication of Mankiw et al. (1997)
     -   OLS estimator
 -   Tutorial 3 (March 5)
@@ -52,4 +57,13 @@ This website will walk you through the tutorials for the *Topics in Economics* (
 -   Tutorial 13 (May 21)
     -   Final Q&A before the exam
 -   Tutorial 14 (May 28)
-    -   Restitution of the group project
+    -   Restitution of the group projects
+
+## About this site and my inspirations
+
+I created this site for teaching purpose. It is of course perfectible and any constructive comment is more than welcome ([write me an email!](mailto:mateo.moglia@gmail.com)). I took inspiration from these sources:
+
+-   The great [Florian Oswald](https://floswald.github.io) teaching material at Sciences Po. Do not hesitate to check his teaching material (in English) 
+
+-   The [tutorials](https://mtes-mct.github.io/parcours-r/) of the French Ministry of Ecology (in French) 
+-   The infamous online book [Econometrics with R](https://www.econometrics-with-r.org) (in English)
