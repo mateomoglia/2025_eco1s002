@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Welcome to this class! – Petite classe ECO1S002</title>
+<title>Tutorial 2: OLS and first repliction – Petite classe ECO1S002</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,10 +67,39 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
-<body class="nav-sidebar docked fullcontent">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -79,7 +108,9 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./home.html">Home</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Petite classe ECO1S002
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -98,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./home.html" class="sidebar-item-text sidebar-link active">
+  <a href="./home.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
@@ -125,13 +156,30 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+   
+  <ul>
+  <li><a href="#quick-model-summary" id="toc-quick-model-summary" class="nav-link active" data-scroll-target="#quick-model-summary">Quick model summary</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a>
+  <ul class="collapse">
+  <li><a href="#warm-up-return-to-scale" id="toc-warm-up-return-to-scale" class="nav-link" data-scroll-target="#warm-up-return-to-scale">1. Warm-up: Return to scale</a></li>
+  <li><a href="#solve-the-maximization-problem" id="toc-solve-the-maximization-problem" class="nav-link" data-scroll-target="#solve-the-maximization-problem">2. Solve the maximization problem</a></li>
+  <li><a href="#per-worker-term" id="toc-per-worker-term" class="nav-link" data-scroll-target="#per-worker-term">3. Per worker term</a></li>
+  <li><a href="#capital-accumulation" id="toc-capital-accumulation" class="nav-link" data-scroll-target="#capital-accumulation">4. Capital accumulation</a></li>
+  <li><a href="#steady-state" id="toc-steady-state" class="nav-link" data-scroll-target="#steady-state">5. Steady state</a></li>
+  <li><a href="#comparative-statics" id="toc-comparative-statics" class="nav-link" data-scroll-target="#comparative-statics">6. Comparative statics</a></li>
+  <li><a href="#balanced-growth-path-bonus" id="toc-balanced-growth-path-bonus" class="nav-link" data-scroll-target="#balanced-growth-path-bonus">7. Balanced growth path [Bonus]</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Welcome to this class!</h1>
+<h1 class="title">Tutorial 2: OLS and first repliction</h1>
 </div>
 
 
@@ -148,121 +196,85 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This website will walk you through the tutorials for the <em>Topics in Economics</em> (1S002) course of Ecole Polytechnique’s Bachelor program. The course has 3 main objectives: (i) know the basics of R (ii) manipulate the standard statistical and empirical tools (iii) write an original research output.</p>
-<blockquote class="blockquote">
-<p><strong>Practical information</strong></p>
-<p><strong>TA</strong>: <a href="https://mateomoglia.github.io">Mateo Moglia</a></p>
-<p><strong>Schedule</strong>: Wednesday morning (check Synapses regularly for any changes in room).</p>
-<p><strong>Required software</strong>: R and its IDE, RStudio (all free). You may download it <a href="https://posit.co/download/rstudio-desktop/">here</a>. Create a free account to use <a href="https://www.overleaf.com">Overleaf</a>. Bring you own laptop or use the lab’s computer. The data used in the tutorials are on Moodle. You will also be able to download to find the solved exercices after each tutorial on Moodle.</p>
-<p><strong>Rules</strong>: Send me an email if you miss the class. You are grown-up adults, I trust you to follow thoroughly the class. Do not hesitate to work in small groups.</p>
-</blockquote>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Log
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ul>
-<li>v1.1 - 25/1/25 - Tutorial 3</li>
-<li>v1.0 - 23/1/25 - Tutorial 2</li>
-<li>v0.1 - 7/12/24 - Tutorial 1</li>
-<li>v0.0 - 5/12/24 - Creation</li>
-</ul>
-</div>
-</div>
-</div>
-<section id="class-outline" class="level2">
-<h2 class="anchored" data-anchor-id="class-outline">Class outline</h2>
-<ul>
-<li><a href="tutorial1.hmtl">Tutorial 1</a> <em>(February 12, computer session)</em>
-<ul>
-<li>Presentation of the class objectives</li>
-<li>First hands on R</li>
-<li>First hands on LaTeX</li>
-</ul></li>
-<li><a href="tutorial2.html">Tutorial 2</a> <em>(February 19)</em>
-<ul>
-<li>Baseline Solow model derivations</li>
-<li>Solow model extensions</li>
-</ul></li>
-<li><a href="tutorial3.hmtl">Tutorial 3</a> <em>(March 5, computer session)</em>
-<ul>
-<li>Replication of Mankiw et al.&nbsp;(1997)</li>
-<li>First hands on the OLS estimator</li>
-<li>Estimating the baseline and augmented Solow models</li>
-</ul></li>
-<li>Tutorial 4 <em>(March 12, computer session)</em>
-<ul>
-<li>OLS bias and Instrumental Variables</li>
-<li>Replication of Acemoglu et al.&nbsp;(2010)</li>
-<li>Export the results</li>
-</ul></li>
-<li>Tutorial 5 <em>(March 19)</em>
-<ul>
-<li>Discussion on the group project</li>
-<li>Q&amp;A</li>
-</ul></li>
-<li>Tutorial 6 <em>(March 19, computer session)</em>
-<ul>
-<li>Autonomous replication of an IV paper <em>(graded)</em></li>
-</ul></li>
-<li>Tutorial 7 <em>(April 2)</em>
-<ul>
-<li>Treatment effect</li>
-<li>Difference-in-differences estimator</li>
-</ul></li>
-</ul>
-<ul>
-<li>Tutorial 8 <em>(April 9)</em>
-<ul>
-<li>Refresher on the utility maximization problem</li>
-<li>The social multiplier</li>
-</ul></li>
-<li>Tutorial 9 <em>(April 16)</em>
-<ul>
-<li>Intertemporal maximization problem</li>
-</ul></li>
-<li>Tutorial 10 <em>(April 30, computer session)</em>
-<ul>
-<li>Spatial segregation</li>
-</ul></li>
-<li>Tutorial 11 <em>(May 7)</em>
-<ul>
-<li>The marriage market</li>
-<li>Q&amp;A</li>
-</ul></li>
-<li>Tutorial 12 <em>(May 14, computer session)</em>
-<ul>
-<li>Regression in discontinuity design</li>
-<li>Mock exam correction</li>
-</ul></li>
-<li>Tutorial 13 <em>(May 21)</em>
-<ul>
-<li>Summarizing the class and methods covered</li>
-<li>Final Q&amp;A</li>
-</ul></li>
-<li>Tutorial 14 <em>(May 28)</em>
-<ul>
-<li>Restitution of the group projects <em>(graded)</em></li>
-</ul></li>
-</ul>
+<p>We are going to dig into into the workhorse model in macroeconomics: the Solow model.</p>
+<section id="quick-model-summary" class="level2">
+<h2 class="anchored" data-anchor-id="quick-model-summary">Quick model summary</h2>
+<ol type="1">
+<li><p><strong>Production Function</strong>: The economy produces output using a production function of the form: <span class="math display">\[ Y_t = F(K_t, L_t) \]</span> where <span class="math inline">\(Y\)</span> is output, <span class="math inline">\(K\)</span> is capital, and <span class="math inline">\(L\)</span> is labor. Often, a Cobb-Douglas production function is assumed: <span class="math display">\[ Y_t = K_t^\alpha L_t^{1-\alpha} \]</span> where <span class="math inline">\(0 &lt; \alpha &lt; 1\)</span>. Capital comes at price <span class="math inline">\(r\)</span> and labor comes at price <span class="math inline">\(w\)</span>.</p></li>
+<li><p><strong>Constant Returns to Scale</strong>: Doubling the inputs (capital and labor) doubles the output.</p></li>
+<li><p><strong>Diminishing Returns</strong>: Increasing one input, holding the other constant, leads to smaller and smaller increases in output.</p></li>
+<li><p><strong>Exogenous Saving Rate</strong>: A fixed fraction <span class="math inline">\(s\)</span> of output is saved and invested.</p></li>
+<li><p><strong>Capital Depreciation</strong>: A constant fraction <span class="math inline">\(\delta\)</span> of capital depreciates each period.</p></li>
+<li><p><strong>Population Growth</strong>: The labor force grows at a constant rate <span class="math inline">\(n\)</span>.</p></li>
+<li><p><strong>Technological Progress</strong>: Technology improves at an exogenous rate <span class="math inline">\(g\)</span>, increasing productivity over time.</p></li>
+<li><p><strong>Steady State</strong>: In the long run, the economy reaches a steady state where capital per worker (<span class="math inline">\(k\)</span>) and output per worker (<span class="math inline">\(y\)</span>) are constant.</p></li>
+</ol>
 </section>
-<section id="about-this-site-and-my-inspirations" class="level2">
-<h2 class="anchored" data-anchor-id="about-this-site-and-my-inspirations">About this site and my inspirations</h2>
-<p>I created this site for teaching purpose. It is of course perfectible and any constructive comment is more than welcome (<a href="mailto:mateo.moglia@gmail.com">write me an email!</a>). I took inspiration from these sources:</p>
-<ul>
-<li><p>The great <a href="https://floswald.github.io">Florian Oswald</a> teaching material at Sciences Po. Do not hesitate to check his teaching material (in English)</p></li>
-<li><p>The <a href="https://mtes-mct.github.io/parcours-r/">tutorials</a> of the French Ministry of Ecology (in French)</p></li>
-<li><p>The infamous online book <a href="https://www.econometrics-with-r.org">Econometrics with R</a> (in English)</p></li>
-</ul>
+<section id="exercises" class="level2">
+<h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
+<section id="warm-up-return-to-scale" class="level3">
+<h3 class="anchored" data-anchor-id="warm-up-return-to-scale">1. Warm-up: Return to scale</h3>
+<p>Let <span class="math inline">\(\lambda \in (0,1)\)</span>, if <span class="math inline">\(F(\lambda X, \lambda Y) &lt; \lambda F(X,Y)\)</span>, the function has decreasing return to scales (and increasing for <span class="math inline">\(&gt;\)</span>). If <span class="math inline">\(F(\lambda X, \lambda Y) = \lambda F(X,Y)\)</span>, the function has constant return to scale. For the following functions, state if they exhibit positive, constant, or negative return to scale.</p>
+<ol type="1">
+<li><span class="math inline">\(y_1 = 10x^2y^2\)</span></li>
+<li><span class="math inline">\(y_2 = \frac{1}{2}x^{1/3}y^{1/2}\)</span></li>
+<li><span class="math inline">\(y_3 = x + 2y\)</span></li>
+<li><span class="math inline">\(y_4 = \sqrt{x} + \log(y)\)</span></li>
+</ol>
+</section>
+<section id="solve-the-maximization-problem" class="level3">
+<h3 class="anchored" data-anchor-id="solve-the-maximization-problem">2. Solve the maximization problem</h3>
+<ol type="1">
+<li>Show that if <span class="math inline">\(x=0\)</span> and/or <span class="math inline">\(y=0\)</span> production does not occur</li>
+<li>Show that marginal productivity is positive for capital and wage</li>
+<li>Show that marginal productivity is decreasing for capital and wage</li>
+<li>Write the down the profit maximization program</li>
+<li>Solve the program</li>
+</ol>
+</section>
+<section id="per-worker-term" class="level3">
+<h3 class="anchored" data-anchor-id="per-worker-term">3. Per worker term</h3>
+<p>Denote <span class="math inline">\(y=Y/L\)</span>, the per-worker production, and <span class="math inline">\(k=K/L\)</span> the per-worker capital.</p>
+<ol type="1">
+<li>Show that <span class="math inline">\(y=Ak^\alpha\)</span></li>
+</ol>
+</section>
+<section id="capital-accumulation" class="level3">
+<h3 class="anchored" data-anchor-id="capital-accumulation">4. Capital accumulation</h3>
+<p>Capital accumulation is given by <span class="math inline">\(\dot K=sY-\delta K\)</span>.</p>
+<ol type="1">
+<li>Interpret this equation</li>
+<li>Show that <span class="math inline">\(\frac{\dot K}{K} = s\frac{y}{k}-\delta\)</span></li>
+<li>Show that <span class="math inline">\(\dot k = sAk^\alpha - (\delta - n)k\)</span></li>
+<li>What happen if <span class="math inline">\(sAk^\alpha &gt; (\delta - n)k\)</span> ?</li>
+</ol>
+</section>
+<section id="steady-state" class="level3">
+<h3 class="anchored" data-anchor-id="steady-state">5. Steady state</h3>
+<p>A steady-state is a capital stock per capita <span class="math inline">\(k^\star\)</span> where, when reached, <span class="math inline">\(\dot k = 0\)</span>.</p>
+<ol type="1">
+<li>What is the steady-state level of output per capita <span class="math inline">\(y^\star\)</span> ?</li>
+<li>Interpret</li>
+</ol>
+</section>
+<section id="comparative-statics" class="level3">
+<h3 class="anchored" data-anchor-id="comparative-statics">6. Comparative statics</h3>
+<p>Comparative statics exercises are thought experiment in which we change the value of a parameter and compare the past and new equilibrium. Consider a new saving rate <span class="math inline">\(s'&gt;s\)</span>.</p>
+<ol type="1">
+<li>How does capital accumulation change?</li>
+<li>How does change the steady-state capital stock?</li>
+<li>How does change the stead-state level of output per capita?</li>
+</ol>
+</section>
+<section id="balanced-growth-path-bonus" class="level3">
+<h3 class="anchored" data-anchor-id="balanced-growth-path-bonus">7. Balanced growth path [Bonus]</h3>
+<p>The balanced growth path is a situation during which capital per worker and output per worker grow a constant (but potentially different) rates. The steady state is a BGP with zero growth rate. Denote <span class="math inline">\(g_y\)</span> and <span class="math inline">\(g_k\)</span> the capital and output per worker growth rates .</p>
+<ol type="1">
+<li>Show that <span class="math inline">\(g_y=g_k\)</span></li>
+</ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

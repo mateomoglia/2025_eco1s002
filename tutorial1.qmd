@@ -22,7 +22,7 @@ For this first tutorial, we are going to (i) download R and Rstudio, (ii) discov
 
 ## What is R? Set-up and launch
 
-R is a free and open-source software used in many contexts: data cleaning, data visualisation, econometrics, machine and deep learning, among others. It is supported by a lively and active user community. R is an **object-based** language, meaning that we are going to manipulate objects through a series of commands. 
+R is a free and open-source software used in many contexts: data cleaning, data visualisation, econometrics, machine and deep learning, among others. It is supported by a lively and active user community. R is an **object-based** language, meaning that we are going to manipulate objects through a series of commands.
 
 R can be used directely from a command terminal, but we prefer to use RStudio, an IDE, to make our lifes easier. An IDE is an interface that eases the use of a software. The most popular one is `RStudio`. To use it, we need to:
 
@@ -70,7 +70,7 @@ Avoid at all cost to use spaces or special characters in your file names. Prefer
 
 ### When writing code
 
-**Always** comment your code, make it readable for your future self but also for others. You may use your code in a week, a month, a year, and should be able to directly understands it! When creating objects, functions, or whatever, give it simple but understandable names. For instance, if you create a data frame containing wages for individuals aged between 25 and 30, you way call it `wage_25_30` and not `w2530` (too short) or `wage_individuals_aged_25_30` (too long). 
+**Always** comment your code, make it readable for your future self but also for others. You may use your code in a week, a month, a year, and should be able to directly understands it! When creating objects, functions, or whatever, give it simple but understandable names. For instance, if you create a data frame containing wages for individuals aged between 25 and 30, you way call it `wage_25_30` and not `w2530` (too short) or `wage_individuals_aged_25_30` (too long).
 
 Moreover, especially for large project, you want to have different scripts. Always keep scripts short and with clear names. For instance `1_clean_data.R`, `2_import_wages.R`, `3_merge_datasets.R`, and `4_data_analysis.R`.
 
@@ -78,11 +78,11 @@ Moreover, especially for large project, you want to have different scripts. Alwa
 
 ### Some useful terms
 
-So far, we talked about `script`. We are going to manipulate `object` using `functions`. Objects can be of different `classes`: matrix, vector, character, numeric, data.frame, etc. Some functions are already in `R` but some are not. Hence, we need to load them thanks to `packages`. 
+So far, we talked about `script`. We are going to manipulate `object` using `functions`. Objects can be of different `classes`: matrix, vector, character, numeric, data.frame, etc. Some functions are already in `R` but some are not. Hence, we need to load them thanks to `packages`.
 
 ### Open a script
 
-We are going to create our first script (the extension is `.R`). This script contains all commands you want to run. R has built-in functions but most useful functions should be called using `library()`. These libraries should be first downloaded then loaded into your project. 
+We are going to create our first script (the extension is `.R`). This script contains all commands you want to run. R has built-in functions but most useful functions should be called using `library()`. These libraries should be first downloaded then loaded into your project.
 
 First, open RStudio and opens a new script. You should have an empty page. You may want to write some words at the top of it to have an idea of what this code does. You can use `#` to comment code.
 
@@ -96,11 +96,11 @@ First, open RStudio and opens a new script. You should have an empty page. You m
 #-------------------------------------------------------------------------------
 
 # Set your working directory
-setwd("/Users/mmoglia/Dropbox/courses/polytechnique/2025_eco1s002/site")
-path <- "/Users/mmoglia/Dropbox/courses/polytechnique/2025_eco1s002/site"
+setwd("C:/Users/mateomoglia/Dropbox/courses/polytechnique/2025_eco1s002/site")
+path <- "/Users/mateomoglia/Dropbox/courses/polytechnique/2025_eco1s002/site"
 ```
 
-Here, I set the working directory using `setwd()`. Notice that we created our first object, named `path` using the assignment operator `<-` (I personally prefer to use `=` which works exactly the same). 
+Here, I set the working directory using `setwd()`. Notice that we created our first object, named `path` using the assignment operator `<-` (I personally prefer to use `=` which works exactly the same).
 
 ::: callout-tip
 What is the class of `path`? **Hint: use the function `class()`**
@@ -116,15 +116,14 @@ class(data) # Check its class
 head(data) # Preview the first lines of data
 ```
 
-Notice that the two objects we created so far can be seen in the Environment pane. 
+Notice that the two objects we created so far can be seen in the Environment pane.
 
 ### Data description
 
-By clicking on the object in the `Environement` panel, you can visualize it, but you can also write some code to describe it. As we just check, `data` is a `data.frame` object. It is made of several columns and rows. To call a specific column in a dataframe, we use the `$` operator.
-To know all the column names in `data`, we can use the function `names()`. To know the "size" of the dataframe, the right function is `dim()`: the first element is the number of rows and the second the number of columns. 
+By clicking on the object in the `Environement` panel, you can visualize it, but you can also write some code to describe it. As we just check, `data` is a `data.frame` object. It is made of several columns and rows. To call a specific column in a dataframe, we use the `$` operator. To know all the column names in `data`, we can use the function `names()`. To know the "size" of the dataframe, the right function is `dim()`: the first element is the number of rows and the second the number of columns.
 
 ::: callout-tip
-You can also call a column by its position in the dataframe. For instance, to call the second column you can type `data[,2]`. For the second row: `data[,2]`. What should you write to print the 10th element of the 3rd column? 
+You can also call a column by its position in the dataframe. For instance, to call the second column you can type `data[,2]`. For the second row: `data[,2]`. What should you write to print the 10th element of the 3rd column?
 :::
 
 We know how to call specific part of the dataframe. To describe the data, we can use several built-in functions.
@@ -277,7 +276,7 @@ LaTeX is very popular software to produce scientic writings. It is relatively ea
 
 Open a blank project in Overleaf. It should look like that:
 
-```
+```         
 \documentclass{article}
 
 %% PREAMBULE ------------------
@@ -303,18 +302,18 @@ Open a blank project in Overleaf. It should look like that:
 
 Three elements are mandatory here: the `\documentclass{}` call, the `\begin{document}` and the `\end{docoment}` parts. All texts should be these last two commands. The preambule is of high importance: it allows you to load packages to perform specific tasks. Here, `graphicx` is useful to input images. Other popular packages include:
 
--   `geometry` allows you to change the margins of the pages, 
+-   `geometry` allows you to change the margins of the pages,
 -   `booktab` to build nice-looking tables
 -   `tikz` to draw graphs directly in LaTeX
 -   `xcolor` to create and choose your favorite colors
 
-You can then directly write any text you like after `\begin{document}`. 
+You can then directly write any text you like after `\begin{document}`.
 
 ### Math mode
 
 Most interesting is the math mode. You can write in line using `$ x = y$` or in an equation environment:
 
-```
+```         
 \begin{equation}
   \mu_k = \int_0^{+\infty} x^k f(x) dx = \int_0^{+\infty} t^{-\frac{k}{\alpha}} \exp ^{-t} dt
 \end{equation}
@@ -326,7 +325,7 @@ An environment starts with `\begin{name}` and ends with `\end{name}`. The enviro
 
 ### Include our results
 
-``` 
+```         
 \begin{figure}
   \centering # To center the graph
   \includegraphics[width=8,height=10]{graph/graph_iris.png}
@@ -338,7 +337,7 @@ We work within the `figure` environment, center the graphic, include it with som
 
 To input the table, we can use `\input{}`:
 
-```    
+```         
 \input{table/sepal_large.tex}
 ```
 

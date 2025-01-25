@@ -7,16 +7,12 @@ toc-title: ""
 toc-location: right
 ---
 
-```{r, echo=F,eval=T,message=F,warning=F}
-packages <- c("ggplot2", "readxl", "dplyr", "tidyr","xtable")
-# Install packages not yet installed
-installed_packages <- packages %in% rownames(installed.packages())
-if (any(installed_packages == FALSE)) {
-  install.packages(packages[!installed_packages])
-}
-# Packages loading
-invisible(lapply(packages, library, character.only = TRUE))
-```
+::: {.cell}
+
+:::
+
+
+
 
 We are going to dig into into the workhorse model in macroeconomics: the Solow model.
 
@@ -92,3 +88,4 @@ Comparative statics exercises are thought experiment in which we change the valu
 The balanced growth path is a situation during which capital per worker and output per worker grow a constant (but potentially different) rates. The steady state is a BGP with zero growth rate. Denote $g_y$ and $g_k$ the capital and output per worker growth rates .
 
 1.  Show that $g_y=g_k$
+
