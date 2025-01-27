@@ -27,14 +27,14 @@ This website will walk you through the tutorials for the *Topics in Economics* (
 
 ## Class outline
 
--   [Tutorial 1](tutorial1.hmtl) *(February 12, computer session)*
+-   [Tutorial 1](https://mateomoglia.github.io/2025_eco1s002/tutorial1.html) *(February 12, computer session)*
     -   Presentation of the class objectives
     -   First hands on R
     -   First hands on LaTeX
--   [Tutorial 2](tutorial2.html) *(February 19)*
+-   [Tutorial 2](https://mateomoglia.github.io/2025_eco1s002/tutorial2.html) *(February 19)*
     -   Baseline Solow model derivations
     -   Solow model extensions
--   [Tutorial 3](tutorial3.hmtl) *(March 5, computer session)*
+-   [Tutorial 3](https://mateomoglia.github.io/2025_eco1s002/tutorial3.html) *(March 5, computer session)*
     -   Replication of Mankiw et al. (1997)
     -   First hands on the OLS estimator
     -   Estimating the baseline and augmented Solow models
