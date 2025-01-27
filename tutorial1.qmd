@@ -1,10 +1,25 @@
 ---
 title: "Tutorial 1"
-format: html
-editor: visual
-toc: true
+format: 
+  revealjs:
+    theme: theme_mm.scss
+    menu:
+      side: left
+    slide-number: c
+    date-format: long
+    embed-resources: true
+toc: false
+visual: true
 toc-title: ""
 toc-location: right
+author:
+  - name: Matéo Moglia
+    email: mateo.moglia@gmail.com
+    affiliations: CREST - Institut Polytechnique de Paris
+    url: https://mateomoglia.github.io
+date: last-modified
+execute:
+  cache: true
 ---
 
 ```{r, echo=F,eval=T,message=F,warning=F}
@@ -18,13 +33,24 @@ if (any(installed_packages == FALSE)) {
 invisible(lapply(packages, library, character.only = TRUE))
 ```
 
-For this first tutorial, we are going to (i) download R and Rstudio, (ii) discover the software and (iii) make our first data visualisation. We are also going to see how to export them and input them in a `.tex` file.
+## Roadmap
+
+For this first tutorial, we are going to
+
+1.  Download R and Rstudio
+2.  Discover the software
+3.  Make our first data visualisation
+4.  Learn how to export them and input them in a `.tex` file.
 
 ## What is R? Set-up and launch
 
-R is a free and open-source software used in many contexts: data cleaning, data visualisation, econometrics, machine and deep learning, among others. It is supported by a lively and active user community. R is an **object-based** language, meaning that we are going to manipulate objects through a series of commands.
+R is a free and open-source software used in many contexts: data cleaning, data visualisation, econometrics, machine and deep learning, among others.
 
-R can be used directely from a command terminal, but we prefer to use RStudio, an IDE, to make our lifes easier. An IDE is an interface that eases the use of a software. The most popular one is `RStudio`. To use it, we need to:
+It is supported by a lively and active user community. R is an **object-based** language, meaning that we are going to manipulate objects through a series of commands.
+
+------------------------------------------------------------------------
+
+R can be used directly from a command terminal, but we prefer to use RStudio, an IDE, to make our lifes easier. An IDE is an interface that eases the use of a software. The most popular one is `RStudio`. To use it, we need to:
 
 1.  Download R
 2.  Then, download RStudio
@@ -34,6 +60,8 @@ R can be used directely from a command terminal, but we prefer to use RStudio, a
 ## General best practices
 
 Before jumping to coding *per se*, let me recall you some best practices when performing computer-based tasks.
+
+------------------------------------------------------------------------
 
 ### Folder organization
 
@@ -60,6 +88,8 @@ Computers are organized around folder. We are going to work in a working directo
 
 Here we are going to work in `~/courses/2025_eco1s002/`. This folder may (and should!) contains subfolders, for instance: `/code`, `/output`, `/raw_data`, etc.
 
+------------------------------------------------------------------------
+
 ### Naming convention
 
 A typical tip is to choose simple and short titles for the files and the scripts. For instance, this file is named `tutorial1.qmd`. Your code can be named `code_tutorial1.R`. It should be self-explanatory.
@@ -68,25 +98,43 @@ A typical tip is to choose simple and short titles for the files and the scripts
 Avoid at all cost to use spaces or special characters in your file names. Prefer instead an underscore or a score.
 :::
 
+------------------------------------------------------------------------
+
 ### When writing code
 
-**Always** comment your code, make it readable for your future self but also for others. You may use your code in a week, a month, a year, and should be able to directly understands it! When creating objects, functions, or whatever, give it simple but understandable names. For instance, if you create a data frame containing wages for individuals aged between 25 and 30, you way call it `wage_25_30` and not `w2530` (too short) or `wage_individuals_aged_25_30` (too long).
+-   **Always** comment your code, make it readable for your future self but also for others. You may use your code in a week, a month, a year, and should be able to directly understands it!
 
-Moreover, especially for large project, you want to have different scripts. Always keep scripts short and with clear names. For instance `1_clean_data.R`, `2_import_wages.R`, `3_merge_datasets.R`, and `4_data_analysis.R`.
+-   When creating objects, functions, or whatever, give it simple but understandable names.
+
+-   For instance, if you create a data frame containing wages for individuals aged between 25 and 30, you way call it `wage_25_30` and not `w2530` (too short) or `wage_individuals_aged_25_30` (too long).
+
+-   Moreover, especially for large project, you want to have different scripts. Always keep scripts short and with clear names. For instance `1_clean_data.R`, `2_import_wages.R`, `3_merge_datasets.R`, and `4_data_analysis.R`.
 
 ## First step in R/Rstudio
 
 ### Some useful terms
 
-So far, we talked about `script`. We are going to manipulate `object` using `functions`. Objects can be of different `classes`: matrix, vector, character, numeric, data.frame, etc. Some functions are already in `R` but some are not. Hence, we need to load them thanks to `packages`.
+-   So far, we talked about `script`. 
+
+-   We are going to manipulate `object` using `functions`. 
+
+-   Objects can be of different `classes`: matrix, vector, character, numeric, data.frame, etc. Some functions are already in `R` but some are not. Hence, we need to load them thanks to `packages`.
+
+------------------------------------------------------------------------
 
 ### Open a script
 
-We are going to create our first script (the extension is `.R`). This script contains all commands you want to run. R has built-in functions but most useful functions should be called using `library()`. These libraries should be first downloaded then loaded into your project.
+-   We are going to create our first script (the extension is `.R`). 
+-   This script contains all commands you want to run. R has built-in functions but most useful functions should be called using `library()`. 
+-   These libraries should be first downloaded then loaded into your project.
 
-First, open RStudio and opens a new script. You should have an empty page. You may want to write some words at the top of it to have an idea of what this code does. You can use `#` to comment code.
+-   First, open RStudio and opens a new script. 
+-   You should have an empty page. You may want to write some words at the top of it to have an idea of what this code does. You can use `#` to comment code.
+
+------------------------------------------------------------------------
 
 ```{r}
+#| echo: true
 #-------------------------------------------------------------------------------
 # This script opens a dataset and proceeds
 # to data visualization.
@@ -106,11 +154,14 @@ Here, I set the working directory using `setwd()`. Notice that we created our fi
 What is the class of `path`? **Hint: use the function `class()`**
 :::
 
+------------------------------------------------------------------------
+
 ### Our first data manipulation
 
 We can load a very famous built-in data set, the `iris` dataset, into an object called `data`.
 
 ```{r}
+#| echo: true
 data = iris # Attribute to data the data set iris
 class(data) # Check its class
 head(data) # Preview the first lines of data
@@ -118,26 +169,38 @@ head(data) # Preview the first lines of data
 
 Notice that the two objects we created so far can be seen in the Environment pane.
 
+------------------------------------------------------------------------
+
 ### Data description
 
-By clicking on the object in the `Environement` panel, you can visualize it, but you can also write some code to describe it. As we just check, `data` is a `data.frame` object. It is made of several columns and rows. To call a specific column in a dataframe, we use the `$` operator. To know all the column names in `data`, we can use the function `names()`. To know the "size" of the dataframe, the right function is `dim()`: the first element is the number of rows and the second the number of columns.
+By clicking on the object in the `Environement` panel, you can visualize it, but you can also write some code to describe it. As we just check, `data` is a `data.frame` object. It is made of several columns and rows.
+
+To call a specific column in a dataframe, we use the `$` operator. To know all the column names in `data`, we can use the function `names()`. To know the "size" of the dataframe, the right function is `dim()`: the first element is the number of rows and the second the number of columns.
 
 ::: callout-tip
 You can also call a column by its position in the dataframe. For instance, to call the second column you can type `data[,2]`. For the second row: `data[,2]`. What should you write to print the 10th element of the 3rd column?
 :::
 
-We know how to call specific part of the dataframe. To describe the data, we can use several built-in functions.
+------------------------------------------------------------------------
+
+To describe the data, we can use several built-in functions.
 
 ```{r}
+#| echo: true
 table(data$Species) # To make a frequency table
 summary(data$Sepal.Length) # To provide summary statistics
 ```
 
+------------------------------------------------------------------------
+
 Now, I want to visualize the data. To do so, we can use base R function `plot`:
 
 ```{r}
+#| echo: true
 plot(iris$Sepal.Length,iris$Sepal.Width)
 ```
+
+------------------------------------------------------------------------
 
 ### Our first graph!
 
@@ -152,7 +215,10 @@ library(ggplot2)
 All packages have to be downloaded and loaded this way. Note that once you've downloaded a package on your computer, you do not need to install it *but* you still need to load it through the `library` function.
 :::
 
+------------------------------------------------------------------------
+
 ```{r}
+#| echo: true
 g1 <- ggplot(data = data, mapping = aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
   geom_point() +
   theme_minimal()
@@ -168,9 +234,12 @@ This looks better! To produce this graph we used different information:
     -   `geom_point` allows to plot... points
     -   `theme_minimal` makes the graph tidy, with a white background, etc.
 
+------------------------------------------------------------------------
+
 Now, we can save it:
 
 ```{r}
+#| echo: true
 ggsave(filename = paste0(path,"/output/graph_iris.png"),plot = g1)
 ```
 
@@ -178,37 +247,49 @@ ggsave(filename = paste0(path,"/output/graph_iris.png"),plot = g1)
 The function `paste0` is useful to concatenate text. Here, instead of writing the full path, we concatenate the object `path` (which happens to be our path) and the end of the path, including the name of the output.
 :::
 
+------------------------------------------------------------------------
+
 ### Data manipulation
 
 To finish this -short- introduction to R, I introduce a new package, probably the most popular one in R: `dplyr`. As before, we install then load the library.
 
 ```{r,echo=T,eval=F}
+#| echo: true
 install.packages("tidyverse")
 library(tidyverse)
 ```
+
+------------------------------------------------------------------------
 
 Let's imagine we want to filter the dataset to keep only the `setosa`. In base R, we need to extract the lines of `iris` for which `Species=="setosa"`. Because R is object based, we can multiple objects, here: `base_setosa`.
 
 > The data frame `iris` is close to a matrix, hence, we can extract using notations close to the matrix ones. Hence `data[1,1]` would give us the first line of the first column (in this order) of `data`. Here, we filt the lines using a condition: `data$Species=="setosa"`. Do not forget the `,`.
 
 ```{r}
+#| echo: true
 # Base R: Filter rows where Species is "setosa"
 base_setosa <- data[data$Species == "setosa", ]
 head(base_setosa)
 ```
 
+------------------------------------------------------------------------
+
 Using `dplyr` and the `pipe` operator `%>%`, we apply the function `filter` on `Species`.
 
 ```{r}
+#| echo: true
 # dplyr: Filter rows where Species is "setosa"
 dplyr_setosa <- iris %>% 
   filter(Species == "setosa")
 head(dplyr_setosa)
 ```
 
+------------------------------------------------------------------------
+
 Next, we can select specific columns.
 
 ```{r}
+#| echo: true
 # Base R: Select only Sepal.Length and Sepal.Width columns
 base_columns <- iris[, c("Sepal.Length", "Sepal.Width")]
 head(base_columns)
@@ -219,7 +300,10 @@ dplyr_columns <- iris %>%
 head(dplyr_columns)
 ```
 
+------------------------------------------------------------------------
+
 ```{r}
+#| echo: true
 # Base R: Create a new column with Sepal.Area (Sepal.Length * Sepal.Width)
 iris$Sepal.Area <- iris$Sepal.Length * iris$Sepal.Width
 head(iris)
@@ -230,9 +314,12 @@ dplyr_iris <- iris %>%
 head(dplyr_iris)
 ```
 
+------------------------------------------------------------------------
+
 The advantage of `dplyr` is to allow for many computations:
 
 ```{r}
+#| echo: true
 dplyr_grouped <- iris %>%
   mutate(Sepal.Area = Sepal.Length * Sepal.Width) %>%
   mutate(is.Sepal.Large = ifelse(Sepal.Area > median(Sepal.Area),1,0)) %>% 
@@ -242,15 +329,20 @@ dplyr_grouped <- iris %>%
 print(dplyr_grouped)
 ```
 
+------------------------------------------------------------------------
+
 This dataset can be, of course represented visually:
 
 ```{r}
+#| echo: true
 ggplot(dplyr_grouped, aes(x = Species, y = count_sepal_large, fill = Species)) +
   geom_bar(stat = "identity") +
   labs(title = "Histogram of Sepal Count by Species",
        x = "Species", y = "Count of large sepals") +
   theme_minimal()
 ```
+
+------------------------------------------------------------------------
 
 But we can also export it to `LaTeX`:
 
@@ -260,6 +352,7 @@ library(xtable)
 ```
 
 ```{r}
+#| echo: true
 colnames(dplyr_grouped) <- c("Species", "Mean_Sepal_Length", "Count_Sepal_Large")
 print(xtable(dplyr_grouped), type = "latex", file = paste0(path,"/output/sepal_large.tex"))
 ```
@@ -273,6 +366,10 @@ LaTeX is very popular software to produce scientic writings. It is relatively ea
 3.  Use an online IDE like Overleaf
 
 > There are plenty of tutorials over the web (or ChatGPT) to know how to use LaTeX, so I am going to be quick.
+
+------------------------------------------------------------------------
+
+### Overleaf
 
 Open a blank project in Overleaf. It should look like that:
 
@@ -300,6 +397,8 @@ Open a blank project in Overleaf. It should look like that:
 \end{document}
 ```
 
+------------------------------------------------------------------------
+
 Three elements are mandatory here: the `\documentclass{}` call, the `\begin{document}` and the `\end{docoment}` parts. All texts should be these last two commands. The preambule is of high importance: it allows you to load packages to perform specific tasks. Here, `graphicx` is useful to input images. Other popular packages include:
 
 -   `geometry` allows you to change the margins of the pages,
@@ -308,6 +407,8 @@ Three elements are mandatory here: the `\documentclass{}` call, the `\begin{docu
 -   `xcolor` to create and choose your favorite colors
 
 You can then directly write any text you like after `\begin{document}`.
+
+------------------------------------------------------------------------
 
 ### Math mode
 
@@ -323,6 +424,8 @@ Most interesting is the math mode. You can write in line using `$ x = y$` or in 
 An environment starts with `\begin{name}` and ends with `\end{name}`. The environment can be an equation, to center a large chunk of text, a figure, a table, etc.
 :::
 
+------------------------------------------------------------------------
+
 ### Include our results
 
 ```         
@@ -333,6 +436,8 @@ An environment starts with `\begin{name}` and ends with `\end{name}`. The enviro
 \end{figure}
 ```
 
+------------------------------------------------------------------------
+
 We work within the `figure` environment, center the graphic, include it with some options and add a caption. The graph should be uploaded in the project first! Here, I stored it in the folder `graph`.
 
 To input the table, we can use `\input{}`:
@@ -342,6 +447,8 @@ To input the table, we can use `\input{}`:
 ```
 
 No need to specify the environment as it was directly created by the `xtable` function earlier on!
+
+------------------------------------------------------------------------
 
 ### Compile the file
 
