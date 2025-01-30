@@ -444,7 +444,7 @@
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Matéo Moglia">
-  <meta name="dcterms.date" content="2025-01-27">
+  <meta name="dcterms.date" content="2025-01-29">
   <title>Petite classe ECO1S002 – Tutorial 1</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -1225,7 +1225,7 @@ margin-right: 0; }
     </div>
 </div>
 
-  <p class="date">January 27, 2025</p>
+  <p class="date">January 29, 2025</p>
 </section>
 <section id="roadmap" class="slide level2">
 <h2>Roadmap</h2>
@@ -1300,22 +1300,36 @@ margin-right: 0; }
 <section class="slide level2">
 
 <h3 id="when-writing-code">When writing code</h3>
-<p><strong>Always</strong> comment your code, make it readable for your future self but also for others. You may use your code in a week, a month, a year, and should be able to directly understands it! When creating objects, functions, or whatever, give it simple but understandable names. For instance, if you create a data frame containing wages for individuals aged between 25 and 30, you way call it <code>wage_25_30</code> and not <code>w2530</code> (too short) or <code>wage_individuals_aged_25_30</code> (too long).</p>
-<p>Moreover, especially for large project, you want to have different scripts. Always keep scripts short and with clear names. For instance <code>1_clean_data.R</code>, <code>2_import_wages.R</code>, <code>3_merge_datasets.R</code>, and <code>4_data_analysis.R</code>.</p>
+<ul>
+<li><p><strong>Always</strong> comment your code, make it readable for your future self but also for others. You may use your code in a week, a month, a year, and should be able to directly understands it!</p></li>
+<li><p>When creating objects, functions, or whatever, give it simple but understandable names.</p></li>
+<li><p>For instance, if you create a data frame containing wages for individuals aged between 25 and 30, you way call it <code>wage_25_30</code> and not <code>w2530</code> (too short) or <code>wage_individuals_aged_25_30</code> (too long).</p></li>
+<li><p>Moreover, especially for large project, you want to have different scripts. Always keep scripts short and with clear names. For instance <code>1_clean_data.R</code>, <code>2_import_wages.R</code>, <code>3_merge_datasets.R</code>, and <code>4_data_analysis.R</code>.</p></li>
+</ul>
 </section>
 <section id="first-step-in-rrstudio" class="slide level2">
 <h2>First step in R/Rstudio</h2>
 <h3 id="some-useful-terms">Some useful terms</h3>
-<p>So far, we talked about <code>script</code>. We are going to manipulate <code>object</code> using <code>functions</code>. Objects can be of different <code>classes</code>: matrix, vector, character, numeric, data.frame, etc. Some functions are already in <code>R</code> but some are not. Hence, we need to load them thanks to <code>packages</code>.</p>
+<ul>
+<li><p>So far, we talked about <code>script</code>.</p></li>
+<li><p>We are going to manipulate <code>object</code> using <code>functions</code>.</p></li>
+<li><p>Objects can be of different <code>classes</code>: matrix, vector, character, numeric, data.frame, etc. Some functions are already in <code>R</code> but some are not. Hence, we need to load them thanks to <code>packages</code>.</p></li>
+</ul>
 </section>
-<section class="slide level2">
-
+<section id="first-step-in-rrstudio-1" class="slide level2">
+<h2>First step in R/Rstudio</h2>
 <h3 id="open-a-script">Open a script</h3>
-<p>We are going to create our first script (the extension is <code>.R</code>). This script contains all commands you want to run. R has built-in functions but most useful functions should be called using <code>library()</code>. These libraries should be first downloaded then loaded into your project.</p>
-<p>First, open RStudio and opens a new script. You should have an empty page. You may want to write some words at the top of it to have an idea of what this code does. You can use <code>#</code> to comment code.</p>
+<ul>
+<li><p>We are going to create our first script (the extension is <code>.R</code>).</p></li>
+<li><p>This script contains all commands you want to run. R has built-in functions but most useful functions should be called using <code>library()</code>.</p></li>
+<li><p>These libraries should be first downloaded then loaded into your project.</p></li>
+<li><p>First, open RStudio and opens a new script.</p></li>
+<li><p>You should have an empty page. You may want to write some words at the top of it to have an idea of what this code does. You can use <code>#</code> to comment code.</p></li>
+</ul>
 </section>
-<section class="slide level2">
-
+<section id="first-step-in-rrstudio-2" class="slide level2">
+<h2>First step in R/Rstudio</h2>
+<h3 id="script">Script</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co">#-------------------------------------------------------------------------------</span></span>
 <span id="cb2-2"><a></a><span class="co"># This script opens a dataset and proceeds</span></span>
@@ -1344,8 +1358,8 @@ margin-right: 0; }
 </div>
 </div>
 </section>
-<section class="slide level2">
-
+<section id="first-step-in-rrstudio-3" class="slide level2">
+<h2>First step in R/Rstudio</h2>
 <h3 id="our-first-data-manipulation">Our first data manipulation</h3>
 <p>We can load a very famous built-in data set, the <code>iris</code> dataset, into an object called <code>data</code>.</p>
 <div class="cell">
@@ -1367,8 +1381,8 @@ margin-right: 0; }
 </div>
 <p>Notice that the two objects we created so far can be seen in the Environment pane.</p>
 </section>
-<section class="slide level2">
-
+<section id="first-step-in-rrstudio-4" class="slide level2">
+<h2>First step in R/Rstudio</h2>
 <h3 id="data-description">Data description</h3>
 <p>By clicking on the object in the <code>Environement</code> panel, you can visualize it, but you can also write some code to describe it. As we just check, <code>data</code> is a <code>data.frame</code> object. It is made of several columns and rows.</p>
 <p>To call a specific column in a dataframe, we use the <code>$</code> operator. To know all the column names in <code>data</code>, we can use the function <code>names()</code>. To know the “size” of the dataframe, the right function is <code>dim()</code>: the first element is the number of rows and the second the number of columns.</p>
@@ -1411,8 +1425,8 @@ margin-right: 0; }
 
 </div>
 <img role="img" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAPACAMAAADja5SLAAAA+VBMVEUAAAAAADoAAGYAOjoAOmYAOpAAZpAAZrY6AAA6AGY6OgA6Ojo6OmY6OpA6Zjo6ZmY6ZpA6ZrY6kJA6kLY6kNtmAABmADpmOgBmOjpmZjpmZmZmZpBmkJBmkLZmkNtmtrZmtttmtv+QOgCQOjqQZgCQZjqQZmaQZpCQkDqQkGaQkJCQkLaQkNuQtraQttuQ29uQ2/+2ZgC2Zjq2kDq2kGa2kJC2kLa2tpC2tra2ttu225C227a229u22/+2/9u2///bkDrbkGbbtmbbtpDbtrbb25Db27bb29vb2//b/7bb/9vb////tmb/25D/27b/29v//7b//9v///+/EKGwAAAACXBIWXMAAB2HAAAdhwGP5fFlAAAgAElEQVR4nO3dfWPUVr4neBUhiydwN2QmLDTd9ATm0rN3esNgLt3tzMDEDVlgB2NSfv8vZkv1KNvlcp2ypJ/Oqc/nj8QuyvJ5kr6W6uioOgMAeldFFwAA9pEABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCA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" width="960" class="r-stretch"></section>
-<section class="slide level2">
-
+<section id="first-step-in-rrstudio-5" class="slide level2">
+<h2>First step in R/Rstudio</h2>
 <h3 id="our-first-graph">Our first graph!</h3>
 <p>We can also use a very popular library for dataviz, <code>ggplot2</code>. First, we install it, then we load it, and we are going to be able to use it.</p>
 <div class="cell">
@@ -1476,9 +1490,9 @@ margin-right: 0; }
 </div>
 </div>
 </section>
-<section class="slide level2">
-
-<h3 id="data-manipulation">Data manipulation</h3>
+<section id="first-step-in-rrstudio-6" class="slide level2">
+<h2>First step in R/Rstudio</h2>
+<h3 id="data-base-vs.-dplyr">Data: base vs. dplyr</h3>
 <p>To finish this -short- introduction to R, I introduce a new package, probably the most popular one in R: <code>dplyr</code>. As before, we install then load the library.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
@@ -1555,6 +1569,9 @@ margin-right: 0; }
 6          5.4         3.9</code></pre>
 </div>
 </div>
+</section>
+<section class="slide level2">
+
 <div class="cell">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="co"># Base R: Create a new column with Sepal.Area (Sepal.Length * Sepal.Width)</span></span>
 <span id="cb24-2"><a></a>iris<span class="sc">$</span>Sepal.Area <span class="ot">&lt;-</span> iris<span class="sc">$</span>Sepal.Length <span class="sc">*</span> iris<span class="sc">$</span>Sepal.Width</span>
@@ -1630,6 +1647,7 @@ margin-right: 0; }
 </section>
 <section id="first-step-in-latex" class="slide level2">
 <h2>First step in LaTeX</h2>
+<h3 id="what-is-latex">What is LaTeX</h3>
 <p>LaTeX is very popular software to produce scientic writings. It is relatively easy to use. From now on, it is mandatory to produce output you would hand using LaTeX. You have three options to use LaTeX:</p>
 <ol type="1">
 <li>Use any text editor and compile the file using the console</li>
@@ -1640,8 +1658,8 @@ margin-right: 0; }
 <p>There are plenty of tutorials over the web (or ChatGPT) to know how to use LaTeX, so I am going to be quick.</p>
 </blockquote>
 </section>
-<section class="slide level2">
-
+<section id="first-step-in-latex-1" class="slide level2">
+<h2>First step in LaTeX</h2>
 <h3 id="overleaf">Overleaf</h3>
 <p>Open a blank project in Overleaf. It should look like that:</p>
 <pre><code>\documentclass{article}
@@ -1677,8 +1695,8 @@ margin-right: 0; }
 </ul>
 <p>You can then directly write any text you like after <code>\begin{document}</code>.</p>
 </section>
-<section class="slide level2">
-
+<section id="first-step-in-latex-2" class="slide level2">
+<h2>First step in LaTeX</h2>
 <h3 id="math-mode">Math mode</h3>
 <p>Most interesting is the math mode. You can write in line using <code>$ x = y$</code> or in an equation environment:</p>
 <pre><code>\begin{equation}
@@ -1698,26 +1716,49 @@ margin-right: 0; }
 </div>
 </div>
 </section>
-<section class="slide level2">
-
-<h3 id="include-our-results">Include our results</h3>
+<section id="first-step-in-latex-3" class="slide level2">
+<h2>First step in LaTeX</h2>
+<h3 id="include-our-results-fig">Include our results (fig)</h3>
 <pre><code>\begin{figure}
   \centering # To center the graph
   \includegraphics[width=8,height=10]{graph/graph_iris.png}
   \caption{Iris Sepals Length and Width}
 \end{figure}</code></pre>
-</section>
-<section class="slide level2">
-
 <p>We work within the <code>figure</code> environment, center the graphic, include it with some options and add a caption. The graph should be uploaded in the project first! Here, I stored it in the folder <code>graph</code>.</p>
+</section>
+<section id="first-step-in-latex-4" class="slide level2">
+<h2>First step in LaTeX</h2>
+<h3 id="include-our-results-table">Include our results (table)</h3>
 <p>To input the table, we can use <code>\input{}</code>:</p>
 <pre><code>\input{table/sepal_large.tex}</code></pre>
 <p>No need to specify the environment as it was directly created by the <code>xtable</code> function earlier on!</p>
 </section>
-<section class="slide level2">
-
+<section id="first-step-in-latex-5" class="slide level2">
+<h2>First step in LaTeX</h2>
 <h3 id="compile-the-file">Compile the file</h3>
-<p>LaTeX is not a “What You See Is What You Get” software, like Word or Canvas. You need to compile the code to obtain the results (usually a <code>.pdf</code>), that you can further download.</p>
+<blockquote>
+<p>LaTeX is not a “What You See Is What You Get” software, like Word or Canvas.</p>
+</blockquote>
+<ul>
+<li>You need to compile the code to obtain the results (usually a <code>.pdf</code>), that you can further download.</li>
+</ul>
+</section>
+<section id="quick-exercise" class="slide level2">
+<h2>Quick exercise</h2>
+<ol type="1">
+<li>Open a new script, add the relevant information (path, date, packages) and load the <code>dataset</code> dataset</li>
+<li>Create a grouping variable based on age bins (10 year)<br>
+</li>
+<li>Using the <code>dplyr</code> syntax, compute the number of observations, the mean, median, and inter-quartile range of <code>var1</code>, <code>var2</code>, and <code>var2</code> by age group. Save as a <code>.tex</code> table.</li>
+<li>Plot the relation between <code>wage</code> and <code>crime</code> (<code>ggplot2</code> syntax) for each age group
+<ol type="1">
+<li>With a scatter plot and lines that connects all points</li>
+<li>Add a title and a subtitle (centered and in bold)</li>
+<li>Put the legend at the bottom of the slide</li>
+<li>Export as a <code>.pdf</code></li>
+</ol></li>
+<li>Export everything in a TeX file</li>
+</ol>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">

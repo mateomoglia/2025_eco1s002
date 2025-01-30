@@ -111,7 +111,6 @@ Avoid at all cost to use spaces or special characters in your file names. Prefer
 -   Moreover, especially for large project, you want to have different scripts. Always keep scripts short and with clear names. For instance `1_clean_data.R`, `2_import_wages.R`, `3_merge_datasets.R`, and `4_data_analysis.R`.
 
 ## First step in R/Rstudio
-
 ### Some useful terms
 
 -   So far, we talked about `script`. 
@@ -120,8 +119,7 @@ Avoid at all cost to use spaces or special characters in your file names. Prefer
 
 -   Objects can be of different `classes`: matrix, vector, character, numeric, data.frame, etc. Some functions are already in `R` but some are not. Hence, we need to load them thanks to `packages`.
 
-------------------------------------------------------------------------
-
+## First step in R/Rstudio
 ### Open a script
 
 -   We are going to create our first script (the extension is `.R`). 
@@ -131,7 +129,8 @@ Avoid at all cost to use spaces or special characters in your file names. Prefer
 -   First, open RStudio and opens a new script. 
 -   You should have an empty page. You may want to write some words at the top of it to have an idea of what this code does. You can use `#` to comment code.
 
-------------------------------------------------------------------------
+## First step in R/Rstudio
+### Script
 
 ```{r}
 #| echo: true
@@ -154,8 +153,7 @@ Here, I set the working directory using `setwd()`. Notice that we created our fi
 What is the class of `path`? **Hint: use the function `class()`**
 :::
 
-------------------------------------------------------------------------
-
+## First step in R/Rstudio
 ### Our first data manipulation
 
 We can load a very famous built-in data set, the `iris` dataset, into an object called `data`.
@@ -169,8 +167,7 @@ head(data) # Preview the first lines of data
 
 Notice that the two objects we created so far can be seen in the Environment pane.
 
-------------------------------------------------------------------------
-
+## First step in R/Rstudio
 ### Data description
 
 By clicking on the object in the `Environement` panel, you can visualize it, but you can also write some code to describe it. As we just check, `data` is a `data.frame` object. It is made of several columns and rows.
@@ -200,8 +197,7 @@ Now, I want to visualize the data. To do so, we can use base R function `plot`:
 plot(iris$Sepal.Length,iris$Sepal.Width)
 ```
 
-------------------------------------------------------------------------
-
+## First step in R/Rstudio
 ### Our first graph!
 
 We can also use a very popular library for dataviz, `ggplot2`. First, we install it, then we load it, and we are going to be able to use it.
@@ -247,9 +243,8 @@ ggsave(filename = paste0(path,"/output/graph_iris.png"),plot = g1)
 The function `paste0` is useful to concatenate text. Here, instead of writing the full path, we concatenate the object `path` (which happens to be our path) and the end of the path, including the name of the output.
 :::
 
-------------------------------------------------------------------------
-
-### Data manipulation
+## First step in R/Rstudio
+### Data: base vs. dplyr
 
 To finish this -short- introduction to R, I introduce a new package, probably the most popular one in R: `dplyr`. As before, we install then load the library.
 
@@ -358,6 +353,7 @@ print(xtable(dplyr_grouped), type = "latex", file = paste0(path,"/output/sepal_l
 ```
 
 ## First step in LaTeX
+### What is LaTeX
 
 LaTeX is very popular software to produce scientic writings. It is relatively easy to use. From now on, it is mandatory to produce output you would hand using LaTeX. You have three options to use LaTeX:
 
@@ -367,8 +363,7 @@ LaTeX is very popular software to produce scientic writings. It is relatively ea
 
 > There are plenty of tutorials over the web (or ChatGPT) to know how to use LaTeX, so I am going to be quick.
 
-------------------------------------------------------------------------
-
+## First step in LaTeX
 ### Overleaf
 
 Open a blank project in Overleaf. It should look like that:
@@ -410,6 +405,7 @@ You can then directly write any text you like after `\begin{document}`.
 
 ------------------------------------------------------------------------
 
+## First step in LaTeX
 ### Math mode
 
 Most interesting is the math mode. You can write in line using `$ x = y$` or in an equation environment:
@@ -426,7 +422,8 @@ An environment starts with `\begin{name}` and ends with `\end{name}`. The enviro
 
 ------------------------------------------------------------------------
 
-### Include our results
+## First step in LaTeX
+### Include our results (fig)
 
 ```         
 \begin{figure}
@@ -436,9 +433,12 @@ An environment starts with `\begin{name}` and ends with `\end{name}`. The enviro
 \end{figure}
 ```
 
+We work within the `figure` environment, center the graphic, include it with some options and add a caption. The graph should be uploaded in the project first! Here, I stored it in the folder `graph`.
+
 ------------------------------------------------------------------------
 
-We work within the `figure` environment, center the graphic, include it with some options and add a caption. The graph should be uploaded in the project first! Here, I stored it in the folder `graph`.
+## First step in LaTeX
+### Include our results (table)
 
 To input the table, we can use `\input{}`:
 
@@ -448,8 +448,23 @@ To input the table, we can use `\input{}`:
 
 No need to specify the environment as it was directly created by the `xtable` function earlier on!
 
-------------------------------------------------------------------------
-
+## First step in LaTeX
 ### Compile the file
 
-LaTeX is not a "What You See Is What You Get" software, like Word or Canvas. You need to compile the code to obtain the results (usually a `.pdf`), that you can further download.
+> LaTeX is not a "What You See Is What You Get" software, like Word or Canvas. 
+
+-   You need to compile the code to obtain the results (usually a `.pdf`), that you can further download.
+
+------------------------------------------------------------------------
+
+## Quick exercise
+
+1.  Open a new script, add the relevant information (path, date, packages) and load the `swiss` dataset
+2.  Create a grouping variable if `Catholic` is below median or under median
+3.  Using the `dplyr` syntax, compute the number of observations, the mean, median, and inter-quartile range of `Fertility`, `Agriculture`, and `Education` by group. Save as a `.tex` table.
+4.  Plot the relation between `` and `Infant.Mortality` (`ggplot2` syntax) for each group
+    1.  With a scatter plot and lines that connects all points
+    2.  Add a title and a subtitle (centered and in bold)
+    3.  Put the legend at the bottom of the slide
+    4.  Export as a `.pdf`
+5.  Export everything in a TeX file
