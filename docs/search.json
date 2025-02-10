@@ -319,7 +319,7 @@
     "href": "tutorial1.html#quick-exercise",
     "title": "Tutorial 1",
     "section": "Quick exercise",
-    "text": "Quick exercise\n\nOpen a new script, add the relevant information (path, date, packages) and load the dataset dataset\nCreate a grouping variable based on age bins (10 year)\n\nUsing the dplyr syntax, compute the number of observations, the mean, median, and inter-quartile range of var1, var2, and var2 by age group. Save as a .tex table.\nPlot the relation between wage and crime (ggplot2 syntax) for each age group\n\nWith a scatter plot and lines that connects all points\nAdd a title and a subtitle (centered and in bold)\nPut the legend at the bottom of the slide\nExport as a .pdf\n\nExport everything in a TeX file",
+    "text": "Quick exercise\n\nOpen a new script, add the relevant information (path, date, packages) and load the swiss dataset\nCreate a grouping variable if Catholic is below median or under median\nUsing the dplyr syntax, compute the number of observations, the mean, median, and inter-quartile range of Fertility, Agriculture, and Education by group. Save as a .tex table.\nPlot the relation between Education and Infant.Mortality (ggplot2 syntax) for each group\n\nWith a scatter plot and lines that connects all points\nAdd a title and a subtitle (centered and in bold)\nPut the legend at the bottom of the slide\nExport as a .pdf\n\nExport everything in a TeX file",
     "crumbs": [
       "Tutorial 1"
     ]

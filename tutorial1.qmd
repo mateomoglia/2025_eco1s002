@@ -462,7 +462,7 @@ No need to specify the environment as it was directly created by the `xtable` fu
 1.  Open a new script, add the relevant information (path, date, packages) and load the `swiss` dataset
 2.  Create a grouping variable if `Catholic` is below median or under median
 3.  Using the `dplyr` syntax, compute the number of observations, the mean, median, and inter-quartile range of `Fertility`, `Agriculture`, and `Education` by group. Save as a `.tex` table.
-4.  Plot the relation between `` and `Infant.Mortality` (`ggplot2` syntax) for each group
+4.  Plot the relation between `Education` and `Infant.Mortality` (`ggplot2` syntax) for each group
     1.  With a scatter plot and lines that connects all points
     2.  Add a title and a subtitle (centered and in bold)
     3.  Put the legend at the bottom of the slide
