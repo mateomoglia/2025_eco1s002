@@ -27,7 +27,7 @@ This website will walk you through the tutorials for the *Topics in Economics* (
 
 ## Class outline
 
--   [Tutorial 1](https://mateomoglia.github.io/2025_eco1s002/tutorial1.html) *(February 12, computer session)*
+-   [Tutorial 1](https://mateomoglia.github.io/2025_eco1s002/tutorial1.html#/title-slide) *(February 12, computer session)*
     -   Presentation of the class objectives
     -   First hands on R
     -   First hands on LaTeX
