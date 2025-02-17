@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tutorial 2: OLS and first repliction – Petite classe ECO1S002</title>
+<title>Tutorial 2: the Solow model – Petite classe ECO1S002</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,10 +35,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-94ab712f215f0f28cf75fcc61d4e0fd5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -168,6 +168,7 @@ window.Quarto = {
   <li><a href="#steady-state" id="toc-steady-state" class="nav-link" data-scroll-target="#steady-state">5. Steady state</a></li>
   <li><a href="#comparative-statics" id="toc-comparative-statics" class="nav-link" data-scroll-target="#comparative-statics">6. Comparative statics</a></li>
   <li><a href="#balanced-growth-path-bonus" id="toc-balanced-growth-path-bonus" class="nav-link" data-scroll-target="#balanced-growth-path-bonus">7. Balanced growth path [Bonus]</a></li>
+  <li><a href="#introducing-technological-progress" id="toc-introducing-technological-progress" class="nav-link" data-scroll-target="#introducing-technological-progress">8. Introducing technological progress</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -177,7 +178,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Tutorial 2: OLS and first repliction</h1>
+<h1 class="title">Tutorial 2: the Solow model</h1>
 </div>
 
 
@@ -212,7 +213,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
 <section id="warm-up-return-to-scale" class="level3">
 <h3 class="anchored" data-anchor-id="warm-up-return-to-scale">1. Warm-up: Return to scale</h3>
-<p>Let <span class="math inline">\(\lambda \in (0,1)\)</span>, if <span class="math inline">\(F(\lambda X, \lambda Y) &lt; \lambda F(X,Y)\)</span>, the function has decreasing return to scales (and increasing for <span class="math inline">\(&gt;\)</span>). If <span class="math inline">\(F(\lambda X, \lambda Y) = \lambda F(X,Y)\)</span>, the function has constant return to scale. For the following functions, state if they exhibit positive, constant, or negative return to scale.</p>
+<p>Let <span class="math inline">\(\lambda &gt; 1\)</span>, if <span class="math inline">\(F(\lambda X, \lambda Y) &lt; \lambda F(X,Y)\)</span>, the function has decreasing return to scales (and increasing for <span class="math inline">\(&gt;\)</span>). If <span class="math inline">\(F(\lambda X, \lambda Y) = \lambda F(X,Y)\)</span>, the function has constant return to scale. For the following functions, state if they exhibit positive, constant, or negative return to scale.</p>
 <ol type="1">
 <li><span class="math inline">\(y_1 = 10x^2y^2\)</span></li>
 <li><span class="math inline">\(y_2 = \frac{1}{2}x^{1/3}y^{1/2}\)</span></li>
@@ -222,10 +223,11 @@ window.Quarto = {
 </section>
 <section id="solve-the-maximization-problem" class="level3">
 <h3 class="anchored" data-anchor-id="solve-the-maximization-problem">2. Solve the maximization problem</h3>
+<p>Consider the function above (<span class="math inline">\(Y_t = K_t^{\alpha} L_t^{1-\alpha}\)</span>).</p>
 <ol type="1">
-<li>Show that if <span class="math inline">\(x=0\)</span> and/or <span class="math inline">\(y=0\)</span> production does not occur</li>
-<li>Show that marginal productivity is positive for capital and wage</li>
-<li>Show that marginal productivity is decreasing for capital and wage</li>
+<li>Show that if <span class="math inline">\(K=0\)</span> and/or <span class="math inline">\(L=0\)</span> production does not occur</li>
+<li>Show that marginal productivity is positive for capital and labour</li>
+<li>Show that marginal productivity is decreasing for capital and labour</li>
 <li>Write the down the profit maximization program</li>
 <li>Solve the program</li>
 </ol>
@@ -239,7 +241,7 @@ window.Quarto = {
 </section>
 <section id="capital-accumulation" class="level3">
 <h3 class="anchored" data-anchor-id="capital-accumulation">4. Capital accumulation</h3>
-<p>Capital accumulation is given by <span class="math inline">\(\dot K=sY-\delta K\)</span>.</p>
+<p>Capital accumulation is given by <span class="math inline">\(\dot K=sY-\delta K\)</span>. Note also that the growth rate of population <span class="math inline">\(n\)</span> can be expressed as <span class="math inline">\(n = \dot L / L\)</span>.</p>
 <ol type="1">
 <li>Interpret this equation</li>
 <li>Show that <span class="math inline">\(\frac{\dot K}{K} = s\frac{y}{k}-\delta\)</span></li>
@@ -260,15 +262,23 @@ window.Quarto = {
 <p>Comparative statics exercises are thought experiment in which we change the value of a parameter and compare the past and new equilibrium. Consider a new saving rate <span class="math inline">\(s'&gt;s\)</span>.</p>
 <ol type="1">
 <li>How does capital accumulation change?</li>
-<li>How does change the steady-state capital stock?</li>
+<li>How does change the steady-state level of capital per capita?</li>
 <li>How does change the stead-state level of output per capita?</li>
 </ol>
 </section>
 <section id="balanced-growth-path-bonus" class="level3">
 <h3 class="anchored" data-anchor-id="balanced-growth-path-bonus">7. Balanced growth path [Bonus]</h3>
-<p>The balanced growth path is a situation during which capital per worker and output per worker grow a constant (but potentially different) rates. The steady state is a BGP with zero growth rate. Denote <span class="math inline">\(g_y\)</span> and <span class="math inline">\(g_k\)</span> the capital and output per worker growth rates .</p>
+<p>The balanced growth path is a situation during which capital per worker and output per worker grow at a constant (but potentially different) rates. The steady state is a BGP with zero growth rate. Denote <span class="math inline">\(g_y\)</span> and <span class="math inline">\(g_k\)</span> the capital and output per worker growth rates .</p>
 <ol type="1">
-<li>Show that <span class="math inline">\(g_y=g_k\)</span></li>
+<li>Show that <span class="math inline">\(g_y \propto g_k\)</span></li>
+</ol>
+</section>
+<section id="introducing-technological-progress" class="level3">
+<h3 class="anchored" data-anchor-id="introducing-technological-progress">8. Introducing technological progress</h3>
+<p>Let assume now that <span class="math inline">\(A\)</span> grows at rate <span class="math inline">\(\dot A / A = g &gt; 0\)</span>.</p>
+<ol type="1">
+<li>What is the new law of capital accumulation?</li>
+<li>What is the steady-state level of output per capita <span class="math inline">\(\tilde{y}^star\)</span>?</li>
 </ol>
 
 
@@ -358,8 +368,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -470,7 +478,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
