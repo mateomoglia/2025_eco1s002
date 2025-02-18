@@ -50,6 +50,7 @@ Let $\lambda > 1$, if $F(\lambda X, \lambda Y) < \lambda F(X,Y)$, the function h
 4.  $y_4 = \sqrt{x} + \log(y)$
 
 ### 2. Solve the maximization problem
+
 Consider the function above ($Y_t = K_t^{\alpha} L_t^{1-\alpha}$).
 
 1.  Show that if $K=0$ and/or $L=0$ production does not occur
@@ -71,7 +72,7 @@ Capital accumulation is given by $\dot K=sY-\delta K$. Note also that the growth
 1.  Interpret this equation
 2.  Show that $\frac{\dot K}{K} = s\frac{y}{k}-\delta$
 3.  Show that $\dot k = sAk^\alpha - (\delta - n)k$
-4.  What happen if $sAk^\alpha > (\delta - n)k$ ?
+4.  What happen if $sAk^\alpha > (\delta - n)k$? Interpret
 
 ### 5. Steady state
 
@@ -86,7 +87,7 @@ Comparative statics exercises are thought experiment in which we change the valu
 
 1.  How does capital accumulation change?
 2.  How does change the steady-state level of capital per capita?
-3.  How does change the stead-state level of output per capita?
+3.  How does change the steady-state level of output per capita?
 
 ### 7. Balanced growth path \[Bonus\]
 
@@ -94,10 +95,9 @@ The balanced growth path is a situation during which capital per worker and outp
 
 1.  Show that $g_y \propto g_k$
 
-### 8. Introducing technological progress 
+### 8. Introducing technological progress \[Bonus\]
 
-Let assume now that $A$ grows at rate $\dot A / A = g > 0$. 
+Let assume now that $A$ grows at rate $\dot A / A = g > 0$.
 
 1.  What is the new law of capital accumulation?
-2.  What is the steady-state level of output per capita $\tilde{y}^star$? 
-
+2.  What is the steady-state level of output per capita $\tilde{y}^\star$?
