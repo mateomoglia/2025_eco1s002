@@ -256,9 +256,9 @@
   {
     "objectID": "tutorial3.html#exercise",
     "href": "tutorial3.html#exercise",
-    "title": "Tutorial 3: OLS and first repliction",
+    "title": "Tutorial 3",
     "section": "Exercise",
-    "text": "Exercise\nWe are going to use the following libraries.\n\n\n\nLibrary\nDescription\n\n\n\n\ntidyverse\nFor data manipulation\n\n\nggplot2\nFor data visualization\n\n\nHmisc\nTo describe dataset\n\n\n\n\nDescribe the data\n\nLoad the data MRW_QJE1992.xlsx into R. Use a path here.\nDescribe the data using function describe from Hmisc library. Is there anything wrong? Keep only relevant observations.\nWhat are the groups of country defined by Mankiw et al.? Create a categorical variable that takes 0 if the country is in group N, 1 if in group I, and 2 if in group O.\nUse the function summary to print a table with summary statistics for all three groups.\nGenerate a scatter plot of growth rate in GDP per capita against \\(ln(GDP)\\) per worker in 1960, similar to Figure 1A in the paper (you need to create one of the two variables). Make it beautiful!!\n\n\n\n\n\n\n\nTo make a graph\n\n\n\n\n\nYou want to use ggplot() function. It takes two main arguments within the parentheses. One is data = ... and the other one is mapping = aes(...).\nThen, you can add the elements you want to draw after a +. Here, we want to plot points. Hence, you code should look like that:\n\nggplot(data = ..., mapping = aes(x = ..., y = ...)) +\n  geom_point() +\n  theme_bw() # This one is pure aesthetic\nggsave(path = paste0(your_path,\"/output/graph1.pdf\"))\n\n\n\n\n\n\nEstimate the baseline model\nWe now turn to the estimation of the main model :\n\nRun the baseline model on the full sample.\n\nStore the results in an object called reg_full.\nInterpret.\n\nRun the regression separately for each sub-sample (based on country type). To filter the data, take advantage of the pipe command and the filter() function.\n\nStore the results in well-named objects\nInterpret.\n\n[Bonus] Can you use a loop to go quicker?\nDo these results validate the Solow model predictions?\n\n\n\nEstimate the augmented model\nAccording to Mankiw, Romer and Weil, we have an omitted variable bias in this first model because we are not accounting for human capital.\n\nIn your opinion, in which direction is our estimate of the effect of savings rate on \\(\\ln\\)(GDP) biased?\nRegress \\(\\ln(I/Y)\\) on \\(\\ln(School)\\). The coefficient we get tells us how correlated the two variables are. Are they positively or negatively correlated? Is the correlation significant?\nNow estimate the “full” model from Table 2 of the paper. I.e., estimate by OLS the baseline model augmented with \\(\\ln(School)\\). As before run the regression for the whole sample first and then by group of countries.\n\n[Bonus] Use the lapply function instead of a loop\n\nAssuming this second model is true, were we over- or underestimating the coefficient of savings rate in the baseline model?",
+    "text": "Exercise\nData cleaning and descriptive statistics\n\nLoad the data and the packages (dplyr and ggplot2)\nWhat are the three groups of countries in the data?\nCompute summary statistics based on country group\nPlot the growth rate of GDP per capita vs. the log of GDP per capita",
     "crumbs": [
       "Tutorial 3"
     ]
@@ -432,6 +432,186 @@
     "text": "First step in LaTeX\nCompile the file\n\nLaTeX is not a “What You See Is What You Get” software, like Word or Canvas.\n\n\nYou need to compile the code to obtain the results (usually a .pdf), that you can further download.",
     "crumbs": [
       "Tutorial 1"
+    ]
+  },
+  {
+    "objectID": "tutorial3.html#roadmap",
+    "href": "tutorial3.html#roadmap",
+    "title": "Tutorial 3",
+    "section": "Roadmap",
+    "text": "Roadmap\nFor this third tutorial, we are going to\n\nRecap on the OLS estimation\nLearn how to go from a model to an empirical prediction\nReplicate the key results from Mankiw, Romer, Weil (1994)\n\n\n\n\n\n\n\nNote\n\n\nBig disclaimer: the recap on OLS is hugely inspired from Florian Oswald’s and Sciences Po’s introduction to Econometrics with R. The interested student can check this fantastical material here: scpoecon.github.io.",
+    "crumbs": [
+      "Tutorial 3"
+    ]
+  },
+  {
+    "objectID": "tutorial3.html#linear-regression",
+    "href": "tutorial3.html#linear-regression",
+    "title": "Tutorial 3",
+    "section": "Linear regression",
+    "text": "Linear regression\nWhy? When?\n\nAn empirical tool to assess the statistical relationship between variables\nIn the toolbox of the social scientist, with many other tools\nCorrelation is not causation\n\nTopic of today: Ordinary Least Square estimator (which is a widely used estimator)\n\n\n\n\n\n\nTip\n\n\nKeep in mind the difference between an estimator \\(\\hat \\beta\\) and the observed value \\(\\beta\\). We cannot observe the true parameter, so we estimate it (with error).",
+    "crumbs": [
+      "Tutorial 3"
+    ]
+  },
+  {
+    "objectID": "tutorial3.html#linear-regression-1",
+    "href": "tutorial3.html#linear-regression-1",
+    "title": "Tutorial 3",
+    "section": "Linear regression",
+    "text": "Linear regression\nVisual intuition\nWe use the cars dataset, in base R, and we are going to relate how speed and stopping distance are related.",
+    "crumbs": [
+      "Tutorial 3"
+    ]
+  },
+  {
+    "objectID": "tutorial3.html#linear-regression-2",
+    "href": "tutorial3.html#linear-regression-2",
+    "title": "Tutorial 3",
+    "section": "Linear regression",
+    "text": "Linear regression\nVisual intuition\nIt seems that a line could be helpful to “summarize” the relation between both variables!",
+    "crumbs": [
+      "Tutorial 3"
+    ]
+  },
+  {
+    "objectID": "tutorial3.html#linear-regression-3",
+    "href": "tutorial3.html#linear-regression-3",
+    "title": "Tutorial 3",
+    "section": "Linear regression",
+    "text": "Linear regression\nBringing some maths\n\nWe want to minimize the distance between the line and the points\nIn practice, the sum of distances can go to 0. Solution?",
+    "crumbs": [
+      "Tutorial 3"
+    ]
+  },
+  {
+    "objectID": "tutorial3.html#linear-regression-4",
+    "href": "tutorial3.html#linear-regression-4",
+    "title": "Tutorial 3",
+    "section": "Linear regression",
+    "text": "Linear regression\nBringing some maths\n\nWe compute the sum of square distances (\\(\\sim\\) error), so the name “ordinary least square”\nAn affine function is defined as $y = _0 + _1 x $ which in matrix form gives \\(Y = X\\beta\\).\nDimension of \\(X\\)?\nThe error for each observation is \\(e_i = y_i - \\beta_0 - \\beta_1 x_i\\)\nHence, we look for \\(\\beta\\) such that: \\[\n\\beta^\\star = \\min_\\beta (Y - X\\beta)'(Y - X\\beta) = \\min_\\beta e'e\n\\]\nFirst order condition: derivative wrt \\(\\beta\\) should be equal to 0",
+    "crumbs": [
+      "Tutorial 3"
+    ]
+  },
+  {
+    "objectID": "tutorial3.html#linear-regression-5",
+    "href": "tutorial3.html#linear-regression-5",
+    "title": "Tutorial 3",
+    "section": "Linear regression",
+    "text": "Linear regression\nDefining the OLS estimator\n\nThe OLS estimator is then: \\[\n\\hat{\\beta} = (X'X)^{-1}X'y\n\\]\nWho wants to try to derive it?\nUnder some conditions, this estimator is the Best Linear Unbiased Estimator (BLUE)\nThose conditions will be super helpful later",
+    "crumbs": [
+      "Tutorial 3"
+    ]
+  },
+  {
+    "objectID": "tutorial3.html#from-the-model-to-the-data",
+    "href": "tutorial3.html#from-the-model-to-the-data",
+    "title": "Tutorial 3",
+    "section": "From the model to the data",
+    "text": "From the model to the data\nSolow model\n\nUsing Harrod-neutral technological progress, the GDP per capita equation is: \\[\n\\frac{Y(t)}{L(t)} = K(t)^\\alpha (A(t) L(t))^{1-\\alpha} \\quad \\alpha \\in \\ (0,1)\n\\]\nWe assume an exogenous growth rate of \\(A\\) and \\(L\\) such that: \\(A(t) = A(0)e^{gt}\\) and \\(L(t) = L(0) e^{nt}\\).\nAt the steady-state level:\n\n\\[\\small\n\\frac{Y}{L} = A(0)e^{gt}\\left(\\frac{s}{n + g + \\delta}\\right)^{\\alpha/(1-\\alpha)}\n\\]\n\nSuper convenient: we can measure everything\n\n\\(Y/L\\), GDP divided by working age population\n\\(s\\), saving measured as the real investment\n\\(n\\), population growth rate\n\\(\\delta\\), capital depreciation (assumed constant)\n\\(g\\), growth rate of technology (assumed constant)",
+    "crumbs": [
+      "Tutorial 3"
+    ]
+  },
+  {
+    "objectID": "tutorial3.html#from-the-model-to-the-data-1",
+    "href": "tutorial3.html#from-the-model-to-the-data-1",
+    "title": "Tutorial 3",
+    "section": "From the model to the data",
+    "text": "From the model to the data\nIs this relationship linear?\nNo. Solution?\n. . .\nLog-linearize it (at time 0)\n\\[\n\\log (Y/L) = \\log(A(0)) + \\left(\\frac{\\alpha}{1-\\alpha}\\right)\\log s - \\left(\\frac{\\alpha}{1-\\alpha}\\right) \\log(n + g + \\delta)\n\\]",
+    "crumbs": [
+      "Tutorial 3"
+    ]
+  },
+  {
+    "objectID": "tutorial3.html#from-the-model-to",
+    "href": "tutorial3.html#from-the-model-to",
+    "title": "Tutorial 3",
+    "section": "From the model to",
+    "text": "From the model to",
+    "crumbs": [
+      "Tutorial 3"
+    ]
+  },
+  {
+    "objectID": "tutorial3.html#linear-regression-6",
+    "href": "tutorial3.html#linear-regression-6",
+    "title": "Tutorial 3",
+    "section": "Linear regression",
+    "text": "Linear regression\nGauss-Markov theorem\n\nLinearity\n\nThe relationship has to be linear\nSee Anscombe quartet\nSolutions: \\(\\log\\), squared\n\n\\(X\\) is full rank\n\nEnsure that variables are not perfectly colinear\nThere are more observations than variables (\\(n &gt; k\\))\n\nZero conditional mean\n\nErrors are not correlated with \\(X\\) (exogeneity)\n\nHomoskedasticity\n\nErrors are not correlated between observations\nSolutions: robust estimation",
+    "crumbs": [
+      "Tutorial 3"
+    ]
+  },
+  {
+    "objectID": "tutorial3.html#from-the-model-to-the-data-2",
+    "href": "tutorial3.html#from-the-model-to-the-data-2",
+    "title": "Tutorial 3",
+    "section": "From the model to the data",
+    "text": "From the model to the data\nEmpirical model\nBecause we do not observe all data, we can only estimate the parameters. Hence, the empirical model we estimate is:\n\\[\n\\log (Y_i/L_i) = \\beta_0 + \\beta_1 \\log s_i + \\beta_2 \\log(n + g + \\delta) + \\epsilon_i\n\\]\nwhere \\(\\beta_0 + \\epsilon_i = \\log A(0)\\), and \\(\\epsilon_i\\) is an error term capturing everything not captured in the model.\n\n\n\n\n\n\nNote\n\n\nWe can, or not, assume that \\(\\beta_1 = -\\beta_2\\). This is an empirical prediction we might want to test.",
+    "crumbs": [
+      "Tutorial 3"
+    ]
+  },
+  {
+    "objectID": "tutorial3.html#linear-regression-7",
+    "href": "tutorial3.html#linear-regression-7",
+    "title": "Tutorial 3",
+    "section": "Linear regression",
+    "text": "Linear regression\nGauss-Markov theorem violation\nMajor threat is 3 (= endogeneity). Usually it arises from 3 sources:\n\nReverse causality. Any exemple?\nOmitted Variable Bias. Any exemple?\nMeasurement error. Any exemple?\n\nThen, the OLS estimator is biased… We will see many ways to tackle this issue.\n\nToday: Omitted Variable Bias.",
+    "crumbs": [
+      "Tutorial 3"
+    ]
+  },
+  {
+    "objectID": "tutorial3.html#appendix",
+    "href": "tutorial3.html#appendix",
+    "title": "Tutorial 3",
+    "section": "Appendix",
+    "text": "Appendix\nAnscombe quartet",
+    "crumbs": [
+      "Tutorial 3"
+    ]
+  },
+  {
+    "objectID": "tutorial3.html#linear-regression-8",
+    "href": "tutorial3.html#linear-regression-8",
+    "title": "Tutorial 3",
+    "section": "Linear regression",
+    "text": "Linear regression\nR2 and prediction quality\n\nR2 is the coefficient of determination, assessing the share of total variance explained by the model\n\n\\[\\small\nR^2 = \\frac{\\texttt{Variance explained}}{\\texttt{Total variance}} = \\frac{\\text{Sum of explained square}}{\\text{Total sum of square}} = 1 - \\frac{\\text{Sum of square residuals}}{\\text{Total sum of square}}\n\\]\n\nR2 is between 0 and 1\nThe higher the R2, the larger the share of variance explained by the model\nA low R2 is not necessarily bad: it is just that the model explains a low share of variance",
+    "crumbs": [
+      "Tutorial 3"
+    ]
+  },
+  {
+    "objectID": "tutorial3.html#linear-regression-9",
+    "href": "tutorial3.html#linear-regression-9",
+    "title": "Tutorial 3",
+    "section": "Linear regression",
+    "text": "Linear regression\nInterpretation\n\nOnce the model set, we can estimate it using R functions\nMain function is lm. For linear model, the syntax is lm(y ~ x)\n\n\nsummary(lm(cars$speed ~ cars$dist))\n\n\nCall:\nlm(formula = cars$speed ~ cars$dist)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-7.5293 -2.1550  0.3615  2.4377  6.4179 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  8.28391    0.87438   9.474 1.44e-12 ***\ncars$dist    0.16557    0.01749   9.464 1.49e-12 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 3.156 on 48 degrees of freedom\nMultiple R-squared:  0.6511,    Adjusted R-squared:  0.6438 \nF-statistic: 89.57 on 1 and 48 DF,  p-value: 1.49e-12\n\n\n\nResults are significant (low p-value), R2 is relatively large",
+    "crumbs": [
+      "Tutorial 3"
+    ]
+  },
+  {
+    "objectID": "tutorial3.html#exercise-1",
+    "href": "tutorial3.html#exercise-1",
+    "title": "Tutorial 3",
+    "section": "Exercise",
+    "text": "Exercise\nBaseline estimation\nAssume \\(g+\\delta=0.05\\).\n\nGenerate the variables you need in the regression\nRun the model on the full sample and on each sub-group. Store the results in appropriate objects.\n\n[Bonus] Use a loop to do it\n\nInterpret the results in the light of the Solow model predictions. What is the share of cross-country income per capita variation is explained by the model?\n[Bonus] We assumed that \\(\\beta_1 \\neq -\\beta_2\\). Using linearHypothesis() from the package car, you can set an hypothesis testing to check if the sum of the coefficient is equal to 0.\nIn previous work, the share of capital in production was thought to be roughly 1/3, is this prediction supported by the data?",
+    "crumbs": [
+      "Tutorial 3"
+    ]
+  },
+  {
+    "objectID": "tutorial3.html#exercise-2",
+    "href": "tutorial3.html#exercise-2",
+    "title": "Tutorial 3",
+    "section": "Exercise",
+    "text": "Exercise\nAdding the human capital\n\nDoes the previous model violate the exogeneity assumption? Why?\nA proposed solution is to add a new variable to capture the level of human capital: school.\nRun again the model on the full and sub- samples.\nInterpret.\nExport the tables and the graph in LaTeX",
+    "crumbs": [
+      "Tutorial 3"
     ]
   }
 ]
