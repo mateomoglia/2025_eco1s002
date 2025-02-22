@@ -59,14 +59,14 @@ $selection-bg: #26351c !default;
   text-align: left;
 
   .title {
-    color: $body-color;
+    color: $accent;
     font-size: 1.4em;
     // font-weight: 350;
     font-weight: lighter;
   }
 
   .subtitle {
-    color: $accent;
+    color: $body-color;
     font-style: italic;
     margin-top: 0em;
     font-weight: lighter;

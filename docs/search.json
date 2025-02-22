@@ -489,7 +489,7 @@
     "href": "tutorial3.html#linear-regression-4",
     "title": "Tutorial 3",
     "section": "Linear regression",
-    "text": "Linear regression\nBringing some maths\n\nWe compute the sum of square distances (\\(\\sim\\) error), so the name “ordinary least square”\nAn affine function is defined as $y = _0 + _1 x $ which in matrix form gives \\(Y = X\\beta\\).\nDimension of \\(X\\)?\nThe error for each observation is \\(e_i = y_i - \\beta_0 - \\beta_1 x_i\\)\nHence, we look for \\(\\beta\\) such that: \\[\n\\beta^\\star = \\min_\\beta (Y - X\\beta)'(Y - X\\beta) = \\min_\\beta e'e\n\\]\nFirst order condition: derivative wrt \\(\\beta\\) should be equal to 0",
+    "text": "Linear regression\nBringing some maths\n\nWe compute the sum of square distances (\\(\\sim\\) error), so the name “ordinary least square”\nAn affine function is defined as \\(y = \\beta_0 + \\beta_1 x\\) which in matrix form gives \\(Y = X\\beta\\).\nDimension of \\(X\\)?\nThe error for each observation is \\(e_i = y_i - \\beta_0 - \\beta_1 x_i\\)\nHence, we look for \\(\\beta\\) such that: \\[\n\\beta^\\star = \\min_\\beta (Y - X\\beta)'(Y - X\\beta) = \\min_\\beta e'e\n\\]\nFirst order condition: derivative wrt \\(\\beta\\) should be equal to 0",
     "crumbs": [
       "Tutorial 3"
     ]
@@ -509,7 +509,7 @@
     "href": "tutorial3.html#from-the-model-to-the-data",
     "title": "Tutorial 3",
     "section": "From the model to the data",
-    "text": "From the model to the data\nSolow model\n\nUsing Harrod-neutral technological progress, the GDP per capita equation is: \\[\n\\frac{Y(t)}{L(t)} = K(t)^\\alpha (A(t) L(t))^{1-\\alpha} \\quad \\alpha \\in \\ (0,1)\n\\]\nWe assume an exogenous growth rate of \\(A\\) and \\(L\\) such that: \\(A(t) = A(0)e^{gt}\\) and \\(L(t) = L(0) e^{nt}\\).\nAt the steady-state level:\n\n\\[\\small\n\\frac{Y}{L} = A(0)e^{gt}\\left(\\frac{s}{n + g + \\delta}\\right)^{\\alpha/(1-\\alpha)}\n\\]\n\nSuper convenient: we can measure everything\n\n\\(Y/L\\), GDP divided by working age population\n\\(s\\), saving measured as the real investment\n\\(n\\), population growth rate\n\\(\\delta\\), capital depreciation (assumed constant)\n\\(g\\), growth rate of technology (assumed constant)",
+    "text": "From the model to the data\nSolow model\n\nUsing Harrod-neutral technological progress, the GDP per capita equation is: \\[\\small\n\\frac{Y(t)}{L(t)} = K(t)^\\alpha (A(t) L(t))^{1-\\alpha} \\quad \\alpha \\in \\ (0,1)\n\\]\nWe assume an exogenous growth rate of \\(A\\) and \\(L\\) such that: \\(A(t) = A(0)e^{gt}\\) and \\(L(t) = L(0) e^{nt}\\).\nAt the steady-state level:\n\n\\[\\small\n\\frac{Y}{L} = A(0)e^{gt}\\left(\\frac{s}{n + g + \\delta}\\right)^{\\alpha/(1-\\alpha)}\n\\]\n\nSuper convenient: we can measure everything\n\n\\(Y/L\\), GDP divided by working age population\n\\(s\\), saving measured as the real investment\n\\(n\\), population growth rate\n\\(\\delta\\) and \\(g\\), capital depreciation and growth rate of technology (assumed constant)",
     "crumbs": [
       "Tutorial 3"
     ]
@@ -519,7 +519,7 @@
     "href": "tutorial3.html#from-the-model-to-the-data-1",
     "title": "Tutorial 3",
     "section": "From the model to the data",
-    "text": "From the model to the data\nIs this relationship linear?\nNo. Solution?\n. . .\nLog-linearize it (at time 0)\n\\[\n\\log (Y/L) = \\log(A(0)) + \\left(\\frac{\\alpha}{1-\\alpha}\\right)\\log s - \\left(\\frac{\\alpha}{1-\\alpha}\\right) \\log(n + g + \\delta)\n\\]",
+    "text": "From the model to the data\nIs this relationship linear?\nNo. Solution?\n\nLog-linearize it (at time 0)\n\\[\n\\log (Y/L) = \\log(A(0)) + \\left(\\frac{\\alpha}{1-\\alpha}\\right)\\log s - \\left(\\frac{\\alpha}{1-\\alpha}\\right) \\log(n + g + \\delta)\n\\]",
     "crumbs": [
       "Tutorial 3"
     ]
@@ -610,6 +610,16 @@
     "title": "Tutorial 3",
     "section": "Exercise",
     "text": "Exercise\nAdding the human capital\n\nDoes the previous model violate the exogeneity assumption? Why?\nA proposed solution is to add a new variable to capture the level of human capital: school.\nRun again the model on the full and sub- samples.\nInterpret.\nExport the tables and the graph in LaTeX",
+    "crumbs": [
+      "Tutorial 3"
+    ]
+  },
+  {
+    "objectID": "tutorial3.html#linear-regression-10",
+    "href": "tutorial3.html#linear-regression-10",
+    "title": "Tutorial 3",
+    "section": "Linear regression",
+    "text": "Linear regression\nInterpretation\n\n\n\n\n\n\nNote\n\n\nEverything should be intepreted everything else equal!\n\n\n\n\nLevel-level regression: marginal effect. If \\(x\\) increases by 1, \\(y\\) increases by \\(\\beta\\)\nLog-log regression: elasticity. If \\(x\\) increases by 1%, \\(y\\) increases by \\(\\beta\\)%\nLog-level regression: percentage change. If \\(x\\) increases by 1, \\(y\\) increases by \\(100\\beta\\)\nLevel-log regression: level change. If \\(x\\) increases by 1%, \\(y\\) increases by \\(\\beta/100\\)",
     "crumbs": [
       "Tutorial 3"
     ]

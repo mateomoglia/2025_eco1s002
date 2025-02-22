@@ -17,7 +17,7 @@ author:
     email: mateo.moglia@gmail.com
     affiliations: CREST - Institut Polytechnique de Paris
     url: https://mateomoglia.github.io
-date: last-modified
+date: "March 5, 2025"
 execute:
   cache: true
 ---
@@ -42,15 +42,16 @@ For this third tutorial, we are going to
 3.  Replicate the key results from Mankiw, Romer, Weil (1994)
 
 ::: callout-note
-Big disclaimer: the recap on OLS is hugely inspired from Florian Oswald's and Sciences Po's introduction to Econometrics with R. The interested student can check this fantastical material here: [scpoecon.github.io](scpoecon.github.io). 
+Big disclaimer: the recap on OLS is hugely inspired from Florian Oswald's and Sciences Po's introduction to Econometrics with R. The interested student can check this fantastical material here: [scpoecon.github.io](scpoecon.github.io).
 :::
 
 ## Linear regression
-### Why? When? 
 
-1. An empirical tool to assess the statistical relationship between variables
-2. In the toolbox of the social scientist, with many other tools 
-3. Correlation **is not** causation
+### Why? When?
+
+1.  An empirical tool to assess the statistical relationship between variables
+2.  In the toolbox of the social scientist, with many other tools
+3.  Correlation **is not** causation
 
 Topic of today: **Ordinary Least Square** estimator (which is a widely used estimator)
 
@@ -59,7 +60,9 @@ Keep in mind the difference between an estimator $\hat \beta$ and the observed v
 :::
 
 ## Linear regression
+
 ### Visual intuition
+
 We use the `cars` dataset, in base R, and we are going to relate how speed and stopping distance are related.
 
 ```{r}
@@ -71,6 +74,7 @@ ggplot(cars,aes(x=speed,y=dist)) +
 ```
 
 ## Linear regression
+
 ### Visual intuition
 
 It seems that a line could be helpful to "summarize" the relation between both variables!
@@ -85,6 +89,7 @@ ggplot(cars,aes(x=speed,y=dist)) +
 ```
 
 ## Linear regression
+
 ### Bringing some maths
 
 -   We want to minimize the distance between the line and the points
@@ -107,36 +112,43 @@ ggplot(cars, aes(x = speed, y = dist)) +
 ```
 
 ## Linear regression
+
 ### Bringing some maths
 
 -   We compute the sum of square distances ($\sim$ error), so the name "ordinary least square"
--   An affine function is defined as $y = \beta_0 + \beta_1 x $ which in matrix form gives $Y = X\beta$. 
+
+-   An affine function is defined as $y = \beta_0 + \beta_1 x$ which in matrix form gives $Y = X\beta$.
+
 -   Dimension of $X$?
+
 -   The error for each observation is $e_i = y_i - \beta_0 - \beta_1 x_i$
--   Hence, we look for $\beta$ such that: 
-$$
-\beta^\star = \min_\beta (Y - X\beta)'(Y - X\beta) = \min_\beta e'e
-$$
+
+-   Hence, we look for $\beta$ such that: $$
+    \beta^\star = \min_\beta (Y - X\beta)'(Y - X\beta) = \min_\beta e'e
+    $$
 
 -   First order condition: derivative wrt $\beta$ should be equal to 0
 
 ## Linear regression
+
 ### Defining the OLS estimator
 
--   The OLS estimator is then:
-$$
-\hat{\beta} = (X'X)^{-1}X'y
-$$
+-   The OLS estimator is then: $$
+    \hat{\beta} = (X'X)^{-1}X'y
+    $$
 
 -   Who wants to try to derive it?
+
 -   Under some conditions, this estimator is the **Best Linear Unbiased Estimator** (BLUE)
+
 -   Those conditions will be super helpful later
 
 ## Linear regression
+
 ### Gauss-Markov theorem
 
 1.  Linearity
-    -   The relationship has to be linear 
+    -   The relationship has to be linear
     -   See <a href="#appendix" class="btn btn-primary">Anscombe quartet</a>
     -   Solutions: $\log$, squared
 2.  $X$ is full rank
@@ -149,6 +161,7 @@ $$
     -   Solutions: robust estimation
 
 ## Linear regression
+
 ### Gauss-Markov theorem violation
 
 Major threat is 3 (= **endogeneity**). Usually it arises from 3 sources:
@@ -157,11 +170,12 @@ Major threat is 3 (= **endogeneity**). Usually it arises from 3 sources:
 2.  Omitted Variable Bias. Any exemple?
 3.  Measurement error. Any exemple?
 
-Then, the OLS estimator is **biased**... We will see many ways to tackle this issue. 
+Then, the OLS estimator is **biased**... We will see many ways to tackle this issue.
 
 -   Today: **Omitted Variable Bias**.
 
 ## Linear regression
+
 ### R2 and prediction quality
 
 -   R2 is the coefficient of determination, assessing the share of total variance explained by the model
@@ -175,6 +189,7 @@ $$
 -   A low R2 is not necessarily bad: it is just that the model explains a low share of variance
 
 ## Linear regression
+
 ### Interpretation
 
 -   Once the model set, we can estimate it using R functions
@@ -186,13 +201,29 @@ summary(lm(cars$speed ~ cars$dist))
 
 -   Results are significant (low p-value), R2 is relatively large
 
+## Linear regression
+
+### Interpretation
+
+::: callout-note
+Everything should be intepreted **everything else equal**!
+:::
+
+-   Level-level regression: marginal effect. If $x$ increases by 1, $y$ increases by $\beta$
+
+-   Log-log regression: elasticity. If $x$ increases by 1%, $y$ increases by $\beta$%
+
+-   Log-level regression: percentage change. If $x$ increases by 1, $y$ increases by $100\beta$
+
+-   Level-log regression: level change. If $x$ increases by 1%, $y$ increases by $\beta/100$
+
 ## From the model to the data
+
 ### Solow model
 
--   Using Harrod-neutral technological progress, the GDP per capita equation is:
-$$
-\frac{Y(t)}{L(t)} = K(t)^\alpha (A(t) L(t))^{1-\alpha} \quad \alpha \in \ (0,1)
-$$
+-   Using Harrod-neutral technological progress, the GDP per capita equation is: $$\small
+    \frac{Y(t)}{L(t)} = K(t)^\alpha (A(t) L(t))^{1-\alpha} \quad \alpha \in \ (0,1)
+    $$
 
 -   We assume an exogenous growth rate of $A$ and $L$ such that: $A(t) = A(0)e^{gt}$ and $L(t) = L(0) e^{nt}$.
 
@@ -206,24 +237,24 @@ $$
     -   $Y/L$, GDP divided by working age population
     -   $s$, saving measured as the real investment
     -   $n$, population growth rate
-    -   $\delta$, capital depreciation (assumed constant)
-    -   $g$, growth rate of technology (assumed constant)
+    -   $\delta$ and $g$, capital depreciation and growth rate of technology (assumed constant)
 
 ## From the model to the data
+
 ### Is this relationship linear?
 
 **No**. Solution?
 
-. . .
-
+::: fragment
 Log-linearize it (at time 0)
 
 $$
 \log (Y/L) = \log(A(0)) + \left(\frac{\alpha}{1-\alpha}\right)\log s - \left(\frac{\alpha}{1-\alpha}\right) \log(n + g + \delta)
 $$
-
+:::
 
 ## From the model to the data
+
 ### Empirical model
 
 Because we do not observe all data, we can only *estimate* the parameters. Hence, the empirical model we estimate is:
@@ -239,8 +270,8 @@ We can, or not, assume that $\beta_1 = -\beta_2$. This is an empirical predictio
 :::
 
 ## Exercise
-### Data cleaning and descriptive statistics
 
+### Data cleaning and descriptive statistics
 
 1.  Load the data and the packages (`dplyr` and `ggplot2`)
 2.  What are the three groups of countries in the data?
@@ -248,17 +279,20 @@ We can, or not, assume that $\beta_1 = -\beta_2$. This is an empirical predictio
 4.  Plot the growth rate of GDP per capita vs. the log of GDP per capita
 
 ## Exercise
+
 ### Baseline estimation
+
 Assume $g+\delta=0.05$.
 
 1.  Generate the variables you need in the regression
 2.  Run the model on the full sample and on each sub-group. Store the results in appropriate objects.
-    -   *[Bonus]* Use a loop to do it
+    -   *\[Bonus\]* Use a loop to do it
 3.  Interpret the results in the light of the Solow model predictions. What is the share of cross-country income per capita variation is explained by the model?
-4. *[Bonus]* We assumed that $\beta_1 \neq -\beta_2$. Using `linearHypothesis()` from the package `car`, you can set an hypothesis testing to check if the sum of the coefficient is equal to 0.
-5.   In previous work, the share of capital in production was thought to be roughly 1/3, is this prediction supported by the data?
+4.  *\[Bonus\]* We assumed that $\beta_1 \neq -\beta_2$. Using `linearHypothesis()` from the package `car`, you can set an hypothesis testing to check if the sum of the coefficient is equal to 0.
+5.  In previous work, the share of capital in production was thought to be roughly 1/3, is this prediction supported by the data?
 
 ## Exercise
+
 ### Adding the human capital
 
 1.  Does the previous model violate the exogeneity assumption? Why?
@@ -268,6 +302,7 @@ Assume $g+\delta=0.05$.
 5.  Export the tables and the graph in LaTeX
 
 ## Appendix {#appendix}
+
 ### Anscombe quartet
 
 ```{r}
