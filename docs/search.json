@@ -4,7 +4,7 @@
     "href": "tutorial1.html",
     "title": "Tutorial 1",
     "section": "",
-    "text": "For this first tutorial, we are going to (i) download R and Rstudio, (ii) discover the software and (iii) make our first data visualisation. We are also going to see how to export them and input them in a .tex file.",
+    "text": "For this first tutorial, we are going to\n\nDownload R and Rstudio\nDiscover the software\nMake our first data visualisation\nLearn how to export them and input them in a .tex file.",
     "crumbs": [
       "Tutorial 1"
     ]
@@ -44,7 +44,7 @@
     "href": "tutorial1.html#first-step-in-latex",
     "title": "Tutorial 1",
     "section": "First step in LaTeX",
-    "text": "First step in LaTeX\nWhat is LaTeX\nLaTeX is very popular software to produce scientic writings. It is relatively easy to use. From now on, it is mandatory to produce output you would hand using LaTeX. You have three options to use LaTeX:\n\nUse any text editor and compile the file using the console\nUse an IDE, like TexStudio or TexLive\nUse an online IDE like Overleaf\n\n\nThere are plenty of tutorials over the web (or ChatGPT) to know how to use LaTeX, so I am going to be quick.",
+    "text": "First step in LaTeX\n\nWhat is LaTeX\nLaTeX is very popular software to produce scientic writings. It is relatively easy to use. From now on, it is mandatory to produce output you would hand using LaTeX. You have three options to use LaTeX:\n\nUse any text editor and compile the file using the console\nUse an IDE, like TexStudio or TexLive\nUse an online IDE like Overleaf\n\n\nThere are plenty of tutorials over the web (or ChatGPT) to know how to use LaTeX, so I am going to be quick.",
     "crumbs": [
       "Tutorial 1"
     ]
@@ -88,7 +88,7 @@
     "href": "home.html#class-outline",
     "title": "Welcome to this class!",
     "section": "Class outline",
-    "text": "Class outline\n\nTutorial 1 (February 12, computer session)\n\nPresentation of the class objectives\nFirst hands on R\nFirst hands on LaTeX\n\nTutorial 2 (February 19)\n\nBaseline Solow model derivations\nSolow model extensions\n\nTutorial 3 (March 5, computer session)\n\nReplication of Mankiw et al. (1997)\nFirst hands on the OLS estimator\nEstimating the baseline and augmented Solow models\n\nTutorial 4 (March 12, computer session)\n\nOLS bias and Instrumental Variables\nReplication of Acemoglu et al. (2010)\nExport the results\n\nTutorial 5 (March 19)\n\nDiscussion on the group project\nQ&A\n\nTutorial 6 (March 19, computer session)\n\nAutonomous replication of an IV paper (graded)\n\nTutorial 7 (April 2)\n\nTreatment effect\nDifference-in-differences estimator\n\n\n\nTutorial 8 (April 9)\n\nRefresher on the utility maximization problem\nThe social multiplier\n\nTutorial 9 (April 16)\n\nIntertemporal maximization problem\n\nTutorial 10 (April 30, computer session)\n\nSpatial segregation\n\nTutorial 11 (May 7)\n\nThe marriage market\nQ&A\n\nTutorial 12 (May 14, computer session)\n\nRegression in discontinuity design\nMock exam correction\n\nTutorial 13 (May 21)\n\nSummarizing the class and methods covered\nFinal Q&A\n\nTutorial 14 (May 28)\n\nRestitution of the group projects (graded)",
+    "text": "Class outline\n\nTutorial 1 (February 12, computer session)\n\nPresentation of the class objectives\nFirst hands on R\nFirst hands on LaTeX\n\nTutorial 2 (February 19)\n\nBaseline Solow model derivations\nSolow model extensions\n\nTutorial 3 (March 5, computer session)\n\nReplication of Mankiw et al. (1997)\nFirst hands on the OLS estimator\nEstimating the baseline and augmented Solow models\n\nTutorial 4 (March 12, computer session)\n\nOLS bias and Instrumental Variables\nReplication of Acemoglu et al. (2010)\nExport the results\n\nTutorial 5 (March 19)\n\nDiscussion on the group project\nQ&A\n\nTutorial 6 (March 26, computer session)\n\nAutonomous replication of an IV paper\n\nTutorial 7 (April 2)\n\nTreatment effect\nDifference-in-differences estimator\n\n\n\nTutorial 8 (April 9)\n\nRefresher on the utility maximization problem\nThe social multiplier\n\nTutorial 9 (April 16)\n\nIntertemporal maximization problem\n\nTutorial 10 (April 30, computer session)\n\nSpatial segregation\n\nTutorial 11 (May 7)\n\nThe marriage market\nQ&A\n\nTutorial 12 (May 14, computer session)\n\nRegression in discontinuity design\nMock exam correction\n\nTutorial 13 (May 21)\n\nSummarizing the class and methods covered\nFinal Q&A\n\nTutorial 14 (May 28)\n\nRestitution of the group projects (graded)",
     "crumbs": [
       "Home"
     ]
@@ -128,7 +128,7 @@
     "href": "tutorial1.html#what-is-r-set-up-and-launch",
     "title": "Tutorial 1",
     "section": "What is R? Set-up and launch",
-    "text": "What is R? Set-up and launch\nR is a free and open-source software used in many contexts: data cleaning, data visualisation, econometrics, machine and deep learning, among others.\nIt is supported by a lively and active user community. R is an object-based language, meaning that we are going to manipulate objects through a series of commands.",
+    "text": "What is R? Set-up and launch\nR is a free and open-source software used in many contexts: data cleaning, data visualisation, econometrics, machine and deep learning, among others.\nIt is supported by a lively and active user community. R is an object-based language, meaning that we are going to manipulate objects through a series of commands.\n\nR can be used directly from a command terminal, but we prefer to use RStudio, an IDE, to make our lifes easier. An IDE is an interface that eases the use of a software. The most popular one is RStudio. To use it, we need to:\n\nDownload R\nThen, download RStudio\n\n\nYou can download both from here https://posit.co/download/rstudio-desktop/.",
     "crumbs": [
       "Tutorial 1"
     ]
@@ -138,7 +138,7 @@
     "href": "tutorial1.html#general-best-practices",
     "title": "Tutorial 1",
     "section": "General best practices",
-    "text": "General best practices\nBefore jumping to coding per se, let me recall you some best practices when performing computer-based tasks.",
+    "text": "General best practices\nBefore jumping to coding per se, let me recall you some best practices when performing computer-based tasks.\n\n\nFolder organization\nComputers are organized around folder. We are going to work in a working directory (wd), but we need to identify it. My folder tree looks like it:\n/Users/mmoglia/Dropbox/\n├── Documents/\n│   ├── perso/\n│   │   ├── banque/\n│   │   ├── admin/\n│   │   └── festival/\n├── Downloads/\n├── Music/\n├── Pictures/\n│   ├── famille/\n│   ├── vacances/\n└── courses/\n│   ├── polytechnique/\n|   |   ├── 2024_eco102/\n|   |   ├── 2025_eco1s002/\n├── research/\nHere we are going to work in ~/courses/2025_eco1s002/. This folder may (and should!) contains subfolders, for instance: /code, /output, /raw_data, etc.\n\n\n\nNaming convention\nA typical tip is to choose simple and short titles for the files and the scripts. For instance, this file is named tutorial1.qmd. Your code can be named code_tutorial1.R. It should be self-explanatory.\n\n\n\n\n\n\nTip\n\n\n\nAvoid at all cost to use spaces or special characters in your file names. Prefer instead an underscore or a score.\n\n\n\n\n\nWhen writing code\n\nAlways comment your code, make it readable for your future self but also for others. You may use your code in a week, a month, a year, and should be able to directly understands it!\nWhen creating objects, functions, or whatever, give it simple but understandable names.\nFor instance, if you create a data frame containing wages for individuals aged between 25 and 30, you way call it wage_25_30 and not w2530 (too short) or wage_individuals_aged_25_30 (too long).\nMoreover, especially for large project, you want to have different scripts. Always keep scripts short and with clear names. For instance 1_clean_data.R, 2_import_wages.R, 3_merge_datasets.R, and 4_data_analysis.R.",
     "crumbs": [
       "Tutorial 1"
     ]
@@ -148,7 +148,7 @@
     "href": "tutorial1.html#first-step-in-rrstudio",
     "title": "Tutorial 1",
     "section": "First step in R/Rstudio",
-    "text": "First step in R/Rstudio\nSome useful terms\n\nSo far, we talked about script.\nWe are going to manipulate object using functions.\nObjects can be of different classes: matrix, vector, character, numeric, data.frame, etc. Some functions are already in R but some are not. Hence, we need to load them thanks to packages.",
+    "text": "First step in R/Rstudio\n\nSome useful terms\n\nSo far, we talked about script.\nWe are going to manipulate object using functions.\nObjects can be of different classes: matrix, vector, character, numeric, data.frame, etc. Some functions are already in R but some are not. Hence, we need to load them thanks to packages.",
     "crumbs": [
       "Tutorial 1"
     ]
@@ -206,9 +206,9 @@
   {
     "objectID": "tutorial3.html",
     "href": "tutorial3.html",
-    "title": "Tutorial 3: OLS and first repliction",
+    "title": "Tutorial 3",
     "section": "",
-    "text": "We learnt how to manage simple datasets using R and dug into the key derivations of the Solow model. We are going replicate our very first paper! You should read the paper beforehand (find it on Moodle) and know the main predictions of the Solow model.",
+    "text": "For this third tutorial, we are going to\n\nRecap on the OLS estimation\nLearn how to go from a model to an empirical prediction\nReplicate the key results from Mankiw, Romer, Weil (1994)\n\n\n\n\n\n\n\nNote\n\n\n\nBig disclaimer: the recap on OLS is hugely inspired from Florian Oswald’s and Sciences Po’s introduction to Econometrics with R. The interested student can check this fantastical material here: scpoecon.github.io.",
     "crumbs": [
       "Tutorial 3"
     ]
@@ -258,7 +258,7 @@
     "href": "tutorial3.html#exercise",
     "title": "Tutorial 3",
     "section": "Exercise",
-    "text": "Exercise\nData cleaning and descriptive statistics\n\nLoad the data and the packages (dplyr and ggplot2)\nWhat are the three groups of countries in the data?\nCompute summary statistics based on country group\nPlot the growth rate of GDP per capita vs. the log of GDP per capita",
+    "text": "Exercise\n\nData cleaning and descriptive statistics\n\nLoad the data and the packages (dplyr and ggplot2)\nWhat are the three groups of countries in the data?\nCompute summary statistics based on country group\nPlot the growth rate of GDP per capita vs. the log of GDP per capita",
     "crumbs": [
       "Tutorial 3"
     ]
@@ -299,7 +299,7 @@
     "href": "tutorial2.html#exercises",
     "title": "Tutorial 2: the Solow model",
     "section": "Exercises",
-    "text": "Exercises\n\n1. Warm-up: Return to scale\nLet \\(\\lambda &gt; 1\\), if \\(F(\\lambda X, \\lambda Y) &lt; \\lambda F(X,Y)\\), the function has decreasing return to scales (and increasing for \\(&gt;\\)). If \\(F(\\lambda X, \\lambda Y) = \\lambda F(X,Y)\\), the function has constant return to scale. For the following functions, state if they exhibit positive, constant, or negative return to scale.\n\n\\(y_1 = 10x^2y^2\\)\n\\(y_2 = \\frac{1}{2}x^{1/3}y^{1/2}\\)\n\\(y_3 = x + 2y\\)\n\\(y_4 = \\sqrt{x} + \\log(y)\\)\n\n\n\n2. Solve the maximization problem\nConsider the function above (\\(Y_t = K_t^{\\alpha} L_t^{1-\\alpha}\\)).\n\nShow that if \\(K=0\\) and/or \\(L=0\\) production does not occur\nShow that marginal productivity is positive for capital and labour\nShow that marginal productivity is decreasing for capital and labour\nWrite the down the profit maximization program\nSolve the program\n\n\n\n3. Per worker term\nDenote \\(y=Y/L\\), the per-worker production, and \\(k=K/L\\) the per-worker capital.\n\nShow that \\(y=Ak^\\alpha\\)\n\n\n\n4. Capital accumulation\nCapital accumulation is given by \\(\\dot K=sY-\\delta K\\). Note also that the growth rate of population \\(n\\) can be expressed as \\(n = \\dot L / L\\).\n\nInterpret this equation\nShow that \\(\\frac{\\dot K}{K} = s\\frac{y}{k}-\\delta\\)\nShow that \\(\\dot k = sAk^\\alpha - (\\delta - n)k\\)\nWhat happen if \\(sAk^\\alpha &gt; (\\delta - n)k\\) ?\n\n\n\n5. Steady state\nA steady-state is a capital stock per capita \\(k^\\star\\) where, when reached, \\(\\dot k = 0\\).\n\nWhat is the steady-state level of output per capita \\(y^\\star\\) ?\nInterpret\n\n\n\n6. Comparative statics\nComparative statics exercises are thought experiment in which we change the value of a parameter and compare the past and new equilibrium. Consider a new saving rate \\(s'&gt;s\\).\n\nHow does capital accumulation change?\nHow does change the steady-state level of capital per capita?\nHow does change the stead-state level of output per capita?\n\n\n\n7. Balanced growth path [Bonus]\nThe balanced growth path is a situation during which capital per worker and output per worker grow at a constant (but potentially different) rates. The steady state is a BGP with zero growth rate. Denote \\(g_y\\) and \\(g_k\\) the capital and output per worker growth rates .\n\nShow that \\(g_y \\propto g_k\\)\n\n\n\n8. Introducing technological progress\nLet assume now that \\(A\\) grows at rate \\(\\dot A / A = g &gt; 0\\).\n\nWhat is the new law of capital accumulation?\nWhat is the steady-state level of output per capita \\(\\tilde{y}^star\\)?",
+    "text": "Exercises\n\n1. Warm-up: Return to scale\nLet \\(\\lambda &gt; 1\\), if \\(F(\\lambda X, \\lambda Y) &lt; \\lambda F(X,Y)\\), the function has decreasing return to scales (and increasing for \\(&gt;\\)). If \\(F(\\lambda X, \\lambda Y) = \\lambda F(X,Y)\\), the function has constant return to scale. For the following functions, state if they exhibit positive, constant, or negative return to scale.\n\n\\(y_1 = 10x^2y^2\\)\n\\(y_2 = \\frac{1}{2}x^{1/3}y^{1/2}\\)\n\\(y_3 = x + 2y\\)\n\\(y_4 = \\sqrt{x} + \\log(y)\\)\n\n\n\n2. Solve the maximization problem\nConsider the function above (\\(Y_t = K_t^{\\alpha} L_t^{1-\\alpha}\\)).\n\nShow that if \\(K=0\\) and/or \\(L=0\\) production does not occur\nShow that marginal productivity is positive for capital and labour\nShow that marginal productivity is decreasing for capital and labour\nWrite the down the profit maximization program\nSolve the program\n\n\n\n3. Per worker term\nDenote \\(y=Y/L\\), the per-worker production, and \\(k=K/L\\) the per-worker capital.\n\nShow that \\(y=Ak^\\alpha\\)\n\n\n\n4. Capital accumulation\nCapital accumulation is given by \\(\\dot K=sY-\\delta K\\). Note also that the growth rate of population \\(n\\) can be expressed as \\(n = \\dot L / L\\).\n\nInterpret this equation\nShow that \\(\\frac{\\dot K}{K} = s\\frac{y}{k}-\\delta\\)\nShow that \\(\\dot k = sAk^\\alpha - (\\delta - n)k\\)\nWhat happen if \\(sAk^\\alpha &gt; (\\delta - n)k\\)? Interpret\n\n\n\n5. Steady state\nA steady-state is a capital stock per capita \\(k^\\star\\) where, when reached, \\(\\dot k = 0\\).\n\nWhat is the steady-state level of output per capita \\(y^\\star\\) ?\nInterpret\n\n\n\n6. Comparative statics\nComparative statics exercises are thought experiment in which we change the value of a parameter and compare the past and new equilibrium. Consider a new saving rate \\(s'&gt;s\\).\n\nHow does capital accumulation change?\nHow does change the steady-state level of capital per capita?\nHow does change the steady-state level of output per capita?\n\n\n\n7. Balanced growth path [Bonus]\nThe balanced growth path is a situation during which capital per worker and output per worker grow at a constant (but potentially different) rates. The steady state is a BGP with zero growth rate. Denote \\(g_y\\) and \\(g_k\\) the capital and output per worker growth rates .\n\nShow that \\(g_y \\propto g_k\\)\n\n\n\n8. Introducing technological progress [Bonus]\nLet assume now that \\(A\\) grows at rate \\(\\dot A / A = g &gt; 0\\).\n\nWhat is the new law of capital accumulation?\nWhat is the steady-state level of output per capita \\(\\tilde{y}^\\star\\)?",
     "crumbs": [
       "Tutorial 2"
     ]
@@ -308,8 +308,8 @@
     "objectID": "tutorial1.html#roadmap",
     "href": "tutorial1.html#roadmap",
     "title": "Tutorial 1",
-    "section": "Roadmap",
-    "text": "Roadmap\nFor this first tutorial, we are going to\n\nDownload R and Rstudio\nDiscover the software\nMake our first data visualisation\nLearn how to export them and input them in a .tex file.",
+    "section": "",
+    "text": "For this first tutorial, we are going to\n\nDownload R and Rstudio\nDiscover the software\nMake our first data visualisation\nLearn how to export them and input them in a .tex file.",
     "crumbs": [
       "Tutorial 1"
     ]
@@ -329,7 +329,7 @@
     "href": "tutorial1.html#first-step-in-rrstudio-1",
     "title": "Tutorial 1",
     "section": "First step in R/Rstudio",
-    "text": "First step in R/Rstudio\nOpen a script\n\nWe are going to create our first script (the extension is .R).\nThis script contains all commands you want to run. R has built-in functions but most useful functions should be called using library().\nThese libraries should be first downloaded then loaded into your project.\nFirst, open RStudio and opens a new script.\nYou should have an empty page. You may want to write some words at the top of it to have an idea of what this code does. You can use # to comment code.",
+    "text": "First step in R/Rstudio\n\nOpen a script\n\nWe are going to create our first script (the extension is .R).\nThis script contains all commands you want to run. R has built-in functions but most useful functions should be called using library().\nThese libraries should be first downloaded then loaded into your project.\nFirst, open RStudio and opens a new script.\nYou should have an empty page. You may want to write some words at the top of it to have an idea of what this code does. You can use # to comment code.",
     "crumbs": [
       "Tutorial 1"
     ]
@@ -339,7 +339,7 @@
     "href": "tutorial1.html#first-step-in-rrstudio-2",
     "title": "Tutorial 1",
     "section": "First step in R/Rstudio",
-    "text": "First step in R/Rstudio\nScript\n\n#-------------------------------------------------------------------------------\n# This script opens a dataset and proceeds\n# to data visualization.\n#\n# Author: Matéo Moglia\n# Date: 12/02/2025\n#-------------------------------------------------------------------------------\n\n# Set your working directory\nsetwd(\"C:/Users/mateomoglia/Dropbox/courses/polytechnique/2025_eco1s002/site\")\npath &lt;- \"/Users/mateomoglia/Dropbox/courses/polytechnique/2025_eco1s002/site\"\n\nHere, I set the working directory using setwd(). Notice that we created our first object, named path using the assignment operator &lt;- (I personally prefer to use = which works exactly the same).\n\n\n\n\n\n\nTip\n\n\nWhat is the class of path? Hint: use the function class()",
+    "text": "First step in R/Rstudio\n\nScript\n\n#-------------------------------------------------------------------------------\n# This script opens a dataset and proceeds\n# to data visualization.\n#\n# Author: Matéo Moglia\n# Date: 12/02/2025\n#-------------------------------------------------------------------------------\n\n# Set your working directory\nsetwd(\"C:/Users/mateomoglia/Dropbox/courses/polytechnique/2025_eco1s002/site\")\npath &lt;- \"/Users/mateomoglia/Dropbox/courses/polytechnique/2025_eco1s002/site\"\n\nHere, I set the working directory using setwd(). Notice that we created our first object, named path using the assignment operator &lt;- (I personally prefer to use = which works exactly the same).\n\n\n\n\n\n\nTip\n\n\n\nWhat is the class of path? Hint: use the function class()",
     "crumbs": [
       "Tutorial 1"
     ]
@@ -349,7 +349,7 @@
     "href": "tutorial1.html#first-step-in-rrstudio-3",
     "title": "Tutorial 1",
     "section": "First step in R/Rstudio",
-    "text": "First step in R/Rstudio\nOur first data manipulation\nWe can load a very famous built-in data set, the iris dataset, into an object called data.\n\ndata = iris # Attribute to data the data set iris\nclass(data) # Check its class\n\n[1] \"data.frame\"\n\nhead(data) # Preview the first lines of data\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa\n\n\nNotice that the two objects we created so far can be seen in the Environment pane.",
+    "text": "First step in R/Rstudio\n\nOur first data manipulation\nWe can load a very famous built-in data set, the iris dataset, into an object called data.\n\ndata = iris # Attribute to data the data set iris\nclass(data) # Check its class\n\n[1] \"data.frame\"\n\nhead(data) # Preview the first lines of data\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa\n\n\nNotice that the two objects we created so far can be seen in the Environment pane.",
     "crumbs": [
       "Tutorial 1"
     ]
@@ -359,7 +359,7 @@
     "href": "tutorial1.html#first-step-in-rrstudio-4",
     "title": "Tutorial 1",
     "section": "First step in R/Rstudio",
-    "text": "First step in R/Rstudio\nData description\nBy clicking on the object in the Environement panel, you can visualize it, but you can also write some code to describe it. As we just check, data is a data.frame object. It is made of several columns and rows.\nTo call a specific column in a dataframe, we use the $ operator. To know all the column names in data, we can use the function names(). To know the “size” of the dataframe, the right function is dim(): the first element is the number of rows and the second the number of columns.\n\n\n\n\n\n\nTip\n\n\nYou can also call a column by its position in the dataframe. For instance, to call the second column you can type data[,2]. For the second row: data[,2]. What should you write to print the 10th element of the 3rd column?",
+    "text": "First step in R/Rstudio\n\nData description\nBy clicking on the object in the Environement panel, you can visualize it, but you can also write some code to describe it. As we just check, data is a data.frame object. It is made of several columns and rows.\nTo call a specific column in a dataframe, we use the $ operator. To know all the column names in data, we can use the function names(). To know the “size” of the dataframe, the right function is dim(): the first element is the number of rows and the second the number of columns.\n\n\n\n\n\n\nTip\n\n\n\nYou can also call a column by its position in the dataframe. For instance, to call the second column you can type data[,2]. For the second row: data[,2]. What should you write to print the 10th element of the 3rd column?\n\n\n\nTo describe the data, we can use several built-in functions.\n\ntable(data$Species) # To make a frequency table\n\n\n    setosa versicolor  virginica \n        50         50         50 \n\nsummary(data$Sepal.Length) # To provide summary statistics\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  4.300   5.100   5.800   5.843   6.400   7.900 \n\n\n\nNow, I want to visualize the data. To do so, we can use base R function plot:\n\nplot(iris$Sepal.Length,iris$Sepal.Width)",
     "crumbs": [
       "Tutorial 1"
     ]
@@ -369,7 +369,7 @@
     "href": "tutorial1.html#first-step-in-rrstudio-5",
     "title": "Tutorial 1",
     "section": "First step in R/Rstudio",
-    "text": "First step in R/Rstudio\nOur first graph!\nWe can also use a very popular library for dataviz, ggplot2. First, we install it, then we load it, and we are going to be able to use it.\n\ninstall.packages(\"ggplot2\",repos = \"http://cran.us.r-project.org\")\nlibrary(ggplot2)\n\n\n\n\n\n\n\nNote\n\n\nAll packages have to be downloaded and loaded this way. Note that once you’ve downloaded a package on your computer, you do not need to install it but you still need to load it through the library function.",
+    "text": "First step in R/Rstudio\n\nOur first graph!\nWe can also use a very popular library for dataviz, ggplot2. First, we install it, then we load it, and we are going to be able to use it.\n\ninstall.packages(\"ggplot2\",repos = \"http://cran.us.r-project.org\")\nlibrary(ggplot2)\n\n\n\n\n\n\n\nNote\n\n\n\nAll packages have to be downloaded and loaded this way. Note that once you’ve downloaded a package on your computer, you do not need to install it but you still need to load it through the library function.\n\n\n\n\ng1 &lt;- ggplot(data = data, mapping = aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +\n  geom_point() +\n  theme_minimal()\ng1\n\n\n\n\n\n\n\n\nThis looks better! To produce this graph we used different information:\n\nThe ggplot command takes data and mapping as input.\n\ndata should be the dataset you want to visualize, here we named it data\nmapping takes aes (for aesthetics)\n\nHere, the aesthetics are the x and y axis, and the color one, to distinguish between the species.\n\ngeom_point allows to plot… points\ntheme_minimal makes the graph tidy, with a white background, etc.\n\n\n\nNow, we can save it:\n\nggsave(filename = paste0(path,\"/output/graph_iris.png\"),plot = g1)\n\n\n\n\n\n\n\nTip\n\n\n\nThe function paste0 is useful to concatenate text. Here, instead of writing the full path, we concatenate the object path (which happens to be our path) and the end of the path, including the name of the output.",
     "crumbs": [
       "Tutorial 1"
     ]
@@ -379,7 +379,7 @@
     "href": "tutorial1.html#first-step-in-rrstudio-6",
     "title": "Tutorial 1",
     "section": "First step in R/Rstudio",
-    "text": "First step in R/Rstudio\nData: base vs. dplyr\nTo finish this -short- introduction to R, I introduce a new package, probably the most popular one in R: dplyr. As before, we install then load the library.\n\ninstall.packages(\"tidyverse\")\nlibrary(tidyverse)",
+    "text": "First step in R/Rstudio\n\nData: base vs. dplyr\nTo finish this -short- introduction to R, I introduce a new package, probably the most popular one in R: dplyr. As before, we install then load the library.\n\ninstall.packages(\"tidyverse\")\nlibrary(tidyverse)\n\n\nLet’s imagine we want to filter the dataset to keep only the setosa. In base R, we need to extract the lines of iris for which Species==\"setosa\". Because R is object based, we can multiple objects, here: base_setosa.\n\nThe data frame iris is close to a matrix, hence, we can extract using notations close to the matrix ones. Hence data[1,1] would give us the first line of the first column (in this order) of data. Here, we filt the lines using a condition: data$Species==\"setosa\". Do not forget the ,.\n\n\n# Base R: Filter rows where Species is \"setosa\"\nbase_setosa &lt;- data[data$Species == \"setosa\", ]\nhead(base_setosa)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa\n\n\n\nUsing dplyr and the pipe operator %&gt;%, we apply the function filter on Species.\n\n# dplyr: Filter rows where Species is \"setosa\"\ndplyr_setosa &lt;- iris %&gt;% \n  filter(Species == \"setosa\")\nhead(dplyr_setosa)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa\n\n\n\nNext, we can select specific columns.\n\n# Base R: Select only Sepal.Length and Sepal.Width columns\nbase_columns &lt;- iris[, c(\"Sepal.Length\", \"Sepal.Width\")]\nhead(base_columns)\n\n  Sepal.Length Sepal.Width\n1          5.1         3.5\n2          4.9         3.0\n3          4.7         3.2\n4          4.6         3.1\n5          5.0         3.6\n6          5.4         3.9\n\n# dplyr: Select only Sepal.Length and Sepal.Width columns\ndplyr_columns &lt;- iris %&gt;% \n  select(Sepal.Length, Sepal.Width)\nhead(dplyr_columns)\n\n  Sepal.Length Sepal.Width\n1          5.1         3.5\n2          4.9         3.0\n3          4.7         3.2\n4          4.6         3.1\n5          5.0         3.6\n6          5.4         3.9\n\n\n\n\n# Base R: Create a new column with Sepal.Area (Sepal.Length * Sepal.Width)\niris$Sepal.Area &lt;- iris$Sepal.Length * iris$Sepal.Width\nhead(iris)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species Sepal.Area\n1          5.1         3.5          1.4         0.2  setosa      17.85\n2          4.9         3.0          1.4         0.2  setosa      14.70\n3          4.7         3.2          1.3         0.2  setosa      15.04\n4          4.6         3.1          1.5         0.2  setosa      14.26\n5          5.0         3.6          1.4         0.2  setosa      18.00\n6          5.4         3.9          1.7         0.4  setosa      21.06\n\n# dplyr: Create a new column with Sepal.Area (Sepal.Length * Sepal.Width)\ndplyr_iris &lt;- iris %&gt;% \n  mutate(Sepal.Area = Sepal.Length * Sepal.Width)\nhead(dplyr_iris)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species Sepal.Area\n1          5.1         3.5          1.4         0.2  setosa      17.85\n2          4.9         3.0          1.4         0.2  setosa      14.70\n3          4.7         3.2          1.3         0.2  setosa      15.04\n4          4.6         3.1          1.5         0.2  setosa      14.26\n5          5.0         3.6          1.4         0.2  setosa      18.00\n6          5.4         3.9          1.7         0.4  setosa      21.06\n\n\n\nThe advantage of dplyr is to allow for many computations:\n\ndplyr_grouped &lt;- iris %&gt;%\n  mutate(Sepal.Area = Sepal.Length * Sepal.Width) %&gt;%\n  mutate(is.Sepal.Large = ifelse(Sepal.Area &gt; median(Sepal.Area),1,0)) %&gt;% \n  group_by(Species) %&gt;%\n  summarize(mean_sepal_length = mean(Sepal.Length),\n            count_sepal_large = sum(is.Sepal.Large))\nprint(dplyr_grouped)\n\n# A tibble: 3 × 3\n  Species    mean_sepal_length count_sepal_large\n  &lt;fct&gt;                  &lt;dbl&gt;             &lt;dbl&gt;\n1 setosa                  5.01                21\n2 versicolor              5.94                18\n3 virginica               6.59                36\n\n\n\nThis dataset can be, of course represented visually:\n\nggplot(dplyr_grouped, aes(x = Species, y = count_sepal_large, fill = Species)) +\n  geom_bar(stat = \"identity\") +\n  labs(title = \"Histogram of Sepal Count by Species\",\n       x = \"Species\", y = \"Count of large sepals\") +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\nBut we can also export it to LaTeX:\n\ninstall.packages(\"xtable\")\nlibrary(xtable)\n\n\ncolnames(dplyr_grouped) &lt;- c(\"Species\", \"Mean_Sepal_Length\", \"Count_Sepal_Large\")\nprint(xtable(dplyr_grouped), type = \"latex\", file = paste0(path,\"/output/sepal_large.tex\"))",
     "crumbs": [
       "Tutorial 1"
     ]
@@ -389,7 +389,7 @@
     "href": "tutorial1.html#first-step-in-latex-1",
     "title": "Tutorial 1",
     "section": "First step in LaTeX",
-    "text": "First step in LaTeX\nOverleaf\nOpen a blank project in Overleaf. It should look like that:\n\\documentclass{article}\n\n%% PREAMBULE ------------------\n\n\\usepackage{graphicx} % Required for inserting images\n\n%% METADATA -------------------\n\n\\title{Tutorial one}\n\\author{Matéo Moglia}\n\\date{February 2024}\n\n%% DOCUMENT START ------------\n\n\\begin{document}\n\n\\maketitle\n\n\\section{Introduction}\n\n\\end{document}",
+    "text": "First step in LaTeX\n\nOverleaf\nOpen a blank project in Overleaf. It should look like that:\n\\documentclass{article}\n\n%% PREAMBULE ------------------\n\n\\usepackage{graphicx} % Required for inserting images\n\n%% METADATA -------------------\n\n\\title{Tutorial one}\n\\author{Matéo Moglia}\n\\date{February 2024}\n\n%% DOCUMENT START ------------\n\n\\begin{document}\n\n\\maketitle\n\n\\section{Introduction}\n\n\\end{document}\n\nThree elements are mandatory here: the \\documentclass{} call, the \\begin{document} and the \\end{docoment} parts. All texts should be these last two commands. The preambule is of high importance: it allows you to load packages to perform specific tasks. Here, graphicx is useful to input images. Other popular packages include:\n\ngeometry allows you to change the margins of the pages,\nbooktab to build nice-looking tables\ntikz to draw graphs directly in LaTeX\nxcolor to create and choose your favorite colors\n\nYou can then directly write any text you like after \\begin{document}.",
     "crumbs": [
       "Tutorial 1"
     ]
@@ -399,7 +399,7 @@
     "href": "tutorial1.html#first-step-in-latex-2",
     "title": "Tutorial 1",
     "section": "First step in LaTeX",
-    "text": "First step in LaTeX\nMath mode\nMost interesting is the math mode. You can write in line using $ x = y$ or in an equation environment:\n\\begin{equation}\n  \\mu_k = \\int_0^{+\\infty} x^k f(x) dx = \\int_0^{+\\infty} t^{-\\frac{k}{\\alpha}} \\exp ^{-t} dt\n\\end{equation}\n\n\n\n\n\n\nTip\n\n\nAn environment starts with \\begin{name} and ends with \\end{name}. The environment can be an equation, to center a large chunk of text, a figure, a table, etc.",
+    "text": "First step in LaTeX\n\nMath mode\nMost interesting is the math mode. You can write in line using $ x = y$ or in an equation environment:\n\\begin{equation}\n  \\mu_k = \\int_0^{+\\infty} x^k f(x) dx = \\int_0^{+\\infty} t^{-\\frac{k}{\\alpha}} \\exp ^{-t} dt\n\\end{equation}\n\n\n\n\n\n\nTip\n\n\n\nAn environment starts with \\begin{name} and ends with \\end{name}. The environment can be an equation, to center a large chunk of text, a figure, a table, etc.",
     "crumbs": [
       "Tutorial 1"
     ]
@@ -409,7 +409,7 @@
     "href": "tutorial1.html#first-step-in-latex-3",
     "title": "Tutorial 1",
     "section": "First step in LaTeX",
-    "text": "First step in LaTeX\nInclude our results (fig)\n\\begin{figure}\n  \\centering # To center the graph\n  \\includegraphics[width=8,height=10]{graph/graph_iris.png}\n  \\caption{Iris Sepals Length and Width}\n\\end{figure}\nWe work within the figure environment, center the graphic, include it with some options and add a caption. The graph should be uploaded in the project first! Here, I stored it in the folder graph.",
+    "text": "First step in LaTeX\n\nInclude our results (fig)\n\\begin{figure}\n  \\centering # To center the graph\n  \\includegraphics[width=8,height=10]{graph/graph_iris.png}\n  \\caption{Iris Sepals Length and Width}\n\\end{figure}\nWe work within the figure environment, center the graphic, include it with some options and add a caption. The graph should be uploaded in the project first! Here, I stored it in the folder graph.",
     "crumbs": [
       "Tutorial 1"
     ]
@@ -419,7 +419,7 @@
     "href": "tutorial1.html#first-step-in-latex-4",
     "title": "Tutorial 1",
     "section": "First step in LaTeX",
-    "text": "First step in LaTeX\nInclude our results (table)\nTo input the table, we can use \\input{}:\n\\input{table/sepal_large.tex}\nNo need to specify the environment as it was directly created by the xtable function earlier on!",
+    "text": "First step in LaTeX\n\nInclude our results (table)\nTo input the table, we can use \\input{}:\n\\input{table/sepal_large.tex}\nNo need to specify the environment as it was directly created by the xtable function earlier on!",
     "crumbs": [
       "Tutorial 1"
     ]
@@ -429,7 +429,7 @@
     "href": "tutorial1.html#first-step-in-latex-5",
     "title": "Tutorial 1",
     "section": "First step in LaTeX",
-    "text": "First step in LaTeX\nCompile the file\n\nLaTeX is not a “What You See Is What You Get” software, like Word or Canvas.\n\n\nYou need to compile the code to obtain the results (usually a .pdf), that you can further download.",
+    "text": "First step in LaTeX\n\nCompile the file\n\nLaTeX is not a “What You See Is What You Get” software, like Word or Canvas.\n\n\nYou need to compile the code to obtain the results (usually a .pdf), that you can further download.",
     "crumbs": [
       "Tutorial 1"
     ]
@@ -438,8 +438,8 @@
     "objectID": "tutorial3.html#roadmap",
     "href": "tutorial3.html#roadmap",
     "title": "Tutorial 3",
-    "section": "Roadmap",
-    "text": "Roadmap\nFor this third tutorial, we are going to\n\nRecap on the OLS estimation\nLearn how to go from a model to an empirical prediction\nReplicate the key results from Mankiw, Romer, Weil (1994)\n\n\n\n\n\n\n\nNote\n\n\nBig disclaimer: the recap on OLS is hugely inspired from Florian Oswald’s and Sciences Po’s introduction to Econometrics with R. The interested student can check this fantastical material here: scpoecon.github.io.",
+    "section": "",
+    "text": "For this third tutorial, we are going to\n\nRecap on the OLS estimation\nLearn how to go from a model to an empirical prediction\nReplicate the key results from Mankiw, Romer, Weil (1994)\n\n\n\n\n\n\n\nNote\n\n\n\nBig disclaimer: the recap on OLS is hugely inspired from Florian Oswald’s and Sciences Po’s introduction to Econometrics with R. The interested student can check this fantastical material here: scpoecon.github.io.",
     "crumbs": [
       "Tutorial 3"
     ]
@@ -449,7 +449,7 @@
     "href": "tutorial3.html#linear-regression",
     "title": "Tutorial 3",
     "section": "Linear regression",
-    "text": "Linear regression\nWhy? When?\n\nAn empirical tool to assess the statistical relationship between variables\nIn the toolbox of the social scientist, with many other tools\nCorrelation is not causation\n\nTopic of today: Ordinary Least Square estimator (which is a widely used estimator)\n\n\n\n\n\n\nTip\n\n\nKeep in mind the difference between an estimator \\(\\hat \\beta\\) and the observed value \\(\\beta\\). We cannot observe the true parameter, so we estimate it (with error).",
+    "text": "Linear regression\n\nWhy? When?\n\nAn empirical tool to assess the statistical relationship between variables\nIn the toolbox of the social scientist, with many other tools\nCorrelation is not causation\n\nTopic of today: Ordinary Least Square estimator (which is a widely used estimator)\n\n\n\n\n\n\nTip\n\n\n\nKeep in mind the difference between an estimator \\(\\hat \\beta\\) and the observed value \\(\\beta\\). We cannot observe the true parameter, so we estimate it (with error).",
     "crumbs": [
       "Tutorial 3"
     ]
@@ -459,7 +459,7 @@
     "href": "tutorial3.html#linear-regression-1",
     "title": "Tutorial 3",
     "section": "Linear regression",
-    "text": "Linear regression\nVisual intuition\nWe use the cars dataset, in base R, and we are going to relate how speed and stopping distance are related.",
+    "text": "Linear regression\n\nVisual intuition\nWe use the cars dataset, in base R, and we are going to relate how speed and stopping distance are related.",
     "crumbs": [
       "Tutorial 3"
     ]
@@ -469,7 +469,7 @@
     "href": "tutorial3.html#linear-regression-2",
     "title": "Tutorial 3",
     "section": "Linear regression",
-    "text": "Linear regression\nVisual intuition\nIt seems that a line could be helpful to “summarize” the relation between both variables!",
+    "text": "Linear regression\n\nVisual intuition\nIt seems that a line could be helpful to “summarize” the relation between both variables!",
     "crumbs": [
       "Tutorial 3"
     ]
@@ -479,7 +479,7 @@
     "href": "tutorial3.html#linear-regression-3",
     "title": "Tutorial 3",
     "section": "Linear regression",
-    "text": "Linear regression\nBringing some maths\n\nWe want to minimize the distance between the line and the points\nIn practice, the sum of distances can go to 0. Solution?",
+    "text": "Linear regression\n\nBringing some maths\n\nWe want to minimize the distance between the line and the points\nIn practice, the sum of distances can go to 0. Solution?",
     "crumbs": [
       "Tutorial 3"
     ]
@@ -489,7 +489,7 @@
     "href": "tutorial3.html#linear-regression-4",
     "title": "Tutorial 3",
     "section": "Linear regression",
-    "text": "Linear regression\nBringing some maths\n\nWe compute the sum of square distances (\\(\\sim\\) error), so the name “ordinary least square”\nAn affine function is defined as \\(y = \\beta_0 + \\beta_1 x\\) which in matrix form gives \\(Y = X\\beta\\).\nDimension of \\(X\\)?\nThe error for each observation is \\(e_i = y_i - \\beta_0 - \\beta_1 x_i\\)\nHence, we look for \\(\\beta\\) such that: \\[\n\\beta^\\star = \\min_\\beta (Y - X\\beta)'(Y - X\\beta) = \\min_\\beta e'e\n\\]\nFirst order condition: derivative wrt \\(\\beta\\) should be equal to 0",
+    "text": "Linear regression\n\nBringing some maths\n\nWe compute the sum of square distances (\\(\\sim\\) error), so the name “ordinary least square”\nAn affine function is defined as \\(y = \\beta_0 + \\beta_1 x\\) which in matrix form gives \\(Y = X\\beta\\).\nDimension of \\(X\\)?\nThe error for each observation is \\(e_i = y_i - \\beta_0 - \\beta_1 x_i\\)\nHence, we look for \\(\\beta\\) such that: \\[\n\\beta^\\star = \\min_\\beta (Y - X\\beta)'(Y - X\\beta) = \\min_\\beta e'e\n\\]\nFirst order condition: derivative wrt \\(\\beta\\) should be equal to 0",
     "crumbs": [
       "Tutorial 3"
     ]
@@ -499,7 +499,7 @@
     "href": "tutorial3.html#linear-regression-5",
     "title": "Tutorial 3",
     "section": "Linear regression",
-    "text": "Linear regression\nDefining the OLS estimator\n\nThe OLS estimator is then: \\[\n\\hat{\\beta} = (X'X)^{-1}X'y\n\\]\nWho wants to try to derive it?\nUnder some conditions, this estimator is the Best Linear Unbiased Estimator (BLUE)\nThose conditions will be super helpful later",
+    "text": "Linear regression\n\nDefining the OLS estimator\n\nThe OLS estimator is then: \\[\n\\hat{\\beta} = (X'X)^{-1}X'y\n\\]\nWho wants to try to derive it?\nUnder some conditions, this estimator is the Best Linear Unbiased Estimator (BLUE)\nThose conditions will be super helpful later",
     "crumbs": [
       "Tutorial 3"
     ]
@@ -509,7 +509,7 @@
     "href": "tutorial3.html#from-the-model-to-the-data",
     "title": "Tutorial 3",
     "section": "From the model to the data",
-    "text": "From the model to the data\nSolow model\n\nUsing Harrod-neutral technological progress, the GDP per capita equation is: \\[\\small\n\\frac{Y(t)}{L(t)} = K(t)^\\alpha (A(t) L(t))^{1-\\alpha} \\quad \\alpha \\in \\ (0,1)\n\\]\nWe assume an exogenous growth rate of \\(A\\) and \\(L\\) such that: \\(A(t) = A(0)e^{gt}\\) and \\(L(t) = L(0) e^{nt}\\).\nAt the steady-state level:\n\n\\[\\small\n\\frac{Y}{L} = A(0)e^{gt}\\left(\\frac{s}{n + g + \\delta}\\right)^{\\alpha/(1-\\alpha)}\n\\]\n\nSuper convenient: we can measure everything\n\n\\(Y/L\\), GDP divided by working age population\n\\(s\\), saving measured as the real investment\n\\(n\\), population growth rate\n\\(\\delta\\) and \\(g\\), capital depreciation and growth rate of technology (assumed constant)",
+    "text": "From the model to the data\n\nSolow model\n\nUsing Harrod-neutral technological progress, the GDP per capita equation is: \\[\\small\n\\frac{Y(t)}{L(t)} = K(t)^\\alpha (A(t) L(t))^{1-\\alpha} \\quad \\alpha \\in \\ (0,1)\n\\]\nWe assume an exogenous growth rate of \\(A\\) and \\(L\\) such that: \\(A(t) = A(0)e^{gt}\\) and \\(L(t) = L(0) e^{nt}\\).\nAt the steady-state level:\n\n\\[\\small\n\\frac{Y}{L} = A(0)e^{gt}\\left(\\frac{s}{n + g + \\delta}\\right)^{\\alpha/(1-\\alpha)}\n\\]\n\nSuper convenient: we can measure everything\n\n\\(Y/L\\), GDP divided by working age population\n\\(s\\), saving measured as the real investment\n\\(n\\), population growth rate\n\\(\\delta\\) and \\(g\\), capital depreciation and growth rate of technology (assumed constant)",
     "crumbs": [
       "Tutorial 3"
     ]
@@ -519,7 +519,7 @@
     "href": "tutorial3.html#from-the-model-to-the-data-1",
     "title": "Tutorial 3",
     "section": "From the model to the data",
-    "text": "From the model to the data\nIs this relationship linear?\nNo. Solution?\n\nLog-linearize it (at time 0)\n\\[\n\\log (Y/L) = \\log(A(0)) + \\left(\\frac{\\alpha}{1-\\alpha}\\right)\\log s - \\left(\\frac{\\alpha}{1-\\alpha}\\right) \\log(n + g + \\delta)\n\\]",
+    "text": "From the model to the data\n\nIs this relationship linear?\nNo. Solution?\n\nLog-linearize it (at time 0)\n\\[\n\\log (Y/L) = \\log(A(0)) + \\left(\\frac{\\alpha}{1-\\alpha}\\right)\\log s - \\left(\\frac{\\alpha}{1-\\alpha}\\right) \\log(n + g + \\delta)\n\\]",
     "crumbs": [
       "Tutorial 3"
     ]
@@ -539,7 +539,7 @@
     "href": "tutorial3.html#linear-regression-6",
     "title": "Tutorial 3",
     "section": "Linear regression",
-    "text": "Linear regression\nGauss-Markov theorem\n\nLinearity\n\nThe relationship has to be linear\nSee Anscombe quartet\nSolutions: \\(\\log\\), squared\n\n\\(X\\) is full rank\n\nEnsure that variables are not perfectly colinear\nThere are more observations than variables (\\(n &gt; k\\))\n\nZero conditional mean\n\nErrors are not correlated with \\(X\\) (exogeneity)\n\nHomoskedasticity\n\nErrors are not correlated between observations\nSolutions: robust estimation",
+    "text": "Linear regression\n\nGauss-Markov theorem\n\nLinearity\n\nThe relationship has to be linear\nSee Anscombe quartet\nSolutions: \\(\\log\\), squared\n\n\\(X\\) is full rank\n\nEnsure that variables are not perfectly colinear\nThere are more observations than variables (\\(n &gt; k\\))\n\nZero conditional mean\n\nErrors are not correlated with \\(X\\) (exogeneity)\n\nHomoskedasticity\n\nErrors are not correlated between observations\nSolutions: robust estimation",
     "crumbs": [
       "Tutorial 3"
     ]
@@ -549,7 +549,7 @@
     "href": "tutorial3.html#from-the-model-to-the-data-2",
     "title": "Tutorial 3",
     "section": "From the model to the data",
-    "text": "From the model to the data\nEmpirical model\nBecause we do not observe all data, we can only estimate the parameters. Hence, the empirical model we estimate is:\n\\[\n\\log (Y_i/L_i) = \\beta_0 + \\beta_1 \\log s_i + \\beta_2 \\log(n + g + \\delta) + \\epsilon_i\n\\]\nwhere \\(\\beta_0 + \\epsilon_i = \\log A(0)\\), and \\(\\epsilon_i\\) is an error term capturing everything not captured in the model.\n\n\n\n\n\n\nNote\n\n\nWe can, or not, assume that \\(\\beta_1 = -\\beta_2\\). This is an empirical prediction we might want to test.",
+    "text": "From the model to the data\n\nEmpirical model\nBecause we do not observe all data, we can only estimate the parameters. Hence, the empirical model we estimate is:\n\\[\n\\log (Y_i/L_i) = \\beta_0 + \\beta_1 \\log s_i + \\beta_2 \\log(n + g + \\delta) + \\epsilon_i\n\\]\nwhere \\(\\beta_0 + \\epsilon_i = \\log A(0)\\), and \\(\\epsilon_i\\) is an error term capturing everything not captured in the model.\n\n\n\n\n\n\nNote\n\n\n\nWe can, or not, assume that \\(\\beta_1 = -\\beta_2\\). This is an empirical prediction we might want to test.",
     "crumbs": [
       "Tutorial 3"
     ]
@@ -559,7 +559,7 @@
     "href": "tutorial3.html#linear-regression-7",
     "title": "Tutorial 3",
     "section": "Linear regression",
-    "text": "Linear regression\nGauss-Markov theorem violation\nMajor threat is 3 (= endogeneity). Usually it arises from 3 sources:\n\nReverse causality. Any exemple?\nOmitted Variable Bias. Any exemple?\nMeasurement error. Any exemple?\n\nThen, the OLS estimator is biased… We will see many ways to tackle this issue.\n\nToday: Omitted Variable Bias.",
+    "text": "Linear regression\n\nGauss-Markov theorem violation\nMajor threat is 3 (= endogeneity). Usually it arises from 3 sources:\n\nReverse causality. Any exemple?\nOmitted Variable Bias. Any exemple?\nMeasurement error. Any exemple?\n\nThen, the OLS estimator is biased… We will see many ways to tackle this issue.\n\nToday: Omitted Variable Bias.",
     "crumbs": [
       "Tutorial 3"
     ]
@@ -569,7 +569,7 @@
     "href": "tutorial3.html#appendix",
     "title": "Tutorial 3",
     "section": "Appendix",
-    "text": "Appendix\nAnscombe quartet",
+    "text": "Appendix\n\nAnscombe quartet",
     "crumbs": [
       "Tutorial 3"
     ]
@@ -579,7 +579,7 @@
     "href": "tutorial3.html#linear-regression-8",
     "title": "Tutorial 3",
     "section": "Linear regression",
-    "text": "Linear regression\nR2 and prediction quality\n\nR2 is the coefficient of determination, assessing the share of total variance explained by the model\n\n\\[\\small\nR^2 = \\frac{\\texttt{Variance explained}}{\\texttt{Total variance}} = \\frac{\\text{Sum of explained square}}{\\text{Total sum of square}} = 1 - \\frac{\\text{Sum of square residuals}}{\\text{Total sum of square}}\n\\]\n\nR2 is between 0 and 1\nThe higher the R2, the larger the share of variance explained by the model\nA low R2 is not necessarily bad: it is just that the model explains a low share of variance",
+    "text": "Linear regression\n\nR2 and prediction quality\n\nR2 is the coefficient of determination, assessing the share of total variance explained by the model\n\n\\[\\small\nR^2 = \\frac{\\texttt{Variance explained}}{\\texttt{Total variance}} = \\frac{\\text{Sum of explained square}}{\\text{Total sum of square}} = 1 - \\frac{\\text{Sum of square residuals}}{\\text{Total sum of square}}\n\\]\n\nR2 is between 0 and 1\nThe higher the R2, the larger the share of variance explained by the model\nA low R2 is not necessarily bad: it is just that the model explains a low share of variance",
     "crumbs": [
       "Tutorial 3"
     ]
@@ -589,7 +589,7 @@
     "href": "tutorial3.html#linear-regression-9",
     "title": "Tutorial 3",
     "section": "Linear regression",
-    "text": "Linear regression\nInterpretation\n\nOnce the model set, we can estimate it using R functions\nMain function is lm. For linear model, the syntax is lm(y ~ x)\n\n\nsummary(lm(cars$speed ~ cars$dist))\n\n\nCall:\nlm(formula = cars$speed ~ cars$dist)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-7.5293 -2.1550  0.3615  2.4377  6.4179 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  8.28391    0.87438   9.474 1.44e-12 ***\ncars$dist    0.16557    0.01749   9.464 1.49e-12 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 3.156 on 48 degrees of freedom\nMultiple R-squared:  0.6511,    Adjusted R-squared:  0.6438 \nF-statistic: 89.57 on 1 and 48 DF,  p-value: 1.49e-12\n\n\n\nResults are significant (low p-value), R2 is relatively large",
+    "text": "Linear regression\n\nInterpretation\n\nOnce the model set, we can estimate it using R functions\nMain function is lm. For linear model, the syntax is lm(y ~ x)\n\n\nsummary(lm(cars$dist ~ cars$speed))\n\n\nCall:\nlm(formula = cars$dist ~ cars$speed)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-29.069  -9.525  -2.272   9.215  43.201 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) -17.5791     6.7584  -2.601   0.0123 *  \ncars$speed    3.9324     0.4155   9.464 1.49e-12 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 15.38 on 48 degrees of freedom\nMultiple R-squared:  0.6511,    Adjusted R-squared:  0.6438 \nF-statistic: 89.57 on 1 and 48 DF,  p-value: 1.49e-12\n\n\n\nResults are significant (low p-value), R2 is relatively large",
     "crumbs": [
       "Tutorial 3"
     ]
@@ -599,7 +599,7 @@
     "href": "tutorial3.html#exercise-1",
     "title": "Tutorial 3",
     "section": "Exercise",
-    "text": "Exercise\nBaseline estimation\nAssume \\(g+\\delta=0.05\\).\n\nGenerate the variables you need in the regression\nRun the model on the full sample and on each sub-group. Store the results in appropriate objects.\n\n[Bonus] Use a loop to do it\n\nInterpret the results in the light of the Solow model predictions. What is the share of cross-country income per capita variation is explained by the model?\n[Bonus] We assumed that \\(\\beta_1 \\neq -\\beta_2\\). Using linearHypothesis() from the package car, you can set an hypothesis testing to check if the sum of the coefficient is equal to 0.\nIn previous work, the share of capital in production was thought to be roughly 1/3, is this prediction supported by the data?",
+    "text": "Exercise\n\nBaseline estimation\nAssume \\(g+\\delta=0.05\\).\n\nGenerate the variables you need in the regression\nRun the model on the full sample and on each sub-group. Store the results in appropriate objects.\n\n[Bonus] Use a loop to do it\n\nInterpret the results in the light of the Solow model predictions. What is the share of cross-country income per capita variation is explained by the model?\n[Bonus] We assumed that \\(\\beta_1 \\neq -\\beta_2\\). Using linearHypothesis() from the package car, you can set an hypothesis testing to check if the sum of the coefficient is equal to 0.\nIn previous work, the share of capital in production was thought to be roughly 1/3, is this prediction supported by the data?",
     "crumbs": [
       "Tutorial 3"
     ]
@@ -609,7 +609,7 @@
     "href": "tutorial3.html#exercise-2",
     "title": "Tutorial 3",
     "section": "Exercise",
-    "text": "Exercise\nAdding the human capital\n\nDoes the previous model violate the exogeneity assumption? Why?\nA proposed solution is to add a new variable to capture the level of human capital: school.\nRun again the model on the full and sub- samples.\nInterpret.\nExport the tables and the graph in LaTeX",
+    "text": "Exercise\n\nAdding the human capital\n\nDoes the previous model violate the exogeneity assumption? Why?\nA proposed solution is to add a new variable to capture the level of human capital: school.\nRun again the model on the full and sub- samples.\nInterpret.\nExport the tables and the graph in LaTeX",
     "crumbs": [
       "Tutorial 3"
     ]
@@ -619,9 +619,51 @@
     "href": "tutorial3.html#linear-regression-10",
     "title": "Tutorial 3",
     "section": "Linear regression",
-    "text": "Linear regression\nInterpretation\n\n\n\n\n\n\nNote\n\n\nEverything should be intepreted everything else equal!\n\n\n\n\nLevel-level regression: marginal effect. If \\(x\\) increases by 1, \\(y\\) increases by \\(\\beta\\)\nLog-log regression: elasticity. If \\(x\\) increases by 1%, \\(y\\) increases by \\(\\beta\\)%\nLog-level regression: percentage change. If \\(x\\) increases by 1, \\(y\\) increases by \\(100\\beta\\)\nLevel-log regression: level change. If \\(x\\) increases by 1%, \\(y\\) increases by \\(\\beta/100\\)",
+    "text": "Linear regression\n\nInterpretation\n\n\n\n\n\n\nNote\n\n\n\nEverything should be intepreted everything else equal!\n\n\n\nLevel-level regression: marginal effect. If \\(x\\) increases by 1, \\(y\\) increases by \\(\\beta\\)\nLog-log regression: elasticity. If \\(x\\) increases by 1%, \\(y\\) increases by \\(\\beta\\)%\nLog-level regression: percentage change. If \\(x\\) increases by 1, \\(y\\) increases by \\(100\\beta\\)\nLevel-log regression: level change. If \\(x\\) increases by 1%, \\(y\\) increases by \\(\\beta/100\\)",
     "crumbs": [
       "Tutorial 3"
     ]
+  },
+  {
+    "objectID": "tutorial3_v1.html",
+    "href": "tutorial3_v1.html",
+    "title": "Tutorial 3: OLS and first repliction",
+    "section": "",
+    "text": "We learnt how to manage simple datasets using R and dug into the key derivations of the Solow model. We are going replicate our very first paper! You should read the paper beforehand (find it on Moodle) and know the main predictions of the Solow model."
+  },
+  {
+    "objectID": "tutorial3_v1.html#mankiw-romer-weil-1992",
+    "href": "tutorial3_v1.html#mankiw-romer-weil-1992",
+    "title": "Tutorial 3: OLS and first repliction",
+    "section": "Mankiw, Romer, Weil (1992)",
+    "text": "Mankiw, Romer, Weil (1992)\nThis paper is one of the most important empirical contribution to the macroeconomics literature. It shows two things:\n\nThe Solow model predictions (in terms of direction) are verified in the data\nBut only an augmented version of the model predicts well the magnitude in the data\n\n\nMain objectives\n\nOpen the dataset\nInspect and clean the dataset\nRun the main regressions\nMake a graph\nExport the results on LaTeX\n\n\n\nData source\nDownload the data from Moodle.\n\n\nFolder organization\nWe are going to work in tutorial2. You may want to create additional subfolders like raw_data, code, output to store the raw data, the code, and the output we create.\n/Users/mmoglia/Dropbox/\n└── courses/\n    └── 2025_eco1s002\n      └── tutorial2\n\npath &lt;- \"/Users/mmoglia/Dropbox/courses/polytechnique/2025_eco1s002/tutorial2\""
+  },
+  {
+    "objectID": "tutorial3_v1.html#ordinary-least-squares",
+    "href": "tutorial3_v1.html#ordinary-least-squares",
+    "title": "Tutorial 3: OLS and first repliction",
+    "section": "Ordinary Least Squares",
+    "text": "Ordinary Least Squares\nThe Ordinary Least Squares (OLS) estimator is a method used in linear regression to estimate the parameters of a linear model. The objective of OLS is to minimize the sum of squared residuals.\n\nLinear Model\nThe linear model can be expressed as:\n\\[\ny = x\\beta + \\epsilon\n\\]\n\n\\(y\\): Dependent variable\n\\(X\\): Matrix of independent, explanatory, variables\n\\(\\beta\\): Coefficients to be estimated.\n\\(\\epsilon\\): Error term (assumed to be normally distributed with mean 0 and constant variance)\n\n\n\nOLS Estimator Formula\nThe OLS estimator for \\(\\beta\\) is given by: \\[\n\\hat\\beta =(X^TX)^{−1}X^Ty\n\\] This equation minimizes the sum of squared residuals (RSS): \\[\n\\sum_{i=1}^n (y_i - \\hat{y}_i)^2\n\\] ### Assumptions of OLS\n\nLinearity: The relationship between the dependent and independent variables is linear\nIndependence: Observations are independent of each other.\nHomoscedasticity: The variance of the error term is constant across observations.\nNo Multicollinearity: Independent variables are not perfectly collinear.\nNormality: The error term is normally distributed\n\n\n\nInterpretation\nThe coefficients \\(\\hat\\beta\\) represent the estimated relationship between the independent and dependent variables. The intercept is the expected value of \\(y\\) when all predictors are zero. The slope(s) indicate the change in \\(y\\) for a one-unit change in the corresponding predictor. If the \\(y\\) and \\(x\\) are in \\(\\log\\), we can interpret \\(\\beta\\) as percentages (eg, if \\(x\\) increases by 1%, \\(y\\) increases by \\(\\hat\\beta\\) percent)."
+  },
+  {
+    "objectID": "tutorial3_v1.html#the-solow-model",
+    "href": "tutorial3_v1.html#the-solow-model",
+    "title": "Tutorial 3: OLS and first repliction",
+    "section": "The Solow model",
+    "text": "The Solow model\nThe Solow growth model (SGM) seeks to explain economic growth taking the rates of saving \\(s\\), population growth \\(n\\) and technological progress \\(g\\) as exogenous (given outside the model). We assume a Cobb-Douglas production function, so output \\(Y\\) at time \\(t\\) is given by:\n\\[\nY_t = K_t^{\\alpha} (A_t L_t)^{1-\\alpha}, \\text{ for } \\alpha \\in (0,1)\n\\]\nThe notation is standard: \\(Y\\) is output, \\(K\\) capital, \\(L\\) labor, and \\(A\\) the level of technology. In this production function, technological change is labor augmenting which is known as “Harrod-neutral”. \\(L\\) and \\(A\\) are assumed to grow exogenously at rates \\(n\\) and \\(g\\).\nThe model assumes that a constant fraction of output, \\(s\\) , is invested. The remaining output is consumed. We define \\(k\\) as the stock of capital per effective unit of labor,\n\\[\n\\begin{align*}\nk_t \\equiv \\frac{K_t}{A_t L_t}\n\\end{align*}\n\\] and \\(y\\) as the level of output per effective unit of labor,\n\\[\n\\begin{align*}\ny_t &= \\frac{Y_t }{A_t L_t} \\\\\n&= K_t^{\\alpha} ( A_t L_t )^{- \\alpha} \\\\\n&= \\left(  \\frac{ K_t } {A_t L_t} \\right)^{\\alpha} \\\\\n&= k_t^{\\alpha}\n\\end{align*}\n\\] The evolution of \\(k\\) is governed by:\n\\[\n\\begin{align}\n\\dot{k}_t & = s y_t - (n+ g + \\delta) k_t \\\\\n& = s k_t^{\\alpha} - (n+ g + \\delta) k_t \\nonumber\n\\end{align}\n\\] where \\(\\delta \\in (0,1)\\) is the rate of capital depreciation. The steady state is defined to be the level of capital \\(k^{ss}\\) at which \\(\\dot{k}_t = 0\\), plugging this into equation the last equation we have: \\[\n\\begin{align*}\n0 = s (k^{ss})^{\\alpha} - (n+ g + \\delta) (k^{ss})\n\\end{align*}\n\\] which implies \\[\n\\begin{align}\nk^{ss} = \\left(  \\frac{s}{ n + g + \\delta } \\right)^{ \\frac{1}{1-\\alpha} }\n\\end{align}\n\\] Assuming that \\(A_t = A_0 \\exp(gt)\\) (growth rate of \\(A\\)): \\[\n\\begin{align}\ny^{ss} &= (k^{ss})^{\\alpha} \\nonumber \\\\\n\\frac{ Y_t }{ A_t L_t } &= \\left(  \\frac{s}{ n + g + \\delta } \\right)^{ \\frac{\\alpha}{1-\\alpha} } \\nonumber \\\\\n\\frac{ Y_t }{ L_t } &= A_0 e^{gt} \\left(  \\frac{s}{ n + g + \\delta } \\right)^{ \\frac{\\alpha}{1-\\alpha} } \\nonumber \\\\\n\\log\\left( \\frac{ Y_t }{ L_t } \\right)&= \\log(A_0 ) + gt  + \\left(  \\frac{\\alpha}{1-\\alpha} \\right) \\log(s)  -  \\left(  \\frac{\\alpha}{1-\\alpha} \\right) \\log(n + g + \\delta)\n\\end{align}\n\\] This last equation gives us an expression for steady-state income per-capita. Since capital’s share in income \\(\\alpha\\) is roughly one third, the model implies elasticity of income per capita with respect to saving rate \\(\\varepsilon_{ \\frac{Y}{L}  , s} = \\frac{d \\log( \\frac{Y}{L}  )}{ d \\log(s) } = \\frac{\\alpha}{1 - \\alpha} \\approx  \\frac{ \\frac{1}{3} }{ \\frac{2}{3} } = \\frac{1}{2}\\), and an elasticity with respect to \\((n+g+\\delta)\\) \\(\\varepsilon_{ \\frac{Y}{L}  , s} = \\frac{d \\log( \\frac{Y}{L}  )}{ d \\log(n+g+\\delta) } = - \\frac{\\alpha}{1 - \\alpha} \\approx - \\frac{ \\frac{1}{3} }{ \\frac{2}{3} } = - \\frac{1}{2}\\)."
+  },
+  {
+    "objectID": "tutorial3_v1.html#specification",
+    "href": "tutorial3_v1.html#specification",
+    "title": "Tutorial 3: OLS and first repliction",
+    "section": "Specification",
+    "text": "Specification\nThe Solow model predicts that real income is higher in countries with higher savings rates and lower in countries with higher values of \\((n+g+\\delta)\\). We want to see if the data support this prediction.\n\nEconometrics model\nWe assume that the growth rate of technology \\(g\\) and the rate of capital depreciation \\(\\delta\\) are constant across countries. In contrast the term \\(A_0\\) reflects not only the level of technology, but also resource endowments, climate, institutions and so on. It may differ across countries, so we assume that \\[\n\\begin{align*}\n\\log(A_0 ) = a + \\varepsilon\n\\end{align*}\n\\] where \\(a\\) is a constant and \\(\\varepsilon\\) is a country specific shock. Thus log income per capita (at time \\(0\\)) is: \\[\n\\begin{align}\n\\log\\left( \\frac{ Y }{ L } \\right)&= a  + \\left(  \\frac{\\alpha}{1-\\alpha} \\right) \\log(s)  -  \\left(  \\frac{\\alpha}{1-\\alpha} \\right) \\log(n + g + \\delta) + \\varepsilon\n\\end{align}\n\\]\nThis last equation is our basic empirical specification in this section. We assume that \\(s\\) and \\(n\\) are independent of \\(\\varepsilon\\), so our regressors are exogenous. This implies we can estimate this equation with Ordinary Least Squares (OLS).\n\n\nData\nThe data are from the Real National Accounts constructed by Summers and Heston (1988). It includes real income, government and private consumption, investment, and population for almost all of the world except the centrally planned economies. The data are annual and cover 1960-1985.\n\nThe population growth rate \\(n\\) is measured as the average rate of growth of the working age population, where working age is defined as 15-64.\nThe savings rate \\(s\\) is measured as the average real investment (including government investment) in real GDP, and \\(Y/L\\) as real GDP in 1985 divided by the working age population in that year.\n\nMankiw, Romer and Weil consider three samples:\n\nThe most comprehensive consists of all countries for which data are available other than those for which oil production is the dominant industry. This sample consists of 98 countries. MRW exclude the oil producers because the bulk of recorded GDP for these countries represents the extraction of existing resources, not value added; one should not expect standard growth models to account for measured GDP in these countries.\nThe second sample excludes countries whose population in 1960 was less than 1 million, or whose real income figures were based on extremely little primary data; measurement error is likely to be a greater problem for these countries. This sample consists of 75 countries.\nThe third sample consists of the 22 OECD countries with population greater than 1 million. This sample has high quality data and the variation in omitted country specific factors is small. A disadvantage is that this sample is small in size.\n\nWe estimate equation (3.1) with and without imposing the constraints that the coefficients on \\(\\log(s)\\) and \\(\\log(n+g+\\delta)\\) are equal in magnitude and opposite in sign. We assume \\(g+\\delta = 0.05\\) because in the US \\(\\delta \\approx 0.03\\) and \\(g \\approx 0.02\\)."
+  },
+  {
+    "objectID": "tutorial3_v1.html#exercise",
+    "href": "tutorial3_v1.html#exercise",
+    "title": "Tutorial 3: OLS and first repliction",
+    "section": "Exercise",
+    "text": "Exercise\nWe are going to use the following libraries.\n\n\n\nLibrary\nDescription\n\n\n\n\ntidyverse\nFor data manipulation\n\n\nggplot2\nFor data visualization\n\n\nHmisc\nTo describe dataset\n\n\n\n\nDescribe the data\n\nLoad the data MRW_QJE1992.xlsx into R. Use a path here.\nDescribe the data using function describe from Hmisc library. Is there anything wrong? Keep only relevant observations.\nWhat are the groups of country defined by Mankiw et al.? Create a categorical variable that takes 0 if the country is in group N, 1 if in group I, and 2 if in group O.\nUse the function summary to print a table with summary statistics for all three groups.\nGenerate a scatter plot of growth rate in GDP per capita against \\(ln(GDP)\\) per worker in 1960, similar to Figure 1A in the paper (you need to create one of the two variables). Make it beautiful!!\n\n\n\n\n\n\n\nTo make a graph\n\n\n\n\n\nYou want to use ggplot() function. It takes two main arguments within the parentheses. One is data = ... and the other one is mapping = aes(...).\nThen, you can add the elements you want to draw after a +. Here, we want to plot points. Hence, you code should look like that:\n\nggplot(data = ..., mapping = aes(x = ..., y = ...)) +\n  geom_point() +\n  theme_bw() # This one is pure aesthetic\nggsave(path = paste0(your_path,\"/output/graph1.pdf\"))\n\n\n\n\n\n\nEstimate the baseline model\nWe now turn to the estimation of the main model :\n\nRun the baseline model on the full sample.\n\nStore the results in an object called reg_full.\nInterpret.\n\nRun the regression separately for each sub-sample (based on country type). To filter the data, take advantage of the pipe command and the filter() function.\n\nStore the results in well-named objects\nInterpret.\n\n[Bonus] Can you use a loop to go quicker?\nDo these results validate the Solow model predictions?\n\n\n\nEstimate the augmented model\nAccording to Mankiw, Romer and Weil, we have an omitted variable bias in this first model because we are not accounting for human capital.\n\nIn your opinion, in which direction is our estimate of the effect of savings rate on \\(\\ln\\)(GDP) biased?\nRegress \\(\\ln(I/Y)\\) on \\(\\ln(School)\\). The coefficient we get tells us how correlated the two variables are. Are they positively or negatively correlated? Is the correlation significant?\nNow estimate the “full” model from Table 2 of the paper. I.e., estimate by OLS the baseline model augmented with \\(\\ln(School)\\). As before run the regression for the whole sample first and then by group of countries.\n\n[Bonus] Use the lapply function instead of a loop\n\nAssuming this second model is true, were we over- or underestimating the coefficient of savings rate in the baseline model?"
   }
 ]

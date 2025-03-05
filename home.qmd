@@ -45,8 +45,8 @@ This website will walk you through the tutorials for the *Topics in Economics* (
 -   Tutorial 5 *(March 19)*
     -   Discussion on the group project
     -   Q&A 
--   Tutorial 6 *(March 19, computer session)*
-    -   Autonomous replication of an IV paper *(graded)*
+-   Tutorial 6 *(March 26, computer session)*
+    -   Autonomous replication of an IV paper
 -   Tutorial 7 *(April 2)*
     -   Treatment effect
     -   Difference-in-differences estimator

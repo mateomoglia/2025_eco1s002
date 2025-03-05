@@ -196,7 +196,7 @@ $$
 -   Main function is `lm`. For linear model, the syntax is `lm(y ~ x)`
 
 ```{r, echo=T}
-summary(lm(cars$speed ~ cars$dist))
+summary(lm(cars$dist ~ cars$speed))
 ```
 
 -   Results are significant (low p-value), R2 is relatively large

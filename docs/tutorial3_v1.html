@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Matéo Moglia">
-<meta name="dcterms.date" content="2025-03-05">
 
-<title>Tutorial 3 – Petite classe ECO1S002</title>
+<title>Tutorial 3: OLS and first repliction – Petite classe ECO1S002</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -144,7 +142,9 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tutorial3.html">Tutorial 3</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Petite classe ECO1S002
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -181,7 +181,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorial3.html" class="sidebar-item-text sidebar-link active">
+  <a href="./tutorial3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tutorial 3</span></a>
   </div>
 </li>
@@ -191,39 +191,49 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="tutorial3.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+   
+  <ul>
+  <li><a href="#mankiw-romer-weil-1992" id="toc-mankiw-romer-weil-1992" class="nav-link active" data-scroll-target="#mankiw-romer-weil-1992">Mankiw, Romer, Weil (1992)</a>
+  <ul class="collapse">
+  <li><a href="#main-objectives" id="toc-main-objectives" class="nav-link" data-scroll-target="#main-objectives">Main objectives</a></li>
+  <li><a href="#data-source" id="toc-data-source" class="nav-link" data-scroll-target="#data-source">Data source</a></li>
+  <li><a href="#folder-organization" id="toc-folder-organization" class="nav-link" data-scroll-target="#folder-organization">Folder organization</a></li>
+  </ul></li>
+  <li><a href="#ordinary-least-squares" id="toc-ordinary-least-squares" class="nav-link" data-scroll-target="#ordinary-least-squares">Ordinary Least Squares</a>
+  <ul class="collapse">
+  <li><a href="#linear-model" id="toc-linear-model" class="nav-link" data-scroll-target="#linear-model">Linear Model</a></li>
+  <li><a href="#ols-estimator-formula" id="toc-ols-estimator-formula" class="nav-link" data-scroll-target="#ols-estimator-formula">OLS Estimator Formula</a></li>
+  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation</a></li>
+  </ul></li>
+  <li><a href="#the-solow-model" id="toc-the-solow-model" class="nav-link" data-scroll-target="#the-solow-model">The Solow model</a></li>
+  <li><a href="#specification" id="toc-specification" class="nav-link" data-scroll-target="#specification">Specification</a>
+  <ul class="collapse">
+  <li><a href="#econometrics-model" id="toc-econometrics-model" class="nav-link" data-scroll-target="#econometrics-model">Econometrics model</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  </ul></li>
+  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise</a>
+  <ul class="collapse">
+  <li><a href="#describe-the-data" id="toc-describe-the-data" class="nav-link" data-scroll-target="#describe-the-data">Describe the data</a></li>
+  <li><a href="#estimate-the-baseline-model" id="toc-estimate-the-baseline-model" class="nav-link" data-scroll-target="#estimate-the-baseline-model">Estimate the baseline model</a></li>
+  <li><a href="#estimate-the-augmented-model" id="toc-estimate-the-augmented-model" class="nav-link" data-scroll-target="#estimate-the-augmented-model">Estimate the augmented model</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Tutorial 3</h1>
+<h1 class="title">Tutorial 3: OLS and first repliction</h1>
 </div>
 
 
-<div class="quarto-title-meta-author">
-  <div class="quarto-title-meta-heading">Author</div>
-  <div class="quarto-title-meta-heading">Affiliation</div>
-  
-    <div class="quarto-title-meta-contents">
-    <p class="author"><a href="https://mateomoglia.github.io">Matéo Moglia</a> <a href="mailto:mateo.moglia@gmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            CREST - Institut Polytechnique de Paris
-          </p>
-      </div>
-  </div>
 
 <div class="quarto-title-meta">
 
-      
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">March 5, 2025</p>
-    </div>
-  </div>
+    
   
     
   </div>
@@ -233,455 +243,245 @@ window.Quarto = {
 </header>
 
 
-<section id="roadmap" class="level2">
-<h2 class="anchored" data-anchor-id="roadmap">Roadmap</h2>
-<p>For this third tutorial, we are going to</p>
+<p>We learnt how to manage simple datasets using R and dug into the key derivations of the Solow model. We are going replicate our very first paper! You should read the paper beforehand <em>(find it on Moodle)</em> and know the main predictions of the Solow model.</p>
+<section id="mankiw-romer-weil-1992" class="level2">
+<h2 class="anchored" data-anchor-id="mankiw-romer-weil-1992">Mankiw, Romer, Weil (1992)</h2>
+<p>This paper is one of the most important empirical contribution to the macroeconomics literature. It shows two things:</p>
 <ol type="1">
-<li>Recap on the OLS estimation</li>
-<li>Learn how to go from a model to an empirical prediction</li>
-<li>Replicate the key results from Mankiw, Romer, Weil (1994)</li>
+<li>The Solow model predictions (in terms of direction) are verified in the data</li>
+<li>But only an augmented version of the model predicts well the magnitude in the data</li>
 </ol>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Big disclaimer: the recap on OLS is hugely inspired from Florian Oswald’s and Sciences Po’s introduction to Econometrics with R. The interested student can check this fantastical material here: <a href="scpoecon.github.io">scpoecon.github.io</a>.</p>
-</div>
-</div>
-</section>
-<section id="linear-regression" class="level2">
-<h2 class="anchored" data-anchor-id="linear-regression">Linear regression</h2>
-<section id="why-when" class="level3">
-<h3 class="anchored" data-anchor-id="why-when">Why? When?</h3>
+<section id="main-objectives" class="level3">
+<h3 class="anchored" data-anchor-id="main-objectives">Main objectives</h3>
 <ol type="1">
-<li>An empirical tool to assess the statistical relationship between variables</li>
-<li>In the toolbox of the social scientist, with many other tools</li>
-<li>Correlation <strong>is not</strong> causation</li>
+<li>Open the dataset</li>
+<li>Inspect and clean the dataset</li>
+<li>Run the main regressions</li>
+<li>Make a graph</li>
+<li>Export the results on LaTeX</li>
 </ol>
-<p>Topic of today: <strong>Ordinary Least Square</strong> estimator (which is a widely used estimator)</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Keep in mind the difference between an estimator <span class="math inline">\(\hat \beta\)</span> and the observed value <span class="math inline">\(\beta\)</span>. We cannot observe the true parameter, so we estimate it (with <strong>error</strong>).</p>
-</div>
-</div>
 </section>
+<section id="data-source" class="level3">
+<h3 class="anchored" data-anchor-id="data-source">Data source</h3>
+<p>Download the data from Moodle.</p>
 </section>
-<section id="linear-regression-1" class="level2">
-<h2 class="anchored" data-anchor-id="linear-regression-1">Linear regression</h2>
-<section id="visual-intuition" class="level3">
-<h3 class="anchored" data-anchor-id="visual-intuition">Visual intuition</h3>
-<p>We use the <code>cars</code> dataset, in base R, and we are going to relate how speed and stopping distance are related.</p>
+<section id="folder-organization" class="level3">
+<h3 class="anchored" data-anchor-id="folder-organization">Folder organization</h3>
+<p>We are going to work in <code>tutorial2</code>. You may want to create additional subfolders like <code>raw_data</code>, <code>code</code>, <code>output</code> to store the raw data, the code, and the output we create.</p>
+<pre class="plaintext"><code>/Users/mmoglia/Dropbox/
+└── courses/
+    └── 2025_eco1s002
+      └── tutorial2</code></pre>
 <div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="tutorial3_files/figure-revealjs/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="960"></p>
-</figure>
-</div>
-</div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>path <span class="ot">&lt;-</span> <span class="st">"/Users/mmoglia/Dropbox/courses/polytechnique/2025_eco1s002/tutorial2"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
-<section id="linear-regression-2" class="level2">
-<h2 class="anchored" data-anchor-id="linear-regression-2">Linear regression</h2>
-<section id="visual-intuition-1" class="level3">
-<h3 class="anchored" data-anchor-id="visual-intuition-1">Visual intuition</h3>
-<p>It seems that a line could be helpful to “summarize” the relation between both variables!</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="tutorial3_files/figure-revealjs/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="linear-regression-3" class="level2">
-<h2 class="anchored" data-anchor-id="linear-regression-3">Linear regression</h2>
-<section id="bringing-some-maths" class="level3">
-<h3 class="anchored" data-anchor-id="bringing-some-maths">Bringing some maths</h3>
-<ul>
-<li>We want to minimize the distance between the line and the points</li>
-<li>In practice, the sum of distances can go to 0. Solution?</li>
-</ul>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="tutorial3_files/figure-revealjs/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="linear-regression-4" class="level2">
-<h2 class="anchored" data-anchor-id="linear-regression-4">Linear regression</h2>
-<section id="bringing-some-maths-1" class="level3">
-<h3 class="anchored" data-anchor-id="bringing-some-maths-1">Bringing some maths</h3>
-<ul>
-<li><p>We compute the sum of square distances (<span class="math inline">\(\sim\)</span> error), so the name “ordinary least square”</p></li>
-<li><p>An affine function is defined as <span class="math inline">\(y = \beta_0 + \beta_1 x\)</span> which in matrix form gives <span class="math inline">\(Y = X\beta\)</span>.</p></li>
-<li><p>Dimension of <span class="math inline">\(X\)</span>?</p></li>
-<li><p>The error for each observation is <span class="math inline">\(e_i = y_i - \beta_0 - \beta_1 x_i\)</span></p></li>
-<li><p>Hence, we look for <span class="math inline">\(\beta\)</span> such that: <span class="math display">\[
-\beta^\star = \min_\beta (Y - X\beta)'(Y - X\beta) = \min_\beta e'e
-\]</span></p></li>
-<li><p>First order condition: derivative wrt <span class="math inline">\(\beta\)</span> should be equal to 0</p></li>
-</ul>
-</section>
-</section>
-<section id="linear-regression-5" class="level2">
-<h2 class="anchored" data-anchor-id="linear-regression-5">Linear regression</h2>
-<section id="defining-the-ols-estimator" class="level3">
-<h3 class="anchored" data-anchor-id="defining-the-ols-estimator">Defining the OLS estimator</h3>
-<ul>
-<li><p>The OLS estimator is then: <span class="math display">\[
-\hat{\beta} = (X'X)^{-1}X'y
-\]</span></p></li>
-<li><p>Who wants to try to derive it?</p></li>
-<li><p>Under some conditions, this estimator is the <strong>Best Linear Unbiased Estimator</strong> (BLUE)</p></li>
-<li><p>Those conditions will be super helpful later</p></li>
-</ul>
-</section>
-</section>
-<section id="linear-regression-6" class="level2">
-<h2 class="anchored" data-anchor-id="linear-regression-6">Linear regression</h2>
-<section id="gauss-markov-theorem" class="level3">
-<h3 class="anchored" data-anchor-id="gauss-markov-theorem">Gauss-Markov theorem</h3>
-<ol type="1">
-<li>Linearity
-<ul>
-<li>The relationship has to be linear</li>
-<li>See <a href="#appendix" class="btn btn-primary">Anscombe quartet</a></li>
-<li>Solutions: <span class="math inline">\(\log\)</span>, squared</li>
-</ul></li>
-<li><span class="math inline">\(X\)</span> is full rank
-<ul>
-<li>Ensure that variables are not perfectly colinear</li>
-<li>There are more observations than variables (<span class="math inline">\(n &gt; k\)</span>)</li>
-</ul></li>
-<li>Zero conditional mean
-<ul>
-<li>Errors are not correlated with <span class="math inline">\(X\)</span> (<strong>exogeneity</strong>)</li>
-</ul></li>
-<li>Homoskedasticity
-<ul>
-<li>Errors are not correlated between observations</li>
-<li>Solutions: robust estimation</li>
-</ul></li>
-</ol>
-</section>
-</section>
-<section id="linear-regression-7" class="level2">
-<h2 class="anchored" data-anchor-id="linear-regression-7">Linear regression</h2>
-<section id="gauss-markov-theorem-violation" class="level3">
-<h3 class="anchored" data-anchor-id="gauss-markov-theorem-violation">Gauss-Markov theorem violation</h3>
-<p>Major threat is 3 (= <strong>endogeneity</strong>). Usually it arises from 3 sources:</p>
-<ol type="1">
-<li>Reverse causality. Any exemple?</li>
-<li>Omitted Variable Bias. Any exemple?</li>
-<li>Measurement error. Any exemple?</li>
-</ol>
-<p>Then, the OLS estimator is <strong>biased</strong>… We will see many ways to tackle this issue.</p>
-<ul>
-<li>Today: <strong>Omitted Variable Bias</strong>.</li>
-</ul>
-</section>
-</section>
-<section id="linear-regression-8" class="level2">
-<h2 class="anchored" data-anchor-id="linear-regression-8">Linear regression</h2>
-<section id="r2-and-prediction-quality" class="level3">
-<h3 class="anchored" data-anchor-id="r2-and-prediction-quality">R2 and prediction quality</h3>
-<ul>
-<li>R2 is the coefficient of determination, assessing the share of total variance explained by the model</li>
-</ul>
-<p><span class="math display">\[\small
-R^2 = \frac{\texttt{Variance explained}}{\texttt{Total variance}} = \frac{\text{Sum of explained square}}{\text{Total sum of square}} = 1 - \frac{\text{Sum of square residuals}}{\text{Total sum of square}}
+<section id="ordinary-least-squares" class="level2">
+<h2 class="anchored" data-anchor-id="ordinary-least-squares">Ordinary Least Squares</h2>
+<p>The Ordinary Least Squares (OLS) estimator is a method used in linear regression to estimate the parameters of a linear model. The objective of OLS is to minimize the sum of squared residuals.</p>
+<section id="linear-model" class="level3">
+<h3 class="anchored" data-anchor-id="linear-model">Linear Model</h3>
+<p>The linear model can be expressed as:</p>
+<p><span class="math display">\[
+y = x\beta + \epsilon
 \]</span></p>
 <ul>
-<li>R2 is between 0 and 1</li>
-<li>The higher the R2, the larger the share of variance explained by the model</li>
-<li>A low R2 is not necessarily bad: it is just that the model explains a low share of variance</li>
+<li><p><span class="math inline">\(y\)</span>: Dependent variable</p></li>
+<li><p><span class="math inline">\(X\)</span>: Matrix of independent, explanatory, variables</p></li>
+<li><p><span class="math inline">\(\beta\)</span>: Coefficients to be estimated.</p></li>
+<li><p><span class="math inline">\(\epsilon\)</span>: Error term (assumed to be normally distributed with mean 0 and constant variance)</p></li>
 </ul>
 </section>
+<section id="ols-estimator-formula" class="level3">
+<h3 class="anchored" data-anchor-id="ols-estimator-formula">OLS Estimator Formula</h3>
+<p>The OLS estimator for <span class="math inline">\(\beta\)</span> is given by: <span class="math display">\[
+\hat\beta =(X^TX)^{−1}X^Ty
+\]</span> This equation minimizes the sum of squared residuals (RSS): <span class="math display">\[
+\sum_{i=1}^n (y_i - \hat{y}_i)^2
+\]</span> ### Assumptions of OLS</p>
+<ol type="1">
+<li><p><strong>Linearity</strong>: The relationship between the dependent and independent variables is linear</p></li>
+<li><p><strong>Independence</strong>: Observations are independent of each other.</p></li>
+<li><p><strong>Homoscedasticity</strong>: The variance of the error term is constant across observations.</p></li>
+<li><p><strong>No Multicollinearity</strong>: Independent variables are not perfectly collinear.</p></li>
+<li><p><strong>Normality</strong>: The error term is normally distributed</p></li>
+</ol>
 </section>
-<section id="linear-regression-9" class="level2">
-<h2 class="anchored" data-anchor-id="linear-regression-9">Linear regression</h2>
 <section id="interpretation" class="level3">
 <h3 class="anchored" data-anchor-id="interpretation">Interpretation</h3>
-<ul>
-<li>Once the model set, we can estimate it using R functions</li>
-<li>Main function is <code>lm</code>. For linear model, the syntax is <code>lm(y ~ x)</code></li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(cars<span class="sc">$</span>dist <span class="sc">~</span> cars<span class="sc">$</span>speed))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Call:
-lm(formula = cars$dist ~ cars$speed)
-
-Residuals:
-    Min      1Q  Median      3Q     Max 
--29.069  -9.525  -2.272   9.215  43.201 
-
-Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept) -17.5791     6.7584  -2.601   0.0123 *  
-cars$speed    3.9324     0.4155   9.464 1.49e-12 ***
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Residual standard error: 15.38 on 48 degrees of freedom
-Multiple R-squared:  0.6511,    Adjusted R-squared:  0.6438 
-F-statistic: 89.57 on 1 and 48 DF,  p-value: 1.49e-12</code></pre>
-</div>
-</div>
-<ul>
-<li>Results are significant (low p-value), R2 is relatively large</li>
-</ul>
+<p>The coefficients <span class="math inline">\(\hat\beta\)</span> represent the estimated relationship between the independent and dependent variables. The intercept is the expected value of <span class="math inline">\(y\)</span> when all predictors are zero. The slope(s) indicate the change in <span class="math inline">\(y\)</span> for a one-unit change in the corresponding predictor. If the <span class="math inline">\(y\)</span> and <span class="math inline">\(x\)</span> are in <span class="math inline">\(\log\)</span>, we can interpret <span class="math inline">\(\beta\)</span> as percentages (eg, if <span class="math inline">\(x\)</span> increases by 1%, <span class="math inline">\(y\)</span> increases by <span class="math inline">\(\hat\beta\)</span> percent).</p>
 </section>
 </section>
-<section id="linear-regression-10" class="level2">
-<h2 class="anchored" data-anchor-id="linear-regression-10">Linear regression</h2>
-<section id="interpretation-1" class="level3">
-<h3 class="anchored" data-anchor-id="interpretation-1">Interpretation</h3>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Everything should be intepreted <strong>everything else equal</strong>!</p>
-</div>
-</div>
-<ul>
-<li><p>Level-level regression: marginal effect. If <span class="math inline">\(x\)</span> increases by 1, <span class="math inline">\(y\)</span> increases by <span class="math inline">\(\beta\)</span></p></li>
-<li><p>Log-log regression: elasticity. If <span class="math inline">\(x\)</span> increases by 1%, <span class="math inline">\(y\)</span> increases by <span class="math inline">\(\beta\)</span>%</p></li>
-<li><p>Log-level regression: percentage change. If <span class="math inline">\(x\)</span> increases by 1, <span class="math inline">\(y\)</span> increases by <span class="math inline">\(100\beta\)</span></p></li>
-<li><p>Level-log regression: level change. If <span class="math inline">\(x\)</span> increases by 1%, <span class="math inline">\(y\)</span> increases by <span class="math inline">\(\beta/100\)</span></p></li>
-</ul>
-</section>
-</section>
-<section id="from-the-model-to-the-data" class="level2">
-<h2 class="anchored" data-anchor-id="from-the-model-to-the-data">From the model to the data</h2>
-<section id="solow-model" class="level3">
-<h3 class="anchored" data-anchor-id="solow-model">Solow model</h3>
-<ul>
-<li><p>Using Harrod-neutral technological progress, the GDP per capita equation is: <span class="math display">\[\small
-\frac{Y(t)}{L(t)} = K(t)^\alpha (A(t) L(t))^{1-\alpha} \quad \alpha \in \ (0,1)
-\]</span></p></li>
-<li><p>We assume an exogenous growth rate of <span class="math inline">\(A\)</span> and <span class="math inline">\(L\)</span> such that: <span class="math inline">\(A(t) = A(0)e^{gt}\)</span> and <span class="math inline">\(L(t) = L(0) e^{nt}\)</span>.</p></li>
-<li><p>At the steady-state level:</p></li>
-</ul>
-<p><span class="math display">\[\small
-\frac{Y}{L} = A(0)e^{gt}\left(\frac{s}{n + g + \delta}\right)^{\alpha/(1-\alpha)}
-\]</span></p>
-<ul>
-<li>Super convenient: we can measure everything
-<ul>
-<li><span class="math inline">\(Y/L\)</span>, GDP divided by working age population</li>
-<li><span class="math inline">\(s\)</span>, saving measured as the real investment</li>
-<li><span class="math inline">\(n\)</span>, population growth rate</li>
-<li><span class="math inline">\(\delta\)</span> and <span class="math inline">\(g\)</span>, capital depreciation and growth rate of technology (assumed constant)</li>
-</ul></li>
-</ul>
-</section>
-</section>
-<section id="from-the-model-to-the-data-1" class="level2">
-<h2 class="anchored" data-anchor-id="from-the-model-to-the-data-1">From the model to the data</h2>
-<section id="is-this-relationship-linear" class="level3">
-<h3 class="anchored" data-anchor-id="is-this-relationship-linear">Is this relationship linear?</h3>
-<p><strong>No</strong>. Solution?</p>
-<div class="fragment">
-<p>Log-linearize it (at time 0)</p>
+<section id="the-solow-model" class="level2">
+<h2 class="anchored" data-anchor-id="the-solow-model">The Solow model</h2>
+<p>The Solow growth model (SGM) seeks to explain economic growth taking the rates of saving <span class="math inline">\(s\)</span>, population growth <span class="math inline">\(n\)</span> and technological progress <span class="math inline">\(g\)</span> as exogenous (given outside the model). We assume a Cobb-Douglas production function, so output <span class="math inline">\(Y\)</span> at time <span class="math inline">\(t\)</span> is given by:</p>
 <p><span class="math display">\[
-\log (Y/L) = \log(A(0)) + \left(\frac{\alpha}{1-\alpha}\right)\log s - \left(\frac{\alpha}{1-\alpha}\right) \log(n + g + \delta)
+Y_t = K_t^{\alpha} (A_t L_t)^{1-\alpha}, \text{ for } \alpha \in (0,1)
 \]</span></p>
-</div>
-</section>
-</section>
-<section id="from-the-model-to-the-data-2" class="level2">
-<h2 class="anchored" data-anchor-id="from-the-model-to-the-data-2">From the model to the data</h2>
-<section id="empirical-model" class="level3">
-<h3 class="anchored" data-anchor-id="empirical-model">Empirical model</h3>
-<p>Because we do not observe all data, we can only <em>estimate</em> the parameters. Hence, the empirical model we estimate is:</p>
+<p>The notation is standard: <span class="math inline">\(Y\)</span> is output, <span class="math inline">\(K\)</span> capital, <span class="math inline">\(L\)</span> labor, and <span class="math inline">\(A\)</span> the level of technology. In this production function, technological change is labor augmenting which is known as “Harrod-neutral”. <span class="math inline">\(L\)</span> and <span class="math inline">\(A\)</span> are assumed to grow exogenously at rates <span class="math inline">\(n\)</span> and <span class="math inline">\(g\)</span>.</p>
+<p>The model assumes that a constant fraction of output, <span class="math inline">\(s\)</span> , is invested. The remaining output is consumed. We define <span class="math inline">\(k\)</span> as the stock of capital per effective unit of labor,</p>
 <p><span class="math display">\[
-\log (Y_i/L_i) = \beta_0 + \beta_1 \log s_i + \beta_2 \log(n + g + \delta) + \epsilon_i
+\begin{align*}
+k_t \equiv \frac{K_t}{A_t L_t}
+\end{align*}
+\]</span> and <span class="math inline">\(y\)</span> as the level of output per effective unit of labor,</p>
+<p><span class="math display">\[
+\begin{align*}
+y_t &amp;= \frac{Y_t }{A_t L_t} \\
+&amp;= K_t^{\alpha} ( A_t L_t )^{- \alpha} \\
+&amp;= \left(  \frac{ K_t } {A_t L_t} \right)^{\alpha} \\
+&amp;= k_t^{\alpha}
+\end{align*}
+\]</span> The evolution of <span class="math inline">\(k\)</span> is governed by:</p>
+<p><span class="math display">\[
+\begin{align}
+\dot{k}_t &amp; = s y_t - (n+ g + \delta) k_t \\
+&amp; = s k_t^{\alpha} - (n+ g + \delta) k_t \nonumber
+\end{align}
+\]</span> where <span class="math inline">\(\delta \in (0,1)\)</span> is the rate of capital depreciation. The steady state is defined to be the level of capital <span class="math inline">\(k^{ss}\)</span> at which <span class="math inline">\(\dot{k}_t = 0\)</span>, plugging this into equation the last equation we have: <span class="math display">\[
+\begin{align*}
+0 = s (k^{ss})^{\alpha} - (n+ g + \delta) (k^{ss})
+\end{align*}
+\]</span> which implies <span class="math display">\[
+\begin{align}
+k^{ss} = \left(  \frac{s}{ n + g + \delta } \right)^{ \frac{1}{1-\alpha} }
+\end{align}
+\]</span> Assuming that <span class="math inline">\(A_t = A_0 \exp(gt)\)</span> (growth rate of <span class="math inline">\(A\)</span>): <span class="math display">\[
+\begin{align}
+y^{ss} &amp;= (k^{ss})^{\alpha} \nonumber \\
+\frac{ Y_t }{ A_t L_t } &amp;= \left(  \frac{s}{ n + g + \delta } \right)^{ \frac{\alpha}{1-\alpha} } \nonumber \\
+\frac{ Y_t }{ L_t } &amp;= A_0 e^{gt} \left(  \frac{s}{ n + g + \delta } \right)^{ \frac{\alpha}{1-\alpha} } \nonumber \\
+\log\left( \frac{ Y_t }{ L_t } \right)&amp;= \log(A_0 ) + gt  + \left(  \frac{\alpha}{1-\alpha} \right) \log(s)  -  \left(  \frac{\alpha}{1-\alpha} \right) \log(n + g + \delta)
+\end{align}
+\]</span> This last equation gives us an expression for steady-state income per-capita. Since capital’s share in income <span class="math inline">\(\alpha\)</span> is roughly one third, the model implies elasticity of income per capita with respect to saving rate <span class="math inline">\(\varepsilon_{ \frac{Y}{L}  , s} = \frac{d \log( \frac{Y}{L}  )}{ d \log(s) } = \frac{\alpha}{1 - \alpha} \approx  \frac{ \frac{1}{3} }{ \frac{2}{3} } = \frac{1}{2}\)</span>, and an elasticity with respect to <span class="math inline">\((n+g+\delta)\)</span> <span class="math inline">\(\varepsilon_{ \frac{Y}{L}  , s} = \frac{d \log( \frac{Y}{L}  )}{ d \log(n+g+\delta) } = - \frac{\alpha}{1 - \alpha} \approx - \frac{ \frac{1}{3} }{ \frac{2}{3} } = - \frac{1}{2}\)</span>.</p>
+</section>
+<section id="specification" class="level2">
+<h2 class="anchored" data-anchor-id="specification">Specification</h2>
+<p>The Solow model predicts that real income is higher in countries with higher savings rates and lower in countries with higher values of <span class="math inline">\((n+g+\delta)\)</span>. We want to see <em>if the data support this prediction</em>.</p>
+<section id="econometrics-model" class="level3">
+<h3 class="anchored" data-anchor-id="econometrics-model">Econometrics model</h3>
+<p>We assume that the growth rate of technology <span class="math inline">\(g\)</span> and the rate of capital depreciation <span class="math inline">\(\delta\)</span> are constant across countries. In contrast the term <span class="math inline">\(A_0\)</span> reflects not only the level of technology, but also resource endowments, climate, institutions and so on. It may differ across countries, so we assume that <span class="math display">\[
+\begin{align*}
+\log(A_0 ) = a + \varepsilon
+\end{align*}
+\]</span> where <span class="math inline">\(a\)</span> is a constant and <span class="math inline">\(\varepsilon\)</span> is a country specific shock. Thus log income per capita (at time <span class="math inline">\(0\)</span>) is: <span class="math display">\[
+\begin{align}
+\log\left( \frac{ Y }{ L } \right)&amp;= a  + \left(  \frac{\alpha}{1-\alpha} \right) \log(s)  -  \left(  \frac{\alpha}{1-\alpha} \right) \log(n + g + \delta) + \varepsilon
+\end{align}
 \]</span></p>
-<p>where <span class="math inline">\(\beta_0 + \epsilon_i = \log A(0)\)</span>, and <span class="math inline">\(\epsilon_i\)</span> is an error term capturing everything not captured in the model.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>We can, or not, assume that <span class="math inline">\(\beta_1 = -\beta_2\)</span>. This is an empirical prediction we might want to test.</p>
-</div>
-</div>
+<p>This last equation is our basic empirical specification in this section. We assume that <span class="math inline">\(s\)</span> and <span class="math inline">\(n\)</span> are independent of <span class="math inline">\(\varepsilon\)</span>, so our regressors are exogenous. This implies we can estimate this equation with Ordinary Least Squares (OLS).</p>
+</section>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<p>The data are from the Real National Accounts constructed by Summers and Heston (1988). It includes real income, government and private consumption, investment, and population for almost all of the world except the centrally planned economies. The data are annual and cover 1960-1985.</p>
+<ul>
+<li>The population growth rate <span class="math inline">\(n\)</span> is measured as the average rate of growth of the working age population, where working age is defined as 15-64.</li>
+<li>The savings rate <span class="math inline">\(s\)</span> is measured as the average real investment (including government investment) in real GDP, and <span class="math inline">\(Y/L\)</span> as real GDP in 1985 divided by the working age population in that year.</li>
+</ul>
+<p>Mankiw, Romer and Weil consider three samples:</p>
+<ul>
+<li><p>The <strong>most comprehensive</strong> consists of all countries for which data are available other than those for which oil production is the dominant industry. This sample consists of 98 countries. MRW exclude the oil producers because the bulk of recorded GDP for these countries represents the extraction of existing resources, not value added; one should not expect standard growth models to account for measured GDP in these countries.</p></li>
+<li><p>The <strong>second sample</strong> excludes countries whose population in 1960 was less than 1 million, or whose real income figures were based on extremely little primary data; measurement error is likely to be a greater problem for these countries. This sample consists of 75 countries.</p></li>
+<li><p>The <strong>third sample</strong> consists of the 22 OECD countries with population greater than 1 million. This sample has high quality data and the variation in omitted country specific factors is small. A disadvantage is that this sample is small in size.</p></li>
+</ul>
+<p>We estimate equation (3.1) with and without imposing the constraints that the coefficients on <span class="math inline">\(\log(s)\)</span> and <span class="math inline">\(\log(n+g+\delta)\)</span> are equal in magnitude and opposite in sign. We assume <span class="math inline">\(g+\delta = 0.05\)</span> because in the US <span class="math inline">\(\delta \approx 0.03\)</span> and <span class="math inline">\(g \approx 0.02\)</span>.</p>
 </section>
 </section>
 <section id="exercise" class="level2">
 <h2 class="anchored" data-anchor-id="exercise">Exercise</h2>
-<section id="data-cleaning-and-descriptive-statistics" class="level3">
-<h3 class="anchored" data-anchor-id="data-cleaning-and-descriptive-statistics">Data cleaning and descriptive statistics</h3>
+<p>We are going to use the following libraries.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Library</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><code>tidyverse</code></td>
+<td style="text-align: left;">For data manipulation</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>ggplot2</code></td>
+<td style="text-align: left;">For data visualization</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>Hmisc</code></td>
+<td style="text-align: left;">To describe dataset</td>
+</tr>
+</tbody>
+</table>
+<section id="describe-the-data" class="level3">
+<h3 class="anchored" data-anchor-id="describe-the-data">Describe the data</h3>
 <ol type="1">
-<li>Load the data and the packages (<code>dplyr</code> and <code>ggplot2</code>)</li>
-<li>What are the three groups of countries in the data?</li>
-<li>Compute summary statistics based on country group</li>
-<li>Plot the growth rate of GDP per capita vs.&nbsp;the log of GDP per capita</li>
+<li><p>Load the data <code>MRW_QJE1992.xlsx</code> into R. Use a path here.</p></li>
+<li><p>Describe the data using function <code>describe</code> from <code>Hmisc</code> library. Is there anything wrong? Keep only relevant observations.</p></li>
+<li><p>What are the groups of country defined by Mankiw et al.? Create a categorical variable that takes 0 if the country is in group N, 1 if in group I, and 2 if in group O.</p></li>
+<li><p>Use the function <code>summary</code> to print a table with summary statistics for all three groups.</p></li>
+<li><p>Generate a scatter plot of growth rate in GDP per capita against <span class="math inline">\(ln(GDP)\)</span> per worker in 1960, similar to Figure 1A in the paper (you need to create one of the two variables). Make it beautiful!!</p></li>
 </ol>
-</section>
-</section>
-<section id="exercise-1" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-1">Exercise</h2>
-<section id="baseline-estimation" class="level3">
-<h3 class="anchored" data-anchor-id="baseline-estimation">Baseline estimation</h3>
-<p>Assume <span class="math inline">\(g+\delta=0.05\)</span>.</p>
-<ol type="1">
-<li>Generate the variables you need in the regression</li>
-<li>Run the model on the full sample and on each sub-group. Store the results in appropriate objects.
-<ul>
-<li><em>[Bonus]</em> Use a loop to do it</li>
-</ul></li>
-<li>Interpret the results in the light of the Solow model predictions. What is the share of cross-country income per capita variation is explained by the model?</li>
-<li><em>[Bonus]</em> We assumed that <span class="math inline">\(\beta_1 \neq -\beta_2\)</span>. Using <code>linearHypothesis()</code> from the package <code>car</code>, you can set an hypothesis testing to check if the sum of the coefficient is equal to 0.</li>
-<li>In previous work, the share of capital in production was thought to be roughly 1/3, is this prediction supported by the data?</li>
-</ol>
-</section>
-</section>
-<section id="exercise-2" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-2">Exercise</h2>
-<section id="adding-the-human-capital" class="level3">
-<h3 class="anchored" data-anchor-id="adding-the-human-capital">Adding the human capital</h3>
-<ol type="1">
-<li>Does the previous model violate the exogeneity assumption? Why?</li>
-<li>A proposed solution is to add a new variable to capture the level of human capital: <code>school</code>.</li>
-<li>Run again the model on the full and sub- samples.</li>
-<li>Interpret.</li>
-<li>Export the tables and the graph in LaTeX</li>
-</ol>
-</section>
-</section>
-<section id="appendix" class="level2">
-<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
-<section id="anscombe-quartet" class="level3">
-<h3 class="anchored" data-anchor-id="anscombe-quartet">Anscombe quartet</h3>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+To make a graph
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>You want to use <code>ggplot()</code> function. It takes two main arguments within the parentheses. One is <code>data = ...</code> and the other one is <code>mapping = aes(...)</code>.</p>
+<p>Then, you can add the elements you want to draw after a <code>+</code>. Here, we want to plot points. Hence, you code should look like that:</p>
 <div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="tutorial3_files/figure-revealjs/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="960"></p>
-</figure>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> ..., <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> ..., <span class="at">y =</span> ...)) <span class="sc">+</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="co"># This one is pure aesthetic</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">path =</span> <span class="fu">paste0</span>(your_path,<span class="st">"/output/graph1.pdf"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
+</div>
+</section>
+<section id="estimate-the-baseline-model" class="level3">
+<h3 class="anchored" data-anchor-id="estimate-the-baseline-model">Estimate the baseline model</h3>
+<p>We now turn to the estimation of the main model :</p>
+<ol type="1">
+<li>Run the baseline model on the full sample.
+<ol type="1">
+<li>Store the results in an object called <code>reg_full</code>.</li>
+<li>Interpret.</li>
+</ol></li>
+<li>Run the regression separately for each sub-sample (based on country type). To filter the data, take advantage of the pipe command and the <code>filter()</code> function.
+<ol type="1">
+<li>Store the results in well-named objects</li>
+<li>Interpret.</li>
+</ol></li>
+<li>[Bonus] Can you use a loop to go quicker?</li>
+<li>Do these results validate the Solow model predictions?</li>
+</ol>
+</section>
+<section id="estimate-the-augmented-model" class="level3">
+<h3 class="anchored" data-anchor-id="estimate-the-augmented-model">Estimate the augmented model</h3>
+<p>According to Mankiw, Romer and Weil, we have an omitted variable bias in this first model because we are not accounting for human capital.</p>
+<ol type="1">
+<li><p>In your opinion, in which direction is our estimate of the effect of savings rate on <span class="math inline">\(\ln\)</span>(GDP) biased?</p></li>
+<li><p>Regress <span class="math inline">\(\ln(I/Y)\)</span> on <span class="math inline">\(\ln(School)\)</span>. The coefficient we get tells us how correlated the two variables are. Are they positively or negatively correlated? Is the correlation significant?</p></li>
+<li><p>Now estimate the “full” model from Table 2 of the paper. I.e., estimate by OLS the baseline model augmented with <span class="math inline">\(\ln(School)\)</span>. As before run the regression for the whole sample first and then by group of countries.</p>
+<ol type="1">
+<li>[Bonus] Use the <code>lapply</code> function instead of a loop</li>
+</ol></li>
+<li><p>Assuming this second model is true, were we over- or underestimating the coefficient of savings rate in the baseline model?</p></li>
+</ol>
 
 
 </section>
 </section>
 
 </main> <!-- /main -->
-
-
-<script>
-
-  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-
-  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-
-  // slide changes (different for each slide format).
-
-  (function () {
-
-    // dispatch for htmlwidgets
-
-    function fireSlideEnter() {
-
-      const event = window.document.createEvent("Event");
-
-      event.initEvent("slideenter", true, true);
-
-      window.document.dispatchEvent(event);
-
-    }
-
-
-
-    function fireSlideChanged(previousSlide, currentSlide) {
-
-      fireSlideEnter();
-
-
-
-      // dispatch for shiny
-
-      if (window.jQuery) {
-
-        if (previousSlide) {
-
-          window.jQuery(previousSlide).trigger("hidden");
-
-        }
-
-        if (currentSlide) {
-
-          window.jQuery(currentSlide).trigger("shown");
-
-        }
-
-      }
-
-    }
-
-
-
-    // hookup for slidy
-
-    if (window.w3c_slidy) {
-
-      window.w3c_slidy.add_observer(function (slide_num) {
-
-        // slide_num starts at position 1
-
-        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-
-      });
-
-    }
-
-
-
-  })();
-
-</script>
-
-
-
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
