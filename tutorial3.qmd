@@ -17,7 +17,7 @@ author:
     email: mateo.moglia@gmail.com
     affiliations: CREST - Institut Polytechnique de Paris
     url: https://mateomoglia.github.io
-date: "March 5, 2025"
+date: last-modified
 execute:
   cache: true
 ---
@@ -137,7 +137,7 @@ ggplot(cars, aes(x = speed, y = dist)) +
     \hat{\beta} = (X'X)^{-1}X'y
     $$
 
--   Who wants to try to derive it?
+-   Who wants to try to derive it? 
 
 -   Under some conditions, this estimator is the **Best Linear Unbiased Estimator** (BLUE)
 
@@ -164,15 +164,30 @@ ggplot(cars, aes(x = speed, y = dist)) +
 
 ### Gauss-Markov theorem violation
 
-Major threat is 3 (= **endogeneity**). Usually it arises from 3 sources:
+Major threat is 3 (= **endogeneity**). Usually it arises from 2 sources:
 
 1.  Reverse causality. Any exemple?
 2.  Omitted Variable Bias. Any exemple?
-3.  Measurement error. Any exemple?
 
-Then, the OLS estimator is **biased**... We will see many ways to tackle this issue.
+Then, the OLS estimator is **biased** and $E(\widehat\beta)\neq \beta$.
+Proof in appendix.
 
--   Today: **Omitted Variable Bias**.
+It also means that $Cov(Y,\epsilon)\neq 0$. In other words, that $y$ and $\epsilon$ somehow move jointly due to some unobserved factors and not due **only** to variation due to $X$.
+
+We will see many ways to tackle this issue.
+
+-   Today: **Omitted Variable Bias**
+-   Next week: **Endogeneity**.
+
+:::callout-tip
+Extensive presentation of the derivations and the Gauss-Markov theorem [here](https://web.stanford.edu/~mrosenfe/soc_meth_proj3/matrix_OLS_NYU_notes.pdf).
+:::
+
+---
+
+A third case leads to an unbiased estimator with higher standard errors (not the *best* estimator anymore): **measurement error**. The intuition behind measurement error is more straightforward:
+
+If $x = x^\star + \delta$ where $\delta$ is a measurement error with mean 0, then the estimator is still unbiased but the variance is higher and the estimation is leess precise.
 
 ## Linear regression
 
@@ -200,6 +215,27 @@ summary(lm(cars$dist ~ cars$speed))
 ```
 
 -   Results are significant (low p-value), R2 is relatively large
+
+## Linear regression
+
+### P-value
+
+The `Pr(>|t|)` value is also called the **p-value**. Let's assume that we want to have a significance level $\alpha$ of 5%. The underlying statistical test is the following:
+
+$$
+\begin{align*}
+H_0 : \beta = 0 \\
+H_1 : \beta \neq 0
+\end{align*}
+$$
+
+where $\beta$ is the *true* coefficient. 
+
+We want to know if, conditional on the fact that $H_0$ is true (the true parameter value is 0), $\widehat \beta = 3.93$ is due to pure chance (then we keep $H_0$) or if it cannot be due to chance (and we reject $H_0$). 
+
+If the p-value falls below the threshold $\alpha$, then we can confidently assume that the coefficient is significantly different from 0. In other words, we reject the hypothesis that the speed has no influence on the stopping distance at the 5% level.
+
+For more details, you can check this quick [note](https://gregorygundersen.com/blog/2021/09/09/ols-hypothesis-testing/).
 
 ## Linear regression
 
@@ -330,3 +366,70 @@ g4 = ggplot(datasets::anscombe,aes(x=x4,y=y4)) +
 (g1 | g2) /
 (g3 | g4)
 ```
+
+## Appendix
+
+### Omitted variable bias proof
+
+Omitted Variable Bias (OVB) occurs when a relevant variable is left out of a regression model, leading to biased and inconsistent estimators. Here, we formally prove the presence of bias in the Ordinary Least Squares (OLS) estimator due to an omitted variable.
+
+Consider the true model: $Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \epsilon$ where $Y$ is the dependent variable, $X_1$ and $X_2$ are explanatory variables, $\epsilon$ is the error term with $E[\epsilon | X_1, X_2] = 0$.
+
+Now, suppose $X_2$ is omitted from the regression. The estimated model is:
+$$
+Y = \alpha_0 + \alpha_1 X_1 + u
+$$
+
+where the new error term $u$ is: $u = \beta_2 X_2 + \epsilon$. Since $X_2$ is omitted, we express it in terms of $X_1$ using the linear projection:
+
+$$
+X_2 = \gamma_0 + \gamma_1 X_1 + v
+$$
+
+where $v$ is the residual such that $E[v | X_1] = 0$.
+
+-----
+
+Substituting this into the omitted equation:
+
+$$
+u = \beta_2 (\gamma_0 + \gamma_1 X_1 + v) + \epsilon
+$$
+
+$$
+u = \beta_2 \gamma_0 + \beta_2 \gamma_1 X_1 + \beta_2 v + \epsilon
+$$
+
+Since $u$ is correlated with $X_1$, the OLS estimator for $\alpha_1$ (which is another way to write an estimator) is:
+
+$$
+\hat{\alpha}_1 = \frac{Cov(Y, X_1)}{Var(X_1)}
+$$
+
+Substituting $Y$ from the true model:
+
+$$
+\hat{\alpha}_1 = \frac{Cov(\beta_0 + \beta_1 X_1 + \beta_2 X_2 + \epsilon, X_1)}{Var(X_1)}
+$$
+
+Expanding covariance terms:
+
+$$
+\hat{\alpha}_1 = \beta_1 + \beta_2 \frac{Cov(X_2, X_1)}{Var(X_1)}
+$$
+
+---
+
+Using the projection equation:
+
+$$
+\hat{\alpha}_1 = \beta_1 + \beta_2 \gamma_1
+$$
+
+Since $\gamma_1 \neq 0$ if $X_1$ and $X_2$ are correlated, and $\beta_2 \neq 0$ if $X_2$ is relevant, it follows that:
+
+$$
+E[\hat{\alpha}_1] \neq \beta_1
+$$
+
+Thus, the OLS estimator is biased due to the omission of $X_2$. Another way of seeing it on these [slides](https://hedibert.org/wp-content/uploads/2016/09/Bias-omittedvariable.pdf).
