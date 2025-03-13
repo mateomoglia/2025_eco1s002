@@ -112,3 +112,5 @@ A good instrument has to check two assumptions. The first one is the **relevance
 
 8.  Does the instrument seem valid? Comment the results.
 9.  Discover the function `ivreg` and do the IV regression again. Do the results differ?
+
+Solutions are [here](https://mateomoglia.github.io/2025_eco1s002/tutorial4_sol.html).
