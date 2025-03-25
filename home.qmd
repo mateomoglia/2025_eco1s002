@@ -19,6 +19,7 @@ This website will walk you through the tutorials for the *Topics in Economics* (
 ::: {.callout-caution collapse="true"}
 ## Log
 
+-   v1.3 - 25/3/25 - Tutorial 6
 -   v1.2 - 8/3/25 - Tutorial 4
 -   v1.1 - 25/1/25 - Tutorial 3
 -   v1.0 - 23/1/25 - Tutorial 2
@@ -46,8 +47,8 @@ This website will walk you through the tutorials for the *Topics in Economics* (
 -   Tutorial 5 *(March 19)*
     -   Discussion on the group project
     -   Q&A
--   Tutorial 6 *(March 26, computer session)*
-    -   Autonomous replication of an IV paper
+-   [Tutorial 6](https://mateomoglia.github.io/2025_eco1s002/tutorial6.html) *(March 26, computer session)*
+    -   Autonomous replication of an IV paper (handed in)
 -   Tutorial 7 *(April 2)*
     -   Treatment effect
     -   Difference-in-differences estimator
