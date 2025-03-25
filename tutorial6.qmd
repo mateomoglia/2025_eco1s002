@@ -41,7 +41,10 @@ For this PC, you are asked to upload a `.pdf` file at the hand of the day. You c
 | `co_max8hr`     | Co pollution   |
 | `so2_mean`      | Sulfure dioxyde pollution |
 | `o3_mean`       | Ozone pollution |
+| `m` | Municipal ID |
+| `week`, `month`, `year` | Time ID |
 
+: Variables used in the replication {.striped .hover}
 
 ## Exercise 1: Intuition
 
@@ -69,6 +72,6 @@ Pay close attention to the footnote of the tables you want to replicate. Notice 
 Notice you will need to create some variables (the polynomials and the fixed effects). The explained variables are scaled by 1000 in the paper.
 
 1.  Replicate Table 2. Predict the value of pollution. Export. Interpret. Does the IV seem valid?
-2.  Replicate Table 3 (Columns 1 to 4 only). Export. Interpret. Are you confident with these results? WHich 
+2.  Replicate Table 3 (Columns 1 to 4 only). Export. Interpret. Are you confident with these results? 
 3.  [Bonus] Rerun the analysis without dropping the outliers. Interpret.
 4.  [Bonus] Plot the main point estimates and the confidence intervals. Which pollutant is the worst?
