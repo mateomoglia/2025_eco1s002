@@ -62,7 +62,7 @@ Most answers are in the introduction of the paper.
 2.  Control variables include `w_tmp_mean`, `w_precip`, `w_cloud`, `w_evap`, `w_invterm`. Keep only observations for which those controls are not missing.
 3.  Remove if `w_tmp_impute` is 1 (ie, if the temperature is imputed).
 4.  Drop if `w_invterm` and `w_tmp_mean` are missing.
-5.  Compute the monthly termal inversion (`w_invterm`) and the monthly temperature (`w_tmp_mean`).
+5.  Compute the monthly average of termal inversion (`w_invterm`) and the monthly average temperature (`w_tmp_mean`).
 6.  Replicate Figure 3 using `ggplot`. The mortality variables are `rw_infant_1y` and `grw_infant_1y`. Export to your `.tex` file.
 
 ## Exercise 3: Empirical analysis
