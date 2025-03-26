@@ -25,7 +25,7 @@ path = "C:/users/mateomoglia/dropbox/courses/polytechnique/2025_eco1s002/tutoria
 Does air pollution affect child mortality? Is this relationship linear? Air pollution is an important subject and leads to various deseases. Most estimates from the literature are from developed countries, leading to low external validity. In this paper, the authors propose a novel estimation of the effect of air pollution on infant mortality, in a developing context, Mexico. 
 
 :::callout-note
-For this PC, you are asked to upload a `.pdf` file at the hand of the day. You can work in group. This is *not* graded but the output quality will be taken into account for the participation grade. Please upload the file on Moodle with the following naming convention: "PC6_GR1_NAME1_NAME2.pdf" or "PC6_GR2_NAME1_NAME2.pdf" (in alphabetical order).
+For this PC, you are asked to upload a `.pdf` file at the end of the day. You can work in group. This is *not* graded but the output quality will be taken into account for the participation grade. Please upload the file on Moodle with the following naming convention: "PC6_GR1_NAME1_NAME2.pdf" or "PC6_GR2_NAME1_NAME2.pdf" (in alphabetical order).
 :::
 
 | Variable | Description 
