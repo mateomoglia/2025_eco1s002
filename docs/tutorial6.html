@@ -216,37 +216,33 @@ Note
 </tr>
 <tr class="odd">
 <td><code>rw_infant_1y</code></td>
-<td style="text-align: left;">Yearly child mortality in Mexico</td>
+<td style="text-align: left;">Child mortality (aged 1) in Mexico</td>
 </tr>
 <tr class="even">
 <td><code>grw_infant_1y</code></td>
-<td style="text-align: left;">Yearly child mortality in Guadalajara</td>
+<td style="text-align: left;">Child mortality (aged 1) in Guadalajara</td>
 </tr>
 <tr class="odd">
-<td><code>grw_infant_1y</code></td>
-<td style="text-align: left;">Yearly child mortality in Guadalajara</td>
-</tr>
-<tr class="even">
 <td><code>pm10_max24hr</code></td>
 <td style="text-align: left;">PM10 pollution</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>co_max8hr</code></td>
 <td style="text-align: left;">Co pollution</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>so2_mean</code></td>
 <td style="text-align: left;">Sulfure dioxyde pollution</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>o3_mean</code></td>
 <td style="text-align: left;">Ozone pollution</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>m</code></td>
 <td style="text-align: left;">Municipal ID</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>week</code>, <code>month</code>, <code>year</code></td>
 <td style="text-align: left;">Time ID</td>
 </tr>
@@ -270,14 +266,13 @@ Note
 <li>Open the raw data</li>
 <li>Control variables include <code>w_tmp_mean</code>, <code>w_precip</code>, <code>w_cloud</code>, <code>w_evap</code>, <code>w_invterm</code>. Keep only observations for which those controls are not missing.</li>
 <li>Remove if <code>w_tmp_impute</code> is 1 (ie, if the temperature is imputed).</li>
-<li>Drop if <code>w_invterm</code> and <code>w_tmp_mean</code> are missing.</li>
 <li>Compute the monthly average of termal inversion (<code>w_invterm</code>) and the monthly average temperature (<code>w_tmp_mean</code>).</li>
 <li>Replicate Figure 3 using <code>ggplot</code>. The mortality variables are <code>rw_infant_1y</code> and <code>grw_infant_1y</code>. Export to your <code>.tex</code> file.</li>
 </ol>
 </section>
 <section id="exercise-3-empirical-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-3-empirical-analysis">Exercise 3: Empirical analysis</h2>
-<p>Pay close attention to the footnote of the tables you want to replicate. Notice that the authors drop the bottom 99 and top 1 percentile observations (to account for outliers). Pollution variables are <code>pm10_max24hr</code>, <code>co_max8hr</code>, <code>so2_mean</code>, <code>o3_mean</code>.</p>
+<p>Pay close attention to the footnote of the tables you want to replicate. Notice that the authors drop the bottom 99 and top 1 percentile observations (to account for outliers). They also weight the regressions by the number of births. Pollution variables are <code>pm10_max24hr</code>, <code>co_max8hr</code>, <code>so2_mean</code>, <code>o3_mean</code>.</p>
 <p>Notice you will need to create some variables (the polynomials and the fixed effects). The explained variables are scaled by 1000 in the paper.</p>
 <ol type="1">
 <li>Replicate Table 2. Predict the value of pollution. Export. Interpret. Does the IV seem valid?</li>

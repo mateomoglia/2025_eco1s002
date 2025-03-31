@@ -49,22 +49,21 @@ This website will walk you through the tutorials for the *Topics in Economics* (
     -   Q&A
 -   [Tutorial 6](https://mateomoglia.github.io/2025_eco1s002/tutorial6.html) *(March 26, computer session)*
     -   Autonomous replication of an IV paper (handed in)
--   Tutorial 7 *(April 2)*
+-   Tutorial 7 *(April 2, computer session)*
     -   Treatment effect
-    -   Difference-in-differences estimator
--   Tutorial 8 *(April 9)*
-    -   Refresher on the utility maximization problem
-    -   The social multiplier
+    -   Solution of Tutorial 6
+-   Tutorial 8 *(April 9, computer session)*
+    -   Difference-in-differences estimation
 -   Tutorial 9 *(April 16)*
+    -   Refresher on utility maximization program
     -   Intertemporal maximization problem
 -   Tutorial 10 *(April 30, computer session)*
     -   Spatial segregation
 -   Tutorial 11 *(May 7)*
     -   The marriage market
-    -   Q&A
 -   Tutorial 12 *(May 14, computer session)*
-    -   Regression in discontinuity design
     -   Mock exam correction
+    -   Discussion on the group project
 -   Tutorial 13 *(May 21)*
     -   Summarizing the class and methods covered
     -   Final Q&A
