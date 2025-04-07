@@ -56,13 +56,14 @@ This website will walk you through the tutorials for the *Topics in Economics* (
     -   Refresher on utility maximization program
     -   Intertemporal maximization problem
 -   Tutorial 9 *(April 16, computer session)*
+    -   Work-leisure trade-off 
     -   Women labour force participation
-    -   Difference-in-differences estimation
 -   Tutorial 10 *(April 30, computer session)*
     -   Research project
 -   Tutorial 11 *(May 7, computer session)*
-    -   Marriage output matrics
+    -   Marriage output matrices
     -   Measures of assortative mating
+    -   Difference-in-differences estimation
 -   Tutorial 12 *(May 14)*
     -   Mock exam correction
 -   Tutorial 13 *(May 21)*
