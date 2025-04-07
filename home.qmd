@@ -52,20 +52,21 @@ This website will walk you through the tutorials for the *Topics in Economics* (
 -   Tutorial 7 *(April 2, computer session)*
     -   Treatment effect
     -   Solution of Tutorial 6
--   Tutorial 8 *(April 9, computer session)*
-    -   Difference-in-differences estimation
--   Tutorial 9 *(April 16)*
+-   Tutorial 8 *(April 9)*
     -   Refresher on utility maximization program
     -   Intertemporal maximization problem
+-   Tutorial 9 *(April 16, computer session)*
+    -   Women labour force participation
+    -   Difference-in-differences estimation
 -   Tutorial 10 *(April 30, computer session)*
-    -   Spatial segregation
--   Tutorial 11 *(May 7)*
-    -   The marriage market
--   Tutorial 12 *(May 14, computer session)*
+    -   Research project
+-   Tutorial 11 *(May 7, computer session)*
+    -   Marriage output matrics
+    -   Measures of assortative mating
+-   Tutorial 12 *(May 14)*
     -   Mock exam correction
-    -   Discussion on the group project
 -   Tutorial 13 *(May 21)*
-    -   Summarizing the class and methods covered
+    -   Research project
     -   Final Q&A
 -   Tutorial 14 *(May 28)*
     -   Restitution of the group projects *(graded)*
