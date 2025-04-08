@@ -823,5 +823,45 @@
     "crumbs": [
       "Tutorial 6"
     ]
+  },
+  {
+    "objectID": "tutorial8.html",
+    "href": "tutorial8.html",
+    "title": "Tutorial 8: Maximization program",
+    "section": "",
+    "text": "In this exercise, we are going to learn: 1. How to maximize the utility of an agent, under budget constraint. 2. Augment the standard model with the social multiplier 3. Augment the model by adding some dynamics",
+    "crumbs": [
+      "Tutorial 8"
+    ]
+  },
+  {
+    "objectID": "tutorial8.html#standard-utility-maximization-program",
+    "href": "tutorial8.html#standard-utility-maximization-program",
+    "title": "Tutorial 8: Maximization program",
+    "section": "Standard utility maximization program",
+    "text": "Standard utility maximization program\nA representative agent derives utility from consuming two goods, \\(x\\) and \\(y\\). Each good comes at price \\(p_x\\) and \\(p_y\\), respectively. The agent is also endowed with an income \\(I\\) to spend in each good.\nThe utility function is Cobb-Douglas and writes: \\[\nU(x,y) = x^\\alpha y^\\beta\n\\]\nwith \\(\\alpha,\\beta&gt;0\\).\n\nWrite the budget constraint\nWrite the utility maximization program\n\nTo solve the utility maximization program, we can set up a Lagrangean. The function \\(\\mathcal{L}(.)\\) is defined as the objective function minus the product between the budget constraint and a scalar \\(\\lambda \\in \\mathbb{R}\\).\n\nWrite the Lagrangean and set the first order conditions (partial derivative with respect to \\(x\\), \\(y\\) and \\(\\lambda\\) equal 0) as a system\nSolve the system for \\(x^\\star\\) and \\(y^\\star\\) and express them as a function of income and prices\nCompute the indirect utility function \\(V(x,y) = U(x^\\star,y^\\star)\\)\n[Bonus] Show that \\(\\lambda^\\star = \\partial V/\\partial I\\). Interpret\nCompute the elasticity of demand of \\(x\\) with respect to \\(p_x\\), \\(p_y\\) and \\(I\\)",
+    "crumbs": [
+      "Tutorial 8"
+    ]
+  },
+  {
+    "objectID": "tutorial8.html#social-multiplier",
+    "href": "tutorial8.html#social-multiplier",
+    "title": "Tutorial 8: Maximization program",
+    "section": "Social multiplier",
+    "text": "Social multiplier\nWe augment the agent program. Indeed, utility can also increase when surrounded by alike people (eg, if you enjoy playing tennis, you might derive utility from the fact that many people enjoy playing tennis around you). We now assume that \\(p_y = 1\\). Utility now writes \\(U = U(S,x,y) = Sx^\\alpha y^\\beta\\).\n\nSolve the new program. Why does including the social capital does not change the equilibrium condition?\n\nSo far, we assumed that the utility maximization program gives a maximum. To show it, we need to solve for the second order condition: \\(2p_x U_{xy} - U_{xx} - p_x^2 U_y y\\).\n\nFor \\(p_x = 2\\), \\(p_y = 1\\), and \\(I=10\\), did we reach a (local) maximum?\nShow that \\(\\partial x / \\partial S &gt; 0 \\iff U_{xS} &gt; p_x U_{yS}\\). Interpret.",
+    "crumbs": [
+      "Tutorial 8"
+    ]
+  },
+  {
+    "objectID": "tutorial8.html#intertemporal-utility-maximization",
+    "href": "tutorial8.html#intertemporal-utility-maximization",
+    "title": "Tutorial 8: Maximization program",
+    "section": "Intertemporal utility maximization",
+    "text": "Intertemporal utility maximization\nAgents are forward looking and have perfect foresighting. It means that they decide on the optimal consumption decision at the begining of the period. Agents can either consume or save their income. We consider two discrete periods, 1 and 2. Future value is discounted with parameter \\(0 &lt; \\rho &lt; 1\\) (agents always prefer consuming 1 today than 1 tomorrow). We also assume that price is equal to unity and we denote the interest rate \\(r\\).\nThe utility writes: \\[\nU = \\log(c^1) + \\rho \\log c^2\n\\]\nIn period 1, the agent can consume a quantity \\(c^1 \\geq 0\\) and can save a quantity \\(S \\geq 0\\). Her income is \\(I^1\\).\n\nWrite the budget constraint in period 1.\n\nIn period 2, the agent can consume \\(c^2 \\geq 0\\). She also obtains an income \\(I^2\\). If she has saved in period 1, she also obtains her savings augmented with the interest rate.\n\nWrite the budget constraint in period 2\nWrite the intertemporal budget constraint by combining both constraints\nSolve the program with the Lagrange method (the intertemporal utility function subject to the intertemporal budget constraint)\nInterpret the results, especially through a change in \\(\\rho\\) and in \\(r\\)",
+    "crumbs": [
+      "Tutorial 8"
+    ]
   }
 ]

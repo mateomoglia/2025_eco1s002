@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Welcome to this class! – Petite classe ECO1S002</title>
+<title>Tutorial 8: Maximization program – Petite classe ECO1S002</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,10 +67,39 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
-<body class="nav-sidebar docked fullcontent">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -79,7 +108,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./home.html">Home</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tutorial8.html">Tutorial 8</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -98,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./home.html" class="sidebar-item-text sidebar-link active">
+  <a href="./home.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
@@ -140,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorial8.html" class="sidebar-item-text sidebar-link">
+  <a href="./tutorial8.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Tutorial 8</span></a>
   </div>
 </li>
@@ -149,13 +178,22 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+   
+  <ul>
+  <li><a href="#standard-utility-maximization-program" id="toc-standard-utility-maximization-program" class="nav-link active" data-scroll-target="#standard-utility-maximization-program">Standard utility maximization program</a></li>
+  <li><a href="#social-multiplier" id="toc-social-multiplier" class="nav-link" data-scroll-target="#social-multiplier">Social multiplier</a></li>
+  <li><a href="#intertemporal-utility-maximization" id="toc-intertemporal-utility-maximization" class="nav-link" data-scroll-target="#intertemporal-utility-maximization">Intertemporal utility maximization</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Welcome to this class!</h1>
+<h1 class="title">Tutorial 8: Maximization program</h1>
 </div>
 
 
@@ -172,120 +210,61 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This website will walk you through the tutorials for the <em>Topics in Economics</em> (1S002) course of Ecole Polytechnique’s Bachelor program. The course has 3 main objectives: (i) know the basics of R (ii) manipulate the standard statistical and empirical tools (iii) write an original research output.</p>
-<blockquote class="blockquote">
-<p><strong>Practical information</strong></p>
-<p><strong>TA</strong>: <a href="https://mateomoglia.github.io">Mateo Moglia</a></p>
-<p><strong>Schedule</strong>: Wednesday morning (check Synapses regularly for any changes in room).</p>
-<p><strong>Required software</strong>: R and its IDE, RStudio (all free). You may download it <a href="https://posit.co/download/rstudio-desktop/">here</a>. Create a free account to use <a href="https://www.overleaf.com">Overleaf</a>. Bring you own laptop or use the lab’s computer. The data used in the tutorials are on Moodle. You will also be able to download to find the solved exercices after each tutorial on Moodle.</p>
-<p><strong>Rules</strong>: Send me an email if you miss the class. You are grown-up adults, I trust you to follow thoroughly the class. Do not hesitate to work in small groups.</p>
-</blockquote>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Log
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ul>
-<li>v1.3 - 25/3/25 - Tutorial 6</li>
-<li>v1.2 - 8/3/25 - Tutorial 4</li>
-<li>v1.1 - 25/1/25 - Tutorial 3</li>
-<li>v1.0 - 23/1/25 - Tutorial 2</li>
-<li>v0.1 - 7/12/24 - Tutorial 1</li>
-<li>v0.0 - 5/12/24 - Creation</li>
-</ul>
-</div>
-</div>
-</div>
-<section id="class-outline" class="level2">
-<h2 class="anchored" data-anchor-id="class-outline">Class outline</h2>
-<ul>
-<li><a href="https://mateomoglia.github.io/2025_eco1s002/tutorial1.html#/title-slide">Tutorial 1</a> <em>(February 12, computer session)</em>
-<ul>
-<li>Presentation of the class objectives</li>
-<li>First hands on R</li>
-<li>First hands on LaTeX</li>
-</ul></li>
-<li><a href="https://mateomoglia.github.io/2025_eco1s002/tutorial2.html">Tutorial 2</a> <em>(February 19)</em>
-<ul>
-<li>Baseline Solow model derivations</li>
-<li>Solow model extensions</li>
-</ul></li>
-<li><a href="https://mateomoglia.github.io/2025_eco1s002/tutorial3.html">Tutorial 3</a> <em>(March 5, computer session)</em>
-<ul>
-<li>Replication of Mankiw et al.&nbsp;(1997)</li>
-<li>First hands on the OLS estimator</li>
-<li>Estimating the baseline and augmented Solow models</li>
-</ul></li>
-<li><a href="https://mateomoglia.github.io/2025_eco1s002/tutorial4.html">Tutorial 4</a> <em>(March 12, computer session)</em>
-<ul>
-<li>OLS bias and Instrumental Variables</li>
-<li>Replication of Acemoglu et al.&nbsp;(2010)</li>
-<li>Export the results</li>
-</ul></li>
-<li>Tutorial 5 <em>(March 19)</em>
-<ul>
-<li>Discussion on the group project</li>
-<li>Q&amp;A</li>
-</ul></li>
-<li><a href="https://mateomoglia.github.io/2025_eco1s002/tutorial6.html">Tutorial 6</a> <em>(March 26, computer session)</em>
-<ul>
-<li>Autonomous replication of an IV paper (handed in)</li>
-</ul></li>
-<li>Tutorial 7 <em>(April 2, computer session)</em>
-<ul>
-<li>Treatment effect</li>
-<li>Solution of Tutorial 6</li>
-</ul></li>
-<li>Tutorial 8 <em>(April 9)</em>
-<ul>
-<li>Refresher on utility maximization program</li>
-<li>Intertemporal maximization problem</li>
-</ul></li>
-<li>Tutorial 9 <em>(April 16, computer session)</em>
-<ul>
-<li>Work-leisure trade-off</li>
-<li>Women labour force participation</li>
-</ul></li>
-<li>Tutorial 10 <em>(April 30, computer session)</em>
-<ul>
-<li>Research project</li>
-</ul></li>
-<li>Tutorial 11 <em>(May 7, computer session)</em>
-<ul>
-<li>Marriage output matrices</li>
-<li>Measures of assortative mating</li>
-<li>Difference-in-differences estimation</li>
-</ul></li>
-<li>Tutorial 12 <em>(May 14)</em>
-<ul>
-<li>Mock exam correction</li>
-</ul></li>
-<li>Tutorial 13 <em>(May 21)</em>
-<ul>
-<li>Research project</li>
-<li>Final Q&amp;A</li>
-</ul></li>
-<li>Tutorial 14 <em>(May 28)</em>
-<ul>
-<li>Restitution of the group projects <em>(graded)</em></li>
-</ul></li>
-</ul>
+<style>
+.math {
+  font-size: small;
+}
+</style>
+<p>In this exercise, we are going to learn: 1. How to maximize the utility of an agent, under budget constraint. 2. Augment the standard model with the social multiplier 3. Augment the model by adding some dynamics</p>
+<section id="standard-utility-maximization-program" class="level2">
+<h2 class="anchored" data-anchor-id="standard-utility-maximization-program">Standard utility maximization program</h2>
+<p>A representative agent derives utility from consuming two goods, <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>. Each good comes at price <span class="math inline">\(p_x\)</span> and <span class="math inline">\(p_y\)</span>, respectively. The agent is also endowed with an income <span class="math inline">\(I\)</span> to spend in each good.</p>
+<p>The utility function is Cobb-Douglas and writes: <span class="math display">\[
+U(x,y) = x^\alpha y^\beta
+\]</span></p>
+<p>with <span class="math inline">\(\alpha,\beta&gt;0\)</span>.</p>
+<ol type="1">
+<li>Write the budget constraint</li>
+<li>Write the utility maximization program</li>
+</ol>
+<p>To solve the utility maximization program, we can set up a Lagrangean. The function <span class="math inline">\(\mathcal{L}(.)\)</span> is defined as the objective function minus the product between the budget constraint and a scalar <span class="math inline">\(\lambda \in \mathbb{R}\)</span>.</p>
+<ol start="3" type="1">
+<li>Write the Lagrangean and set the first order conditions (partial derivative with respect to <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span> and <span class="math inline">\(\lambda\)</span> equal 0) as a system</li>
+<li>Solve the system for <span class="math inline">\(x^\star\)</span> and <span class="math inline">\(y^\star\)</span> and express them as a function of income and prices</li>
+<li>Compute the indirect utility function <span class="math inline">\(V(x,y) = U(x^\star,y^\star)\)</span></li>
+<li>[Bonus] Show that <span class="math inline">\(\lambda^\star = \partial V/\partial I\)</span>. Interpret</li>
+<li>Compute the elasticity of demand of <span class="math inline">\(x\)</span> with respect to <span class="math inline">\(p_x\)</span>, <span class="math inline">\(p_y\)</span> and <span class="math inline">\(I\)</span></li>
+</ol>
 </section>
-<section id="about-this-site-and-my-inspirations" class="level2">
-<h2 class="anchored" data-anchor-id="about-this-site-and-my-inspirations">About this site and my inspirations</h2>
-<p>I created this site for teaching purpose. It is of course perfectible and any constructive comment is more than welcome (<a href="mailto:mateo.moglia@gmail.com">write me an email!</a>). I took inspiration from these sources:</p>
-<ul>
-<li><p>The great <a href="https://floswald.github.io">Florian Oswald</a> teaching material at Sciences Po. Do not hesitate to check his teaching material (in English)</p></li>
-<li><p>The <a href="https://mtes-mct.github.io/parcours-r/">tutorials</a> of the French Ministry of Ecology (in French)</p></li>
-<li><p>The infamous online book <a href="https://www.econometrics-with-r.org">Econometrics with R</a> (in English)</p></li>
-</ul>
+<section id="social-multiplier" class="level2">
+<h2 class="anchored" data-anchor-id="social-multiplier">Social multiplier</h2>
+<p>We augment the agent program. Indeed, utility can also increase when surrounded by alike people (eg, if you enjoy playing tennis, you might derive utility from the fact that many people enjoy playing tennis around you). We now assume that <span class="math inline">\(p_y = 1\)</span>. Utility now writes <span class="math inline">\(U = U(S,x,y) = Sx^\alpha y^\beta\)</span>.</p>
+<ol type="1">
+<li>Solve the new program. Why does including the social capital does not change the equilibrium condition?</li>
+</ol>
+<p>So far, we assumed that the utility maximization program gives a maximum. To show it, we need to solve for the second order condition: <span class="math inline">\(2p_x U_{xy} - U_{xx} - p_x^2 U_y y\)</span>.</p>
+<ol start="2" type="1">
+<li>For <span class="math inline">\(p_x = 2\)</span>, <span class="math inline">\(p_y = 1\)</span>, and <span class="math inline">\(I=10\)</span>, did we reach a (local) maximum?</li>
+<li>Show that <span class="math inline">\(\partial x / \partial S &gt; 0 \iff U_{xS} &gt; p_x U_{yS}\)</span>. Interpret.</li>
+</ol>
+</section>
+<section id="intertemporal-utility-maximization" class="level2">
+<h2 class="anchored" data-anchor-id="intertemporal-utility-maximization">Intertemporal utility maximization</h2>
+<p>Agents are forward looking and have perfect foresighting. It means that they decide on the optimal consumption decision at the begining of the period. Agents can either consume or save their income. We consider two discrete periods, 1 and 2. Future value is discounted with parameter <span class="math inline">\(0 &lt; \rho &lt; 1\)</span> (agents always prefer consuming 1 today than 1 tomorrow). We also assume that price is equal to unity and we denote the interest rate <span class="math inline">\(r\)</span>.</p>
+<p>The utility writes: <span class="math display">\[
+U = \log(c^1) + \rho \log c^2
+\]</span></p>
+<p>In period 1, the agent can consume a quantity <span class="math inline">\(c^1 \geq 0\)</span> and can save a quantity <span class="math inline">\(S \geq 0\)</span>. Her income is <span class="math inline">\(I^1\)</span>.</p>
+<ol type="1">
+<li>Write the budget constraint in period 1.</li>
+</ol>
+<p>In period 2, the agent can consume <span class="math inline">\(c^2 \geq 0\)</span>. She also obtains an income <span class="math inline">\(I^2\)</span>. If she has saved in period 1, she also obtains her savings augmented with the interest rate.</p>
+<ol start="2" type="1">
+<li>Write the budget constraint in period 2</li>
+<li>Write the intertemporal budget constraint by combining both constraints</li>
+<li>Solve the program with the Lagrange method (the intertemporal utility function subject to the intertemporal budget constraint)</li>
+<li>Interpret the results, especially through a change in <span class="math inline">\(\rho\)</span> and in <span class="math inline">\(r\)</span></li>
+</ol>
 
 
 </section>

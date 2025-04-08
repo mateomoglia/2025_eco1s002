@@ -56,7 +56,7 @@ This website will walk you through the tutorials for the *Topics in Economics* (
     -   Refresher on utility maximization program
     -   Intertemporal maximization problem
 -   Tutorial 9 *(April 16, computer session)*
-    -   Work-leisure trade-off 
+    -   Work-leisure trade-off
     -   Women labour force participation
 -   Tutorial 10 *(April 30, computer session)*
     -   Research project
