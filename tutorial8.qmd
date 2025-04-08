@@ -41,16 +41,16 @@ To solve the utility maximization program, we can set up a Lagrangean. The funct
 6.  [Bonus] Show that $\lambda^\star = \partial V/\partial I$. Interpret
 7.  Compute the elasticity of demand of $x$ with respect to $p_x$, $p_y$ and $I$
 
+The second order condition to reach a local maximum is: $2p_x p_y U_{xy} - U_{xx}p_y^2 - U_{yy} p_x^2 > 0$ (where $U_{xx}$ is the second derivative of $U$ wrt $x$).
+
+8.  For $p_x = 2$, $p_y = 1$, $I=10$, $\alpha=\beta=0.5$ did we reach a (local) maximum?
+
 ## Social multiplier
 
-We augment the agent program. Indeed, utility can also increase when surrounded by alike people (eg, if you enjoy playing tennis, you might derive utility from the fact that many people enjoy playing tennis around you). We now assume that $p_y = 1$. Utility now writes $U = U(S,x,y) = Sx^\alpha y^\beta$.
+We augment the agent program. Indeed, utility can also increase when surrounded by alike people (eg, if you enjoy playing tennis, you might derive utility from the fact that many people enjoy playing tennis around you). We now assume that $p_y = 1$. Utility now writes $U = U(S,x,y)$. $x$ is affected by the social capital (eg, $x$ is the number of hours during which you play tennis).
 
 1.  Solve the new program. Why does including the social capital does not change the equilibrium condition?
-
-So far, we assumed that the utility maximization program gives a maximum. To show it, we need to solve for the second order condition: $2p_x U_{xy} - U_{xx} - p_x^2 U_y y$.  
-
-2.  For $p_x = 2$, $p_y = 1$, and $I=10$, did we reach a (local) maximum?
-3.  Show that $\partial x / \partial S > 0 \iff U_{xS} > p_x U_{yS}$. Interpret.
+2.  Show that $\partial x / \partial S > 0 \iff U_{xS} > p_x U_{yS}$. Interpret. *Hint: Differentiate both utility function and budget constraint with respect to S. Use the second order condition for local maximum. Reminder the Schwartz theorem: $f_{xy} = f{yx}$.*
 
 ## Intertemporal utility maximization
 
@@ -58,10 +58,10 @@ Agents are forward looking and have perfect foresighting. It means that they dec
 
 The utility writes:
 $$
-U = \log(c^1) + \rho \log c^2
+U = \log c^1 + \rho \log c^2
 $$
 
-In period 1, the agent can consume a quantity $c^1 \geq 0$ and can save a quantity $S \geq 0$. Her income is $I^1$. 
+In period 1, the agent can consume a quantity $c^1 > 0$ and can save a quantity $S > 0$. Her income is $I^1$. 
 
 1.  Write the budget constraint in period 1.
 
@@ -71,3 +71,4 @@ In period 2, the agent can consume $c^2 \geq 0$. She also obtains an income $I^2
 3.  Write the intertemporal budget constraint by combining both constraints
 4.  Solve the program with the Lagrange method (the intertemporal utility function subject to the intertemporal budget constraint)
 5.  Interpret the results, especially through a change in $\rho$ and in $r$
+

@@ -215,7 +215,12 @@ window.Quarto = {
   font-size: small;
 }
 </style>
-<p>In this exercise, we are going to learn: 1. How to maximize the utility of an agent, under budget constraint. 2. Augment the standard model with the social multiplier 3. Augment the model by adding some dynamics</p>
+<p>In this exercise, we are going to learn:</p>
+<ol type="1">
+<li>How to maximize the utility of an agent, under budget constraint.</li>
+<li>Augment the standard model with the social multiplier</li>
+<li>Augment the model by adding some dynamics</li>
+</ol>
 <section id="standard-utility-maximization-program" class="level2">
 <h2 class="anchored" data-anchor-id="standard-utility-maximization-program">Standard utility maximization program</h2>
 <p>A representative agent derives utility from consuming two goods, <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>. Each good comes at price <span class="math inline">\(p_x\)</span> and <span class="math inline">\(p_y\)</span>, respectively. The agent is also endowed with an income <span class="math inline">\(I\)</span> to spend in each good.</p>
@@ -235,26 +240,26 @@ U(x,y) = x^\alpha y^\beta
 <li>[Bonus] Show that <span class="math inline">\(\lambda^\star = \partial V/\partial I\)</span>. Interpret</li>
 <li>Compute the elasticity of demand of <span class="math inline">\(x\)</span> with respect to <span class="math inline">\(p_x\)</span>, <span class="math inline">\(p_y\)</span> and <span class="math inline">\(I\)</span></li>
 </ol>
+<p>The second order condition to reach a local maximum is: <span class="math inline">\(2p_x p_y U_{xy} - U_{xx}p_y^2 - U_{yy} p_x^2 &gt; 0\)</span> (where <span class="math inline">\(U_{xx}\)</span> is the second derivative of <span class="math inline">\(U\)</span> wrt <span class="math inline">\(x\)</span>).</p>
+<ol start="8" type="1">
+<li>For <span class="math inline">\(p_x = 2\)</span>, <span class="math inline">\(p_y = 1\)</span>, <span class="math inline">\(I=10\)</span>, <span class="math inline">\(\alpha=\beta=0.5\)</span> did we reach a (local) maximum?</li>
+</ol>
 </section>
 <section id="social-multiplier" class="level2">
 <h2 class="anchored" data-anchor-id="social-multiplier">Social multiplier</h2>
-<p>We augment the agent program. Indeed, utility can also increase when surrounded by alike people (eg, if you enjoy playing tennis, you might derive utility from the fact that many people enjoy playing tennis around you). We now assume that <span class="math inline">\(p_y = 1\)</span>. Utility now writes <span class="math inline">\(U = U(S,x,y) = Sx^\alpha y^\beta\)</span>.</p>
+<p>We augment the agent program. Indeed, utility can also increase when surrounded by alike people (eg, if you enjoy playing tennis, you might derive utility from the fact that many people enjoy playing tennis around you). We now assume that <span class="math inline">\(p_y = 1\)</span>. Utility now writes <span class="math inline">\(U = U(S,x,y)\)</span>. <span class="math inline">\(x\)</span> is affected by the social capital (eg, <span class="math inline">\(x\)</span> is the number of hours during which you play tennis).</p>
 <ol type="1">
 <li>Solve the new program. Why does including the social capital does not change the equilibrium condition?</li>
-</ol>
-<p>So far, we assumed that the utility maximization program gives a maximum. To show it, we need to solve for the second order condition: <span class="math inline">\(2p_x U_{xy} - U_{xx} - p_x^2 U_y y\)</span>.</p>
-<ol start="2" type="1">
-<li>For <span class="math inline">\(p_x = 2\)</span>, <span class="math inline">\(p_y = 1\)</span>, and <span class="math inline">\(I=10\)</span>, did we reach a (local) maximum?</li>
-<li>Show that <span class="math inline">\(\partial x / \partial S &gt; 0 \iff U_{xS} &gt; p_x U_{yS}\)</span>. Interpret.</li>
+<li>Show that <span class="math inline">\(\partial x / \partial S &gt; 0 \iff U_{xS} &gt; p_x U_{yS}\)</span>. Interpret. <em>Hint: Differentiate both utility function and budget constraint with respect to S. Use the second order condition for local maximum. Reminder the Schwartz theorem: <span class="math inline">\(f_{xy} = f{yx}\)</span>.</em></li>
 </ol>
 </section>
 <section id="intertemporal-utility-maximization" class="level2">
 <h2 class="anchored" data-anchor-id="intertemporal-utility-maximization">Intertemporal utility maximization</h2>
 <p>Agents are forward looking and have perfect foresighting. It means that they decide on the optimal consumption decision at the begining of the period. Agents can either consume or save their income. We consider two discrete periods, 1 and 2. Future value is discounted with parameter <span class="math inline">\(0 &lt; \rho &lt; 1\)</span> (agents always prefer consuming 1 today than 1 tomorrow). We also assume that price is equal to unity and we denote the interest rate <span class="math inline">\(r\)</span>.</p>
 <p>The utility writes: <span class="math display">\[
-U = \log(c^1) + \rho \log c^2
+U = \log c^1 + \rho \log c^2
 \]</span></p>
-<p>In period 1, the agent can consume a quantity <span class="math inline">\(c^1 \geq 0\)</span> and can save a quantity <span class="math inline">\(S \geq 0\)</span>. Her income is <span class="math inline">\(I^1\)</span>.</p>
+<p>In period 1, the agent can consume a quantity <span class="math inline">\(c^1 &gt; 0\)</span> and can save a quantity <span class="math inline">\(S &gt; 0\)</span>. Her income is <span class="math inline">\(I^1\)</span>.</p>
 <ol type="1">
 <li>Write the budget constraint in period 1.</li>
 </ol>
