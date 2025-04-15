@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Welcome to this class! – Petite classe ECO1S002</title>
+<title>Tutorial 9: (Women) labour force participation – Petite classe ECO1S002</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,10 +67,39 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
-<body class="nav-sidebar docked fullcontent">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -79,7 +108,9 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./home.html">Home</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Petite classe ECO1S002
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -98,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./home.html" class="sidebar-item-text sidebar-link active">
+  <a href="./home.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
@@ -155,13 +186,21 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+   
+  <ul>
+  <li><a href="#theoretical-approach-of-labour-supply" id="toc-theoretical-approach-of-labour-supply" class="nav-link active" data-scroll-target="#theoretical-approach-of-labour-supply">Theoretical approach of labour supply</a></li>
+  <li><a href="#empirical-approach" id="toc-empirical-approach" class="nav-link" data-scroll-target="#empirical-approach">Empirical approach</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Welcome to this class!</h1>
+<h1 class="title">Tutorial 9: (Women) labour force participation</h1>
 </div>
 
 
@@ -178,120 +217,107 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This website will walk you through the tutorials for the <em>Topics in Economics</em> (1S002) course of Ecole Polytechnique’s Bachelor program. The course has 3 main objectives: (i) know the basics of R (ii) manipulate the standard statistical and empirical tools (iii) write an original research output.</p>
-<blockquote class="blockquote">
-<p><strong>Practical information</strong></p>
-<p><strong>TA</strong>: <a href="https://mateomoglia.github.io">Mateo Moglia</a></p>
-<p><strong>Schedule</strong>: Wednesday morning (check Synapses regularly for any changes in room).</p>
-<p><strong>Required software</strong>: R and its IDE, RStudio (all free). You may download it <a href="https://posit.co/download/rstudio-desktop/">here</a>. Create a free account to use <a href="https://www.overleaf.com">Overleaf</a>. Bring you own laptop or use the lab’s computer. The data used in the tutorials are on Moodle. You will also be able to download to find the solved exercices after each tutorial on Moodle.</p>
-<p><strong>Rules</strong>: Send me an email if you miss the class. You are grown-up adults, I trust you to follow thoroughly the class. Do not hesitate to work in small groups.</p>
-</blockquote>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Log
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ul>
-<li>v1.3 - 25/3/25 - Tutorial 6</li>
-<li>v1.2 - 8/3/25 - Tutorial 4</li>
-<li>v1.1 - 25/1/25 - Tutorial 3</li>
-<li>v1.0 - 23/1/25 - Tutorial 2</li>
-<li>v0.1 - 7/12/24 - Tutorial 1</li>
-<li>v0.0 - 5/12/24 - Creation</li>
-</ul>
-</div>
-</div>
-</div>
-<section id="class-outline" class="level2">
-<h2 class="anchored" data-anchor-id="class-outline">Class outline</h2>
-<ul>
-<li><a href="https://mateomoglia.github.io/2025_eco1s002/tutorial1.html#/title-slide">Tutorial 1</a> <em>(February 12, computer session)</em>
-<ul>
-<li>Presentation of the class objectives</li>
-<li>First hands on R</li>
-<li>First hands on LaTeX</li>
-</ul></li>
-<li><a href="https://mateomoglia.github.io/2025_eco1s002/tutorial2.html">Tutorial 2</a> <em>(February 19)</em>
-<ul>
-<li>Baseline Solow model derivations</li>
-<li>Solow model extensions</li>
-</ul></li>
-<li><a href="https://mateomoglia.github.io/2025_eco1s002/tutorial3.html">Tutorial 3</a> <em>(March 5, computer session)</em>
-<ul>
-<li>Replication of Mankiw et al.&nbsp;(1997)</li>
-<li>First hands on the OLS estimator</li>
-<li>Estimating the baseline and augmented Solow models</li>
-</ul></li>
-<li><a href="https://mateomoglia.github.io/2025_eco1s002/tutorial4.html">Tutorial 4</a> <em>(March 12, computer session)</em>
-<ul>
-<li>OLS bias and Instrumental Variables</li>
-<li>Replication of Acemoglu et al.&nbsp;(2010)</li>
-<li>Export the results</li>
-</ul></li>
-<li>Tutorial 5 <em>(March 19)</em>
-<ul>
-<li>Discussion on the group project</li>
-<li>Q&amp;A</li>
-</ul></li>
-<li><a href="https://mateomoglia.github.io/2025_eco1s002/tutorial6.html">Tutorial 6</a> <em>(March 26, computer session)</em>
-<ul>
-<li>Autonomous replication of an IV paper (handed in)</li>
-</ul></li>
-<li>Tutorial 7 <em>(April 2, computer session)</em>
-<ul>
-<li>Treatment effect</li>
-<li>Solution of Tutorial 6</li>
-</ul></li>
-<li><a href="https://mateomoglia.github.io/2025_eco1s002/tutorial8.html">Tutorial 8</a> <em>(April 9)</em>
-<ul>
-<li>Refresher on utility maximization program</li>
-<li>Intertemporal maximization problem</li>
-</ul></li>
-<li><a href="https://mateomoglia.github.io/2025_eco1s002/tutorial9.html">Tutorial 9</a> <em>(April 16, computer session)</em>
-<ul>
-<li>Work-leisure trade-off</li>
-<li>Women labour force participation</li>
-</ul></li>
-<li>Tutorial 10 <em>(April 30, computer session)</em>
-<ul>
-<li>Research project</li>
-</ul></li>
-<li>Tutorial 11 <em>(May 7, computer session)</em>
-<ul>
-<li>Marriage output matrices</li>
-<li>Measures of assortative mating</li>
-<li>Difference-in-differences estimation</li>
-</ul></li>
-<li>Tutorial 12 <em>(May 14)</em>
-<ul>
-<li>Mock exam correction</li>
-</ul></li>
-<li>Tutorial 13 <em>(May 21)</em>
-<ul>
-<li>Research project</li>
-<li>Final Q&amp;A</li>
-</ul></li>
-<li>Tutorial 14 <em>(May 28)</em>
-<ul>
-<li>Restitution of the group projects <em>(graded)</em></li>
-</ul></li>
-</ul>
+<style>
+.math {
+  font-size: small;
+}
+</style>
+<p>In this exercise, we are going to learn:</p>
+<ol type="1">
+<li>How households decide on their labour supply</li>
+<li>How the family size affect the latter</li>
+<li>Estimate the effects of having children on women labour participation</li>
+</ol>
+<section id="theoretical-approach-of-labour-supply" class="level2">
+<h2 class="anchored" data-anchor-id="theoretical-approach-of-labour-supply">Theoretical approach of labour supply</h2>
+<p>Consider an individual who derives her utility from consuming a good <span class="math inline">\(c\)</span> and leisure <span class="math inline">\(l\)</span>. The good comes at price <span class="math inline">\(p=1\)</span>, it is the <em>numéraire</em>. Utility function is:</p>
+<p><span class="math display">\[
+U(c,l) = c^\alpha \times l^{1-\alpha}
+\]</span></p>
+<p>The individual earns a labour wage <span class="math inline">\(w\)</span>. The number of hours worked is denoted <span class="math inline">\(h\)</span>, hence the labour income is <span class="math inline">\(wh\)</span>. She also obtains a lump-sum benefit from the governement <span class="math inline">\(y\)</span>. Hence, her total income is <span class="math inline">\(wh + y\)</span>. There is a fixed number of hours <span class="math inline">\(T\)</span> in each day, such that <span class="math inline">\(T = l+h\)</span>.</p>
+<ol type="1">
+<li>What are the two constraints? Can you express the budget constraint as a function of leisure <span class="math inline">\(l\)</span>, consumption, and total amount of time <span class="math inline">\(T\)</span> only?</li>
+<li>Write down the maximization problem and the associated lagrangean.</li>
+<li>Solve the maximization program to find <span class="math inline">\(c^\star\)</span> and <span class="math inline">\(h^\star\)</span>.</li>
+</ol>
+<p>We are now going to proceed to some comparative statics, i.e.&nbsp;we are going to twist some parameters to understand the partial equilibrium effects.</p>
+<ol start="4" type="1">
+<li>How does evolve <span class="math inline">\(h^\star\)</span> with wage? with the lump-sum benefit?</li>
+</ol>
+<p>Now, we are going to assume that the individual has a positive number of children <span class="math inline">\(n&gt;0 \in \mathbb{N}\)</span>. Then, she must allocate a fixed number of hours to take care of their children. Each child requires <span class="math inline">\(K\)</span> hours of childcare, hence the total number of hours is <span class="math inline">\(nK\)</span>. In practice, it reduces the number of hours available to leisure and work.</p>
+<ol start="5" type="1">
+<li>How does it affect labour supply? Is there a threshold upon which the mother stops providing labour?</li>
+</ol>
 </section>
-<section id="about-this-site-and-my-inspirations" class="level2">
-<h2 class="anchored" data-anchor-id="about-this-site-and-my-inspirations">About this site and my inspirations</h2>
-<p>I created this site for teaching purpose. It is of course perfectible and any constructive comment is more than welcome (<a href="mailto:mateo.moglia@gmail.com">write me an email!</a>). I took inspiration from these sources:</p>
-<ul>
-<li><p>The great <a href="https://floswald.github.io">Florian Oswald</a> teaching material at Sciences Po. Do not hesitate to check his teaching material (in English)</p></li>
-<li><p>The <a href="https://mtes-mct.github.io/parcours-r/">tutorials</a> of the French Ministry of Ecology (in French)</p></li>
-<li><p>The infamous online book <a href="https://www.econometrics-with-r.org">Econometrics with R</a> (in English)</p></li>
-</ul>
+<section id="empirical-approach" class="level2">
+<h2 class="anchored" data-anchor-id="empirical-approach">Empirical approach</h2>
+<p>The theoretical prediction is that mothers might drop out the labour force because they have children. We are going to estimate this effect.</p>
+<ol type="1">
+<li>Open the dataset <code>lfs_women.csv</code>.</li>
+</ol>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>idmen</code></td>
+<td>Household ID</td>
+</tr>
+<tr class="even">
+<td><code>obs</code></td>
+<td>Household member position in the HH</td>
+</tr>
+<tr class="odd">
+<td><code>mne1</code></td>
+<td>Number of children</td>
+</tr>
+<tr class="even">
+<td><code>nag</code></td>
+<td>Age</td>
+</tr>
+<tr class="odd">
+<td><code>nsexe</code></td>
+<td>1 if male</td>
+</tr>
+<tr class="even">
+<td><code>same_sexe</code></td>
+<td>1 if first two children have the same gender</td>
+</tr>
+<tr class="odd">
+<td><code>hh_twin_after</code></td>
+<td>1 if second born are twins</td>
+</tr>
+<tr class="even">
+<td><code>ndiplo</code></td>
+<td>Scale from 1 to 9, high skilled from 5 to 9</td>
+</tr>
+<tr class="odd">
+<td><code>ntravail</code></td>
+<td>1 if the individual is working</td>
+</tr>
+<tr class="even">
+<td><code>ntpp</code></td>
+<td>2 if the individual is working full time</td>
+</tr>
+</tbody>
+</table>
+<p>For the sake of time, the dataset has been already cleaned. We can directly move to the estimation.</p>
+<ol start="2" type="1">
+<li>Write a model with the labour force participation on the left hand side. This variable is explained by: being a mother, having a large family (more than 2 children), and the interaction between both.</li>
+<li>Create the relevant variables.</li>
+<li>Run this model. Intepret.</li>
+<li>Is there OVB? Which variables can you include to tackle it?</li>
+<li>Add household fixed effects. Why should we add these FE?</li>
+<li>Is there any endogeneity bias?</li>
+<li>A good instrument is to use the number of twins. Why?</li>
+<li>Run the IV regression with the number of twins as instrument for having a large family. Interpret.</li>
+<li>An alternative instrument is to have children the same gender. Why?</li>
+<li>Run the IV regression with an indicator that takes 1 if the children are of the same gender. Intepret.</li>
+</ol>
 
 
 </section>

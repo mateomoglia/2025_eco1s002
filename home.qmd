@@ -52,10 +52,10 @@ This website will walk you through the tutorials for the *Topics in Economics* (
 -   Tutorial 7 *(April 2, computer session)*
     -   Treatment effect
     -   Solution of Tutorial 6
--   Tutorial 8 *(April 9)*
+-   [Tutorial 8](https://mateomoglia.github.io/2025_eco1s002/tutorial8.html) *(April 9)*
     -   Refresher on utility maximization program
     -   Intertemporal maximization problem
--   Tutorial 9 *(April 16, computer session)*
+-   [Tutorial 9](https://mateomoglia.github.io/2025_eco1s002/tutorial9.html) *(April 16, computer session)*
     -   Work-leisure trade-off
     -   Women labour force participation
 -   Tutorial 10 *(April 30, computer session)*
