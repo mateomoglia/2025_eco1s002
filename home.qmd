@@ -58,8 +58,8 @@ This website will walk you through the tutorials for the *Topics in Economics* (
 -   [Tutorial 9](https://mateomoglia.github.io/2025_eco1s002/tutorial9.html) *(April 16, computer session)*
     -   Work-leisure trade-off
     -   Women labour force participation
--   Tutorial 10 *(April 30, computer session)*
-    -   Research project
+-   [Tutorial 10](https://mateomoglia.github.io/2025_eco1s002/tutorial10.html) *(April 30, computer session)*
+    -   How to write the research project
 -   Tutorial 11 *(May 7, computer session)*
     -   Marriage output matrices
     -   Measures of assortative mating

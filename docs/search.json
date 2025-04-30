@@ -88,7 +88,7 @@
     "href": "home.html#class-outline",
     "title": "Welcome to this class!",
     "section": "Class outline",
-    "text": "Class outline\n\nTutorial 1 (February 12, computer session)\n\nPresentation of the class objectives\nFirst hands on R\nFirst hands on LaTeX\n\nTutorial 2 (February 19)\n\nBaseline Solow model derivations\nSolow model extensions\n\nTutorial 3 (March 5, computer session)\n\nReplication of Mankiw et al. (1997)\nFirst hands on the OLS estimator\nEstimating the baseline and augmented Solow models\n\nTutorial 4 (March 12, computer session)\n\nOLS bias and Instrumental Variables\nReplication of Acemoglu et al. (2010)\nExport the results\n\nTutorial 5 (March 19)\n\nDiscussion on the group project\nQ&A\n\nTutorial 6 (March 26, computer session)\n\nAutonomous replication of an IV paper (handed in)\n\nTutorial 7 (April 2, computer session)\n\nTreatment effect\nSolution of Tutorial 6\n\nTutorial 8 (April 9)\n\nRefresher on utility maximization program\nIntertemporal maximization problem\n\nTutorial 9 (April 16, computer session)\n\nWork-leisure trade-off\nWomen labour force participation\n\nTutorial 10 (April 30, computer session)\n\nResearch project\n\nTutorial 11 (May 7, computer session)\n\nMarriage output matrices\nMeasures of assortative mating\nDifference-in-differences estimation\n\nTutorial 12 (May 14)\n\nMock exam correction\n\nTutorial 13 (May 21)\n\nResearch project\nFinal Q&A\n\nTutorial 14 (May 28)\n\nRestitution of the group projects (graded)",
+    "text": "Class outline\n\nTutorial 1 (February 12, computer session)\n\nPresentation of the class objectives\nFirst hands on R\nFirst hands on LaTeX\n\nTutorial 2 (February 19)\n\nBaseline Solow model derivations\nSolow model extensions\n\nTutorial 3 (March 5, computer session)\n\nReplication of Mankiw et al. (1997)\nFirst hands on the OLS estimator\nEstimating the baseline and augmented Solow models\n\nTutorial 4 (March 12, computer session)\n\nOLS bias and Instrumental Variables\nReplication of Acemoglu et al. (2010)\nExport the results\n\nTutorial 5 (March 19)\n\nDiscussion on the group project\nQ&A\n\nTutorial 6 (March 26, computer session)\n\nAutonomous replication of an IV paper (handed in)\n\nTutorial 7 (April 2, computer session)\n\nTreatment effect\nSolution of Tutorial 6\n\nTutorial 8 (April 9)\n\nRefresher on utility maximization program\nIntertemporal maximization problem\n\nTutorial 9 (April 16, computer session)\n\nWork-leisure trade-off\nWomen labour force participation\n\nTutorial 10 (April 30, computer session)\n\nHow to write the research project\n\nTutorial 11 (May 7, computer session)\n\nMarriage output matrices\nMeasures of assortative mating\nDifference-in-differences estimation\n\nTutorial 12 (May 14)\n\nMock exam correction\n\nTutorial 13 (May 21)\n\nResearch project\nFinal Q&A\n\nTutorial 14 (May 28)\n\nRestitution of the group projects (graded)",
     "crumbs": [
       "Home"
     ]
@@ -892,6 +892,76 @@
     "text": "Empirical approach\nThe theoretical prediction is that mothers might drop out the labour force because they have children. We are going to estimate this effect.\n\nOpen the dataset lfs_women.csv.\n\n\n\n\nVariable\nDescription\n\n\n\n\nidmen\nHousehold ID\n\n\nobs\nHousehold member position in the HH\n\n\nmne1\nNumber of children\n\n\nnag\nAge\n\n\nnsexe\n1 if male\n\n\nsame_sexe\n1 if first two children have the same gender\n\n\nhh_twin_after\n1 if second born are twins\n\n\nndiplo\nScale from 1 to 9, high skilled from 5 to 9\n\n\nntravail\n1 if the individual is working\n\n\nntpp\n2 if the individual is working full time\n\n\n\nFor the sake of time, the dataset has been already cleaned. We can directly move to the estimation.\n\nWrite a model with the labour force participation on the left hand side. This variable is explained by: being a mother, having a large family (more than 2 children), and the interaction between both.\nCreate the relevant variables.\nRun this model. Intepret.\nIs there OVB? Which variables can you include to tackle it?\nAdd household fixed effects. Why should we add these FE?\nIs there any endogeneity bias?\nA good instrument is to use the number of twins. Why?\nRun the IV regression with the number of twins as instrument for having a large family. Interpret.\nAn alternative instrument is to have children the same gender. Why?\nRun the IV regression with an indicator that takes 1 if the children are of the same gender. Intepret.",
     "crumbs": [
       "Tutorial 9"
+    ]
+  },
+  {
+    "objectID": "tutorial10.html#roadmap",
+    "href": "tutorial10.html#roadmap",
+    "title": "Tutorial 10: Write a report",
+    "section": "Roadmap",
+    "text": "Roadmap\nReview the main steps to write a research paper, with some examples:\n\nIntroduction\nDescriptive evidence\nReduced form evidence",
+    "crumbs": [
+      "Tutorial 10"
+    ]
+  },
+  {
+    "objectID": "tutorial10.html#what-you-will-handle",
+    "href": "tutorial10.html#what-you-will-handle",
+    "title": "Tutorial 10: Write a report",
+    "section": "What you will handle",
+    "text": "What you will handle\n\nA 8 to 10 page report (including tables and figures, not include bibliography or appendix). It must be written in .tex.\nA slide deck (that you will present on May the 28th)\nThe code to go from the raw data to the output (+ a link to the raw data). I need to be able to replicate all your results using R and only R!\n\n\n\n\n\n\n\nTip\n\n\nFor the code, you can use several R files to split the tasks. For instance, you can have three scripts: 1_clean_data.R, 2_descriptive_evidence.R and 3_reduced_form.R.",
+    "crumbs": [
+      "Tutorial 10"
+    ]
+  },
+  {
+    "objectID": "tutorial10.html#report-introduction",
+    "href": "tutorial10.html#report-introduction",
+    "title": "Tutorial 10: Write a report",
+    "section": "Report introduction",
+    "text": "Report introduction\n2/3 pages\nThe introduction should include the following elements:\n\nA motivation (2/3 paragraphs) State why the question you tackle is important, why is it a subject that is relevant for the policy leaders.\nA research question (1 paragraph) Precisely state what is the research question.\nA brief summary of the paper (3 paragraphs) Precise: the data you use, the context, the method you used, the key results.\nA literature review (2 paragraphs) Cite some papers that are close to what you do and state how you compare to them in terms of results and methods.\n\n\n\n\n\n\n\nTip\n\n\nA reader who wants to know the main message of your paper, the context, and the punchline results needs to read only the introduction.",
+    "crumbs": [
+      "Tutorial 10"
+    ]
+  },
+  {
+    "objectID": "tutorial10.html#descriptive-evidence",
+    "href": "tutorial10.html#descriptive-evidence",
+    "title": "Tutorial 10: Write a report",
+    "section": "Descriptive evidence",
+    "text": "Descriptive evidence\n3 pages\n\nData description: Data sources (with the appropriate references), the time span, the geographical level of analysis, the countries/contexts. Say some words about the context you are working on (developing/developed countries, political contexts, etc.)\nSummary statistics: Make a table with the summary statistics (min,Q1,mean,median,Q3,max,nb.observations) of the key variables in your analysis\nDescriptive evidence: You should make non-causal graphs (scatter or line) and/or maps to support your intuition (for instance the Graph 1 in Nunn (2014))",
+    "crumbs": [
+      "Tutorial 10"
+    ]
+  },
+  {
+    "objectID": "tutorial10.html#causal-evidence",
+    "href": "tutorial10.html#causal-evidence",
+    "title": "Tutorial 10: Write a report",
+    "section": "Causal evidence",
+    "text": "Causal evidence\n2/3 pages\n\nOLS: You should build an econometric model with a regression of \\(y\\) on \\(x\\) and other variables. State precisely what the variables are. You should also precise if you should suspect endogeneity, OVB, or measurement error. Export the results with coefficient tables with the relevant information (standard errors, N, R2, proper labelling, etc.)\nExtensions: If you think you can implement an IV or another strategy, you should write that here. If you actually implement it, please import the results as well.\n\n\n\n\n\n\n\nTip\n\n\nCheck the papers that we saw in class to know how to format the figures and tables. The presentation is standard and you should mimic it.",
+    "crumbs": [
+      "Tutorial 10"
+    ]
+  },
+  {
+    "objectID": "tutorial10.html#conclusion",
+    "href": "tutorial10.html#conclusion",
+    "title": "Tutorial 10: Write a report",
+    "section": "Conclusion",
+    "text": "Conclusion\nThe conclusion is short and quikly summarizes the results.",
+    "crumbs": [
+      "Tutorial 10"
+    ]
+  },
+  {
+    "objectID": "tutorial10.html#dissemination",
+    "href": "tutorial10.html#dissemination",
+    "title": "Tutorial 10: Write a report",
+    "section": "Dissemination",
+    "text": "Dissemination\nYou will need to make slides (7 to 8’ presentation) to present your key results. The structure should be the following\n\nMotivation\nResearch question + contribution to the literature\nData description\nDescriptive evidence\nCausal evidence\nConclusion\n\nYou will also need to provide the raw data + the code to replicate all the results.",
+    "crumbs": [
+      "Tutorial 10"
     ]
   }
 ]
