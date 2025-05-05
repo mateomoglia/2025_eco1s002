@@ -60,10 +60,10 @@ This website will walk you through the tutorials for the *Topics in Economics* (
     -   Women labour force participation
 -   [Tutorial 10](https://mateomoglia.github.io/2025_eco1s002/tutorial10.html) *(April 30, computer session)*
     -   How to write the research project
--   Tutorial 11 *(May 7, computer session)*
+-   [Tutorial 11](https://mateomoglia.github.io/2025_eco1s002/tutorial11.html) *(April 30, computer session)*
+    -   Difference-in-differences estimation
     -   Marriage output matrices
     -   Measures of assortative mating
-    -   Difference-in-differences estimation
 -   Tutorial 12 *(May 14)*
     -   Mock exam correction
 -   Tutorial 13 *(May 21)*
